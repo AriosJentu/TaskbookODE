@@ -1,0 +1,90 @@
+\subsection{Задачи}
+
+	Для следующих двумерных систем уравнений с частными производными найти общее решение в виде семейства поверхностей $F(u, x, y) = C$:
+
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{nonlinsys_partialsyst:systems2}
+			\item \( \dpart{u}{x} = 1, ~ \dpart{u}{y} = 1 \) % u - x - y = C
+			\item \( \dpart{u}{x} = -2x, ~ \dpart{u}{y} = 2 \) % u + x**2 - 2*y = C
+			\item \( \dpart{u}{x} = \cos{x}, ~ \dpart{u}{y} = -\frac{1}{y} \) % u + log(y) - sin(x) = C
+			\item \( \dpart{u}{x} = y, ~ \dpart{u}{y} = x \) % u - x*y = C
+			\item \( \dpart{u}{x} = \cos\pares{x + y}, ~ \dpart{u}{y} = \cos\pares{x + y} \) % u - sin(x + y) = C
+			\item \( \dpart{u}{x} = 2y \pares{3x - y}, ~ \dpart{u}{y} = x \pares{3x - 4y} \) % u - 3*x**2*y + 2*x*y**2 = C
+			\item \( \dpart{u}{x} = - e^{y}, ~ \dpart{u}{y} = - x e^{y} \) % u + x*exp(y) = C
+			\item \( \dpart{u}{x} = 2 e^{2 x} \ln{y}, ~ \dpart{u}{y} = \frac{e^{2x}}{y} \) % u - exp(2*x)*log(y) = C
+			\item \( \dpart{u}{x} = y \sec^2{x}, ~ \dpart{u}{y} = \tan{x} - 2y \) % u + y**2 - y*tan(x) = C
+			\item \( \cos{x} \cdot \dpart{u}{x} = \tan{x} \tan{y}, ~ \cos{x} \cdot \dpart{u}{y} = \sec^2{y} \) % u - tan(y)*sec(x) = C
+			\item \( \dpart{u}{x} = \frac{y}{u}, ~ \dpart{u}{y} = \frac{x}{u} \) % u**2 - 2*x*y = C
+			\item \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = \frac{2 y}{x} \) % u*x - y**2 = C
+			\item \( x^2 \dpart{u}{x} + 2xu = e^{-y}, ~ x\dpart{u}{y} = -e^{-y} \) % u*x**2 - x*exp(-y) = C
+			\item \( x\dpart{u}{x} = y e^{-u}, ~ \dpart{u}{y} = e^{-u} \ln{x} \) % -y*log(x) + exp(u) = C
+			\item \( x\dpart{u}{x} = 2 y e^{u} + 1, ~ x\dpart{u}{y} = 2 \left(x - y\right) e^{u} \) % 2*x*y + x*exp(-u) - y**2 = C
+			\item \( \dpart{u}{x} = -\frac{u y + 4 e^{2 x}}{x y}, ~ \dpart{u}{y} = \frac{2}{x} - \frac{u}{y} \) % u*x*y - y**2 + 2*exp(2*x) = C
+			\item \( \dpart{u}{x} = 2 \sec{u}, ~ y \dpart{u}{y} = 2x \sec{u} - \tan{u} \) % -2*x*y + y*sin(u) = C
+			\item \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = \frac{e^{-ux}}{xy} \) % exp(u*x) - log(y) = C
+			
+		\end{enumtasks}
+	\end{multicols}
+		
+	\begin{enumtasks}
+
+		\label{nonlinsys_partialsyst:systems2star}
+		\itemstar \( 2\dpart{u}{x} = \frac{2u - y^2}{u - x}, ~ \dpart{u}{y} = -\frac{xy}{u - x} \) % u**2 - 2*u*x + x*y**2 = C
+		\itemstar \( \dpart{u}{x} = - \frac{u}{3 u^{2} - 6 u + x}, ~ \dpart{u}{y} = \frac{1}{3 u^{2} - 6 u + x} \) % u**3 - 3*u**2 + u*x - y = C
+
+	\end{enumtasks}
+
+	Для следующих двумерных систем уравнений с частными производными найти решение задачи Коши в виде трехмерной поверхности, где $u = u(x, y)$:
+
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{nonlinsys_partialsyst:systems2cauchy}
+			\item \( \dpart{u}{x} = -1, ~ \dpart{u}{y} = 2 y, ~ u(0, 0) = 1 \) % u + x - y**2 = 1
+			\item \( \dpart{u}{x} = \frac{1}{u}, ~ \dpart{u}{y} = - \frac{e^y}{2u}, ~ u(1, 0) = 1 \) % u**2 - 2*x + exp(y) = 0
+			\item \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = \frac{1}{x y^2}, ~ u(1, 1) = -1 \) % u*x + 1/y = 0
+			\item \( \dpart{u}{x} = \frac{u}{x} - \frac{x}{y}, ~ \dpart{u}{y} = \pares{\frac{x}{y}}^2, ~ u(1, -1) = 2 \) % u/x + x/y = 1
+		
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{enumtasks}
+
+		\label{nonlinsys_partialsyst:systems2cauchy_hard}
+		\item \(  \dpart{u}{x} = e^{-u} \ln{y}, ~ y\dpart{u}{y} = x e^{-u}, ~ u(0, 1) = 0 \) % -x*log(y) + exp(u) = 0
+		\item \(  \cos{x} \cdot \dpart{u}{x} = u \sin{x} + y^2, ~ \cos{x} \cdot \dpart{u}{y} = 2 x y, ~ u(\pi, 0) = 1 \) % u*cos(x) - x*y**2 = -1
+		\item \(  \dpart{u}{x} = y^2 \pares{u + x} - 1, ~ \dpart{u}{y} = 2xy \pares{u + x}, ~ u(-1, 1) = 2 \) % -x*y**2 + log(u + x) = 1
+		\item \(  \sin{u} \dpart{u}{x} = y - \cos{x}, ~ \dpart{u}{y} = x \cosec{u}, ~ u(\pi, 1) = \pi \) % x*y - sin(x) + cos(u) = pi - 1
+		\item \(  \dpart{u}{x} = - \frac{e^{-u}}{u + 1}, ~ \dpart{u}{y} = \frac{2 y e^{-u}}{u + 1}, ~ u(0, 0) = 1 \) % u*exp(u) + x - y**2 = e
+		\item \(  x\dpart{u}{x} = \frac{2x - u \ln{u}}{\ln{u} + 1}, ~ xy \dpart{u}{y} = - \frac{1}{\ln{u} + 1}, ~ u(1, e) = e \) % u*x*log(u) - x**2 + log(y) = 1
+		
+	\end{enumtasks}
+
+	Для следующих трехмерных систем уравнений с частными производными найти решение в виде поверхности, где $u = u(x, y, z)$:
+
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{nonlinsys_partialsyst:systems3}
+			\item \( \dpart{u}{x} = y, ~ \dpart{u}{y} = x, ~ \dpart{u}{z} = -1 \) % u - x*y + z = C
+			\item \( \dpart{u}{x} = 3 z^2, ~ \dpart{u}{y} = - 4 y^3, ~ \dpart{u}{z} = 6xz \) % u - 3*x*z**2 + y**4 = C
+			\item \( \dpart{u}{x} = \frac{u}{x}, ~ \dpart{u}{y} = 2xyz, ~ \dpart{u}{z} = x y^2 \) % u/x - y**2*z = C
+			\item \( \dpart{u}{x} = \frac{2 x y}{z}, ~ \dpart{u}{y} = \frac{u}{y}, ~ \dpart{u}{z} = - \frac{u}{z} \) % u*z/y - x**2 = C
+			\item \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = -\frac{ux + 1}{xy}, ~ \dpart{u}{z} = \frac{4 z^3}{xy} \) % u*x*y + y - z**4 = C
+			\item \( e^{y + z} \dpart{u}{x} = - 3 x^2, ~ e^{y + z} \dpart{u}{y} = x^3, ~ \dpart{u}{z} = - u \) % u*exp(z) + x**3*exp(-y) = C
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{enumtasks}
+	
+		\label{nonlinsys_partialsyst:systems3hard}
+		\item \( \dpart{u}{x} = - \frac{u}{x + e^u}, ~ \dpart{u}{y} = \frac{z}{x + e^u}, ~ \dpart{u}{z} = \frac{y}{x + e^u} \) % u*x - y*z + exp(u) = C
+		\item \( \cos{u} \cdot \dpart{u}{x} = - \frac{y e^{xy}}{u + \tan{u}}, ~ \cos{u} \cdot \dpart{u}{y} = - \frac{x e^{x y}}{u + \tan{u}}, ~ \cos{u} \cdot \dpart{u}{z} = \frac{2 z}{u + \tan{u}} \) % u*sin(u) - z**2 + exp(x*y) = C
+		\itemstar \( z \dpart{u}{x} = y \pares{u + x} e^x - z, ~ z\dpart{u}{y} = \pares{u + x} e^{x}, ~ z \dpart{u}{z} = - \pares{u + x} \ln\pares{u + x} \) % -y*exp(x) + z*log(u + x) = C
+		\itemstar \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = - \frac{y \sin{ux} + z^2}{x y^2 \cos{ux}}, ~ \dpart{u}{z} = - \frac{2z \ln{y}}{xy \cos{ux}} \) % y*sin(u*x) + z**2*log(y) = C
+
+	\end{enumtasks}
+

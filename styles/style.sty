@@ -1,0 +1,39 @@
+\RequirePackage{xltxtra}
+\RequirePackage{polyglossia}
+\RequirePackage{xecyr}
+
+% Page numbering
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyheadoffset{10mm}
+\fancyfootoffset{0mm}
+\setlength{\headheight}{21pt}
+
+% Config main language
+\setmainlanguage{russian}
+\setdefaultlanguage{russian}
+\SetLanguageKeys{russian}{indentfirst=true}
+
+% Configure font
+% \setmainfont{Georgia}
+\setmainfont{Times New Roman}
+\setsansfont{Courier New}
+\setmonofont{Droid Sans Mono}
+% \setsansfont{Droid Sans}
+% \newfontfamily\cyrillicfont{Georgia}
+
+% Table of contents
+\dottedcontents{section}[1.7em]{\vspace{2pt} \bfseries}{1.7em}{1pc}
+\dottedcontents{subsection}[2.5em]{}{2.5em}{1pc}
+
+% Sections font XeLaTeX
+\titleformat*{\section}{\normalfont \large \bfseries \centering}
+\titleformat*{\subsection}{\normalfont \bfseries \centering}
+
+\geometry{left=2.5cm}
+\geometry{right=1.5cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}

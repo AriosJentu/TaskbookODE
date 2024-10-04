@@ -1,0 +1,50 @@
+\subsection{Задачи}
+
+	Найти общее решение для вполне-интегрируемых уравнений Пфаффа:
+
+	\begin{enumtasks}
+
+		\label{nonlinsys_pfaff:general}
+		\item \( 2 y ~ dy + \cos{(x + y)} \pares{dx + dy} - z ~ dx = x ~ dz \) 	 												% y^2 - xz + sin(x + y) = C
+		\item \( 2 z ~dz + \pares{x - 2 \ln{x}} ~dy + \pares{y - \frac{2 y}{x}} ~dx = 0 \) 	 									% xy - 2y lnx + z^2 = C
+		\item \( 2 x ~dx + \frac{y ~dz}{z^{2} + 1} + \arctan{z} ~dy = 0 \)														% x^2 + y arctan(z) = C
+		\item \( \frac{x}{z^2} ~ dz - \pares{2xy + \recip{x}} ~ dy + \pares{\frac{y}{x^2} - y^2 - \recip{z}} ~dx = 0 \) 	 		% xy^2 + x/z + y/x = C
+		\item \( \pares{x + \frac{2 y}{z^3}} ~dz + \pares{\frac{1}{x} - \frac{1}{z^2}} ~dy + \pares{z - \frac{y}{x^2}} ~dx = 0 \)	% xz - y/z^2 + y/x = C
+		\item \( 2y\sin{x} ~ dy + y^2 \cos{x} ~ dx = xz \sin{z} ~ dz - \pares{x ~ dz + z ~ dx} \cos{z} \) 						% xz cos(z) + y^2 sin(x) = C
+		\item \( \pares{4y - z} ~dx + 4x ~ dy + \pares{dz + dy} \sec^2\pares{y+z} = x ~ dz \) 	 								% 4xy - xz + tan(y + z) = C
+		\item \( \pares{2 xe^{y} - \frac{x}{y^2}} ~dy + \pares{2 e^{y} + \frac{1}{y}} ~dx = 2z ~ dz \) 	 						% 2x e^y + x/y - z^2 = C
+		\item \( x \pares{dy + dz} + y \pares{dx + dz} + z \pares{dx + dy} = xy ~ dz + xz ~ dy + yz ~ dx \) 	 					% xy + xz + yz - xyz = C
+		\itemstar \( 2 \pares{z e^x - xy} ~ dz + x \pares{\cos{y} - 2z} ~ dy = \pares{2yz - z^2 e^x - \sin{y}} ~ dx \)				% x siny + z^2 e^x - 2xyz = C
+		\itemstar \( \pares{x ~ dy + y ~ dx} \arcsin{z} + \frac{1}{\sqrt{1 - z^2}} \pares{xy + 2z} ~ dz = 2x ~ dx \)					% xy arcsin(z) - x^2 - 2 sqrt(1 - z^2) = C
+
+	\end{enumtasks}
+
+	% \pagebreak
+	Найти интегрирующие множители, и построить общее решение для следующих уравнений Пфаффа:
+
+	\begin{enumtasks}
+
+		\label{nonlinsys_pfaff:int_factor}
+		\item \( z^3 ~ dx + \pares{xz^2 - y} ~ dz + z ~ dy = 0 \) 	 																					% / z^2 -> xz + y/z = C
+		\item \( x ~dy + y ~dx + \frac{x y}{z \ln{z}} ~ dz = \frac{2 z}{\ln{z}} ~dz \) 	 																% * lnz -> xy lnz - z^2 = C
+		\item \( \pares{2yz - x} e^{-z} ~ dy + \pares{1 - ye^{-z}} ~ dx + \pares{x + y^2 e^{-z}} ~ dz = 0 \) 	 											% * e^z -> xe^z + y^2 z - xy = C
+		\item \( x \pares{y^2 ~ dz + 3 yz ~ dy} = 2 y^2 z ~ dx \) 	 																					% * y/x^3 -> 2y^3 z/x^2 = C
+		\item \( \frac{xy}{z} \cdot \ln{xy} ~dz + x ~dy + y ~dx = 0 \) 	 																				% * z/(xy) -> z ln(xy) = C
+		\item \( \frac{2z}{xy} ~ dz + \frac{x}{y} ~ dy - \frac{y}{x} ~ dx = 2 \pares{dy - dx} \) 	 														% * xy -> x^2 y - xy^2 + z^2 = C
+		\item \( 2 \pares{dy - \frac{z}{y} ~ dx} + \pares{\frac{dy}{y} + \frac{dx}{x}} \cos{xy} = \frac{x}{y} ~ dz - \frac{y}{x} ~ dx \) 					% * xy -> xy^2 - x^2 z + sin(xy) = C
+		\item \( \pares{\frac{z^3}{x} - 2} y ~ dx + \pares{3yz^2 - \frac{2}{xy^2}} ~ dz + \frac{6z}{xy^3} ~ dy = 0 \) 									% * x/y -> x^2 - xz^3 + 2z/y^3 = C
+		\item \( 2x^2 y \pares{6 x^2 ~ dx + 5y^2 z ~ dz} - x^2 \pares{8 x^3 + y^3} ~ dy = 0 \) 	 														% / (y^3 x^2) -> 4x^3/y^2 - y + 5z^2 = C
+		\item \( \frac{zx}{x+y} ~ dz + \frac{z}{x+y}\pares{2y ~ dy + z ~ dx} = \frac{z}{x+y}\ln\pares{x+y} ~ dz + \frac{z^2}{(x+y)^2} \pares{dx + dy} \)	% * (x + y)/z -> xz + y^2 - z ln(x + y) = C
+		\item \( 2x^3 z^2 ~ dy - \recip{z}\pares{2x^3 + z^3} e^y ~ dz + \recip{x} \pares{x^3 + 2z^3z} e^{y} ~ dx = 2x^2 z^2 ~ dx \) 						% * e^(-y) / (x^3 z^3) -> x/z^2 -2x e^(-y) - z/x^2 = C
+		
+		\label{nonlinsys_pfaff:int_factor_hard}
+		\item \( \frac{x}{y} e^{x} ~dz + \pares{e^y + \frac{z}{y} e^x} ~ dx = \pares{1 + \recip{y}} e^y ~ dy \)	 										% * y e^(-x) -> xz - y e^(y-x) = C
+		\item \( z\tan{x} \pares{dy - z ~ dz} - 2yz^2\sec{x} \pares{z ~ dy + y ~ dz} + zy ~ dx = z ~dz \) 												% * cos(x)/z -> y sinx + z cosx - y^2 z^2 = C
+		\item \( x ~ dy + y ~ dx + \frac{1}{z} \pares{dy + x ~ dz} + \frac{\tan{z}}{z} \pares{dx - y ~ dz} = \frac{xy \sec{z}}{z \sin^2{z}} ~ dz \) 		% * z cosz -> xy cotz + x sinz + y cosz = C
+		\item \( z ~ dy + 2 \tan{y} ~ dz + \left(\frac{2}{z}\sec{y} + \frac{z}{x} \tan{y}\right) ~ dx = 0 \) 	 											% * xz cosy -> x^2 + xz^2 siny = C
+		\itemstar \( \pares{y^2 + z^2} \cdot \pares{z ~ dx - x ~ dz} = \pares{z^2 + x^2} \cdot \pares{ y ~ dz - z ~ dy } \) 									% / (z^2 + x^2) -> acot{z/x} + atan{y/z} = C
+		\itemstar \( e^{-y} \pares{\frac{dz}{z} + dx} - e^{-x-y} \pares{x^2 ~ dy + \frac{x^2y}{z} ~ dz + 2xy ~ dz} + \frac{e^{-x}}{z} ~ dy = 0 \) 			% * z e^(x + y) -> z e^x + e^y - x^2 yz = C
+		\itemstar \( z^2 \pares{x ~ dx + z ~ dz} = \pares{y ~ dz - z ~ dy} \sqrt{x^2 + z^2} \)																% /(z^2 sqrt(x^2 + z^2)) -> y/z + sqrt(x^2 + z^2) = C
+		\itemstar \( dy + dz + \frac{y+z}{x z} \pares{2z ~ dx - x ~ dz} + \frac{4z}{x} \sqrt{yz + z^2} ~ dz = 0 \)											% * x/sqrt(yz + z^2) -> x sqrt(y + z)/sqrt(z) + z^2 = C
+
+	\end{enumtasks}

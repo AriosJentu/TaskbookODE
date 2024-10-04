@@ -1,0 +1,67 @@
+\subsection{Задачи}
+
+	Свести задачу к задаче с однородными краевыми условиями, найти интегрирующий множитель и построить интегральную форму для следующих краевых задач:
+	\begin{enumtasks}
+
+		\label{bvp_green:int_factor}
+		\item \( x^2 u'' + xu' - u = 0, ~ u(-1) = -1, ~ u(1) = 1 \) % u = x; \( w = x, ~ \mu = \frac{1}{x}, ~ \pares{xu', v'} + \pares{\frac{u}{x}, v} = 0 \)
+		\item \( xu'' + \pares{x - 1} u' - u = -1, ~ u(0) = 0, ~ u(1) = 1 \) % u = x; \( w = x, ~ \mu = \frac{e^x}{x^2}, ~ \pares{\frac{e^x}{x} u', v'} + \pares{\frac{e^x}{x^2} u, v} = 0 \)
+		\item \( \pares{2x - 1} u'' - 2u' - \pares{2x - 3} u = 3x - 2x^2 - 2, ~ u(-1) = \frac{1}{e} - 1, ~ u(1) = 1 + e \) % u = x + e^x; \( w = x + e^x, ~ \mu = \frac{1}{\pares{2x - 1}^2}, ~ \pares{\frac{u'}{2x - 1}, v'} + \pares{\frac{2x - 3}{\pares{2x - 1}^2} u, v} = 0 \)
+		\item \( x^2 u'' = 2 \pares{xu' - u + 1}, ~ u(0) = 1, ~ u(1) = 1 \) % u = x^2 - x + 1; \( w = 1, ~ \mu = \frac{1}{x^4}, ~ \pares{\frac{u'}{x^2}, v'} - 2\pares{\frac{u}{x^4}, v} = -\pares{\frac{2}{x^4}, v} \)
+		\item \( x \pares{x - 4} u'' - 2 \pares{x - 2} u' + 2u = - 4, ~ u(0) = 2, ~ u(1) = 1 \) % u = x^2 - 2x + 2; \( w = 2 - x, ~ \mu = \frac{1}{x^2 \pares{x - 4}^2}, ~ \pares{\frac{u'}{x\pares{x - 4}}, v'} - 2\pares{\frac{u}{x^2 \pares{x - 4}^2}, v} = 4 \pares{\frac{1}{x^2 \pares{x - 4}^2}, v} \)
+		\item \( x \pares{x - 1} u'' + \pares{x + 1} u' - u = 3x^2, ~ u(-1) = 1, ~ u(1) = 3 \) % u = x^2 + x + 1; \( w = x + 2, ~ \mu = \frac{x - 1}{x^2}, ~ \pares{\frac{\pares{x-1}^2}{x} u', v'} + \pares{\frac{\pares{x-1}}{x^2} u, v} = \pares{\pares{3 + \frac{1}{x^2}} \pares{1 - x}, v} \)
+		\item \( u'' - 3u' \cot{x} + \pares{3 \cosec^2{x} - 2} u = 3 \cot{x} \cosec{x}, ~ u(0) = 1, ~ u\pares{\frac{\pi}{2}} = 0 \) % u = \sin{2x} + \cos{x}; \( w = \cos{x}, ~ \mu = \cosec^3{x}, ~ \pares{u' \cosec^3{x}, v'} - \pares{\pares{2 + \cos{2x}} \cdot u \cosec^5{x}, v} = 0 \)
+		\itemstar \( x \pares{x - 2} u'' - \pares{x^2 - 2} u' + 2 \pares{x - 1} u = \pares{x - 2}^2, ~ u(0) = -2, ~ u(1) = 1 - e \) % u = x^2 + x - e^x - 1; \( w = 2x - 1 - e^x, ~ \mu = \frac{e^{-x}}{x^2 \pares{x - 2}^2}, ~ \pares{\frac{e^{-x}}{x \pares{x-2}} u', v'} - 2 \pares{\frac{e^{-x} \pares{x-1}}{x^2 \pares{x - 2}^2} u, v} = \pares{\frac{e^{-x} \pares{x^2 - 2x + 2}}{x^2 \pares{x - 2}^2}, v} \)
+		\itemstar \( \pares{x e^x + 1} u'' - \pares{x + 1} u' e^x + u e^x = e^x, ~ u(0) = 2, ~ u(1) = 3 \) % u = x + 2; \( w = x + 2, ~ \mu = \frac{1}{\pares{xe^x + 1}^2}, ~ \pares{\frac{u'}{xe^x + 1}, v'} - \pares{\frac{e^x}{\pares{xe^x + 1}^2} u, v} = 0 \)
+		\itemstar \( x^2 \pares{\ln{x} - 1} u'' - x \pares{2 \ln{x} - 1} u' + 2 u \ln{x} = 2 \ln{x}, ~ u(1) = 1, ~ u(e) = 1 + e \) % u = x \ln{x} + 1; \( w = x + \ln{x}, ~ \mu = \frac{1}{x^4 \pares{\ln{x} - 1}^2}, ~ \pares{\frac{u'}{x^2 \pares{\ln{x} - 1}}, v'} - 2 \pares{\frac{\ln{x}}{x^4 \pares{\ln{x} - 1}^2} u, v} = \pares{\frac{2\ln^2{x} - 5 \ln{x} + x + 2}{x^4 \pares{\ln{x} - 1}^2}, v} \)
+
+	\end{enumtasks}
+
+	Свести задачу к задаче с однородными краевыми условиями, найти интегрирующий множитель и построить общее решение следующих краевых задач для линейных уравнений с постоянными коэффициентами с помощью функции Грина:
+	\begin{enumtasks}
+
+		\label{bvp_green:green_lifting}
+		\item \( y'' = \pares{x + 2} e^x, ~ y(0) = 1, ~ y(1) = e \) % y = 1 - x + x e^x
+		\item \( y'' - y' = 1 - 2 x, ~ y(0) = 2, ~ y(1) = e + 3 \) % y = e^x + 1 + x^2 + x
+		\item \( y'' - y = 2 e^x, ~ y(0) = 0, ~ y\pares{\ln{2}} = \ln{4} + 3 \) % y = \sinh{x} + x e^x
+		\item \( y'' - 3 y' + 2 y = 2 \cdot \pares{1 - x} e^x, ~ y(0) = 0, ~ y(1) = 2e - e^2 \) % y = \pares{x^2 + 1} \cdot e^x - e^{2x}
+		\item \( y'' - 2 y' + y = x + e^{2x} - 2, ~ y(0) = 1, ~ y(1) = 1 + e + e^2 \) % y = x \cdot \pares{e^x + 1} + e^{2x}
+		\item \( y'' - y' - 2 y = 3 e^{2x}, ~ y(0) = 1, ~ y\pares{\ln{3}} = 9 \pares{1 + \ln{3}} \) % y = \pares{x + 1} \cdot e^{2x}
+		\item \( y'' - 4 y = 4 \sinh{2 x}, ~ y(-1) = 3 \cosh{2}, ~ y(1) = 5 \cosh{2} \) % y = \pares{x + 1} \cdot \cosh{2x}
+		\item \( y'' - 4 y' + 4 y = 4 x + 2 e^{2x} - 4, ~ y(0) = 1, ~ y'(1) = 1 \) % y = \pares{x - 1}^2 e^{2x} + x
+		\item \( y'' - 2 y' + y = 2 \pares{x - 1} e^{-x}, ~ y'(-1) = 2 \cosh{1}, ~ y'(1) = - 2 e \) % y = e^x - 2x e^x + x \cosh{x}
+		\item \( y'' + y = 2 \cosh{x}, ~ y(0) = 2, ~ y\pares{\frac{\pi}{2}} = \cosh{\frac{\pi}{2}} \) % y = \cos{x} + \cosh{x}
+		\item \( y'' + y = 2 \cos{x}, ~ y(0) = -1, ~ y'\pares{\pi} = - \pi \) % y = x \sin{x} - \cos{x}
+		\item \( y'' = 2 \pares{y' - y + x}, ~ y(0) = 2, ~ y'\pares{\pi} = 1 - e^{\pi} \) % y = e^x \cos{x} + x + 1
+		
+		\label{bvp_green:green_lifting_hard}
+		\item \( y'' - 2 y' + 5 y = 10 \cos{x}, ~ y(0) + y'(0) = 3, ~ y\pares{\pi} = e^{\pi} - 2 \) % y = e^x \cos{2x} - \sin{x} + 2 \cos{x}
+		\item \( y'' - 2 y' + 5 y = 4 x e^x, ~ y(0) + y'(0) = 5, ~ y\pares{\pi} = \pares{1 + \pi} e^{\pi} \) % y = \pares{\cos{2x} + \sin{2 x} + x} e^x
+		\item \( y'' + 2 y' + 2 y = e^{-x}, ~ y'(0) = -2, ~ y\pares{\pi} - y'\pares{\pi} = 0 \) % y = \pares{\cos{x} + 1} e^{- x}
+		\item \( y'' + 4 y' + 5 y = 2 \cdot \pares{5x + 3} \cdot e^x, ~ 2y'(0) - y(0) = 9, ~ y\pares{\pi} = e^{-2\pi} + \pi e^{\pi} \) % y = e^{-2x} \sin{x} - e^{-2x} \cos{x} + xe^x
+		\item \( y'' + 2 y' + 5 y = 5 x^2 + 4 x + 2, ~ 2y'(0) - y(0) = 4, ~ y\pares{\frac{\pi}{4}} + y'\pares{\frac{\pi}{4}} = \pares{\frac{\pi}{4}}^2 + \frac{\pi}{2} \) % y = e^{-x} \sin{2x} + x^2
+		\item \( y'' + 6 y' + 13 y = 13 x + 6, ~ y(0) + y'(0) = -3, ~ y'\pares{\pi} = 1 - 5e^{-3 \pi} \) % y = e^{-3x} \cos{2x} - e^{-3x} \sin{2x} + x
+		\itemstar \( y'' + 4 y = 32 \sin{6 x} + 2 \tan^3{x} + 6 \tan{x}, ~ y(0) - y'(0) = 6, ~ 2 y\pares{\frac{\pi}{4}} + y'\pares{\frac{\pi}{4}} = 4 \) % y = \cos{2 x} - \sin{6 x} + \tan{x}
+		\itemstar \( \syst{&y'' - 6 y' + 13 y = 5 \cdot \pares{6 \sin{x} - 7 \cos{x}} e^{- x}, \\ &y\pares{-\pi} + 2 y'\pares{-\pi} = 8 e^{-3\pi} - 5 e^{\pi}, ~ y\pares{\pi} - y'\pares{\pi} = 4 \cdot \pares{e^{-\pi} - e^{3\pi}}} \) % y = 2 \cdot e^{3 x} \sin{2 x} + 2 e^{- x} \sin{x} - e^{- x} \cos{x}
+
+	\end{enumtasks}
+
+	Свести задачу к задаче с однородными краевыми условиями, найти интегрирующий множитель и построить общее решение следующих краевых задач для линейных уравнений с переменными коэффициентами с помощью функции Грина:
+	\begin{enumtasks}
+		
+		\label{bvp_green:green_linear}
+		\item \( x^2 y'' - xy' = 3 \pares{y - 1}, ~ y(-1) = 2, ~ y'(1) = 5 \) % \mu = \frac{1}{x^4}, ~ y = x^{3} + 1 - \frac{2}{x}
+		\item \( x^3 y'' + 2 x^2 y' = 2 \pares{xy - x - 1}, ~ y(-1) = -2, ~ y(1) = 2 \) % \mu = \frac{1}{x}, ~ y = x + 1 + \frac{1}{x} - \frac{1}{x^2}
+		\item \( x \pares{x + 1} y'' + \pares{x - 1} y' = y + 3x^2, ~ y'(0) = -1, ~ y(1) = 2 \) % \mu = \frac{1 + x}{x^2}, ~ y = x^2 + x - 1 + \frac{1}{x + 1}
+		\item \( x^2 \pares{\ln{x} - 1} y'' - x y' + y = \pares{2\ln{x} - 3} \cdot x^2 - 1, ~ y'(0) = 1, ~ y'(1) = 3 \) % \mu = \frac{1}{x^2 \pares{\ln{x} - 1}^2}, ~ y = x^2 + x - 1
+		\item \( x \pares{x + 1} y'' - \pares{x^2 - 2}y' = \pares{x + 2} \pares{y - 1}, ~ y(-1) = -\frac{1}{e}, ~ y(1) + y'(1) = 1 - 2e \) % \mu = \frac{xe^{-x}}{\pares{x + 1}^2}, ~ y = - e^{x} + 1 + \frac{1}{x}
+		\item \( \pares{1 - 2x} y'' + 4xy' - 4y = \pares{1 - 2x}^2 + 1, ~ y(-1) = 1 + \frac{1}{e^2}, ~ y'(0) - y(0) = 1 \) % \mu = \frac{e^{-x}}{1 - 2x}. ~ y = x^2 + e^{2x}
+		
+		\label{bvp_green:green_linear_hard}
+		\itemstar \( \syst{&2 y'' \cos^2{x} + 3y' \sin{2x} + 2 \pares{2 - \cos{2x}} y = 4 - 2 \cos{2x}, \\ &y'(0) = 0, ~ y \pares{\frac{\pi}{2}} - y' \pares{\frac{\pi}{2}} = 2} \) % \mu = \sec^3{x}, ~ y = \cos{x} + 1
+		\itemstar \( \syst{&\pares{x - \tan{x}} y'' + \pares{x y' - y} \tan{x} = \pares{x^2 - 2} \tan{x} + 2x, \\ &y(0) - y'(0) = -2, ~ y\pares{\frac{\pi}{2}} - y'\pares{\frac{\pi}{2}} = \frac{\pi^2}{4} - \frac{\pi}{2}} \) % \mu = \frac{\sec{x}}{\pares{x - \tan{x}}^2}, ~ y = x^2 + x + \sin{x}
+		\itemstar \( \syst{&\pares{2 x - 1} y'' - 2 y' + \pares{3 - 2x} y = 3x - 2x^2 - 2, \\ &2y\pares{-\ln{2}} + 2y' \pares{-\ln{2}} = 4 - 2\ln{2}, ~ y'(0) - y(0) = 1} \) % \mu = \frac{1}{\pares{2x - 1}^2}, ~ y = x + e^{x}
+		\itemstar \( \syst{&x^2 \pares{\ln{x} + 1} y'' + x \pares{2 \ln{x} + 1} y' - y = 2x \ln{x}, \\ &y(1) + 2y'(1) = 3, ~ 2y(2) - y'(2) = 4 \ln{2} + 7} \) % \mu = \frac{1}{\pares{\ln{x} + 1}^2}, ~ y = x + 2 \ln{x} + \frac{4}{x}
+
+	\end{enumtasks}
+

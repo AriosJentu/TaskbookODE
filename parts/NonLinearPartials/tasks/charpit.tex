@@ -1,0 +1,54 @@
+\subsection{Задачи}
+
+	Методом Лагранжа-Шарпи построить общее решение следующих уравнений:
+
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{charpit_lagrange:general_solution}
+			\item \( q = p^2 + 1 \) % u = C_1 x + \pares{C_1^2 + 1} y + C_2
+			\item \( q \sqrt{p - 1} = 1 \)	% u = C_1 x + \frac{y}{\sqrt{C_1 + 1}} + C_2
+			\item \( p \cosec{q} - 3q^2 = 1 \) % u = x \pares{1 + 3C_1^2} \sin{C_1} + C_1 y + C_2
+			\item \( pq - q^2 = 1 \) % u = \frac{x \pares{1 + C_1^2}}{C_1} C_1 y + C_2
+			\item \( p^2 - q^2 = 1 \) % u = x \cosh{C_1} + y \sinh{C_1} + C_2
+			\item \( pq e^x + 1 = p e^x \) % e^{-x} = t -> u = C_1 e^{-x} + \frac{\pares{C_1 + 1} y}{C_1} + C_2
+			\item \( \pares{qu^2 - 1} \sin{p} = 0 \) % u^3 = C_1 x + 3y + C_2
+			\item \( 2p = u \pares{pq - 1} \) % u - C_1^2 \ln\pares{u + C_1} = C_1^2 x + y + C_2
+			\item \( p \pares{u^2 + 1} = q^2 + p^2 \) % \arctan{u} = \frac{C_1}{C_1^2 + 1} \pares{C_1 x + y} + C_2
+			\item \( q \cos^2{u} = p^2 - q^2 \) % \pares{C_1^2 - 1} \tan{u} = C_1 x + y + C_2
+			\item \( p^2 u^2 = q^2 \pares{p - q} \) % \frac{1}{u} = \frac{C_1^2}{1 - C_1} \pares{C_1 x + y} + C_2
+			\item \( pe^{x} u = q^2 e^{2x} - p^2 \) % e^{x} = t -> \ln{u} = \frac{C_1}{1 - C_1^2} \pares{C_1 e^{x} + y} + C_2
+			\item \( pq = x^2 y^2 \) % 3C_1 u = C_1^2 x^3 + y^3 + C_2
+			\item \( p^2 x = q^2 y \) % u = C_1 \pares{\sqrt{x} + \sqrt{y}} + C_2
+			\item \( p \sin^2{y} = q^2 \cos{x} \) % u = C_1^2 \sin{x} + C_1 \cos{y} + C_2
+			\item \( q\pares{px + u} = y \) % 2C_1 ux = C_1^2 x^2 + y^2 + C_2
+			\itemstar \( yq \pares{p + u} = e^{-2x} \) % v = ue^x, t = e^x -> C_1 ue^x = C_1^2 x + \ln{y} + C_2
+			\itemdstar \( py^2 \cos^2{x} - 1 = \pares{qy + 2u}^2 y^2 \sec^2{y} \) % v = uy^2 -> uy^2 = \pares{1 + C_1^2} \tan{x} + C_1 \sin{y} + C_2
+
+			% \item \( \pares{qy + 1}^2 = py^2 \pares{px + q} \)											% y e^{u} = C_2 y - C_1 x + \frac{C_2^2}{C_1} 
+			% \item \( p + qy = px + \frac{p}{u - qy} \)													% u = C_1 xy - C_1 y + \frac{C_1 y}{C_2} + C_2
+			% \item \( py \pares{x + \frac{1}{qy + u}} + qy^2 = 1 \)										% uy = C_1 x + \frac{C_1}{C_2} + C_2 y - 1 
+			% \item \( px \pares{q + 1} = q \pares{u + y} \)												% u = C_1 C_2 x + C_1 xy + C_2 
+			% \item \( px = q \pares{y + \sqrt{u + 1 - p x}} \) 											% u = C_1 + C_2 xy + C_2 x \sqrt{C_1 + 1} 
+			% \item \( 2u = px + qy + p \sqrt{1 + \frac{q}{2\sqrt{u}}} \) 								% \sqrt{u} = C_1 x + C_2 \sqrt{C_2 + 1} + C_2 y 
+			% \item \( y \pares{2 + qy} \cos{x} = p \pares{q e^{-u} - 2y \sin{x}} \) 						% e^{-u} = C_1 C_2 + C_1 \sin{x} + C_2 y^2
+			% \item \( u^2 + \frac{p}{2qxy^2} = u \pares{px - 2qy} + 1 \) 								% u^2 = C_1 x^2 + \frac{C_1}{C_2} + \frac{C_2}{y} + 1
+
+		\end{enumtasks}
+	\end{multicols}
+
+	Методом Лагранжа-Шарпи построить общее решение следующих уравнений, и найти поверхность, удовлетворяющую условиям Коши:
+
+	\begin{enumtasks}
+
+		\label{charpit_lagrange:cauchy_problems}
+		\item \( q = 1 + \sqrt{1 - p}; \quad u \sat_{x = 0} = y, ~ u \sat_{y = 0} = x \) 														% u = x + y
+		\item \( q^4 = u^2 p^3; \quad u \sat_{x = 0} = \frac{1}{1 - y}, ~ u \sat_{y = 0} = \frac{1}{1 - x} \)									% u = 1/(1 - x - y)
+		\item \( qe^u \pares{p^2+1} = p^2 + q^2 e^{2u}; \quad u \sat_{x=1} = \ln{y}, ~ u \sat_{y=1} = \ln{x} \)									% e^u = x + y - 1
+		\item \( pq = u + 1; \quad u \sat_{x = -y} = -1, ~ u \sat_{y = 0} = \frac{x^2}{4} - 1 \) 												% 2 sqrt{1 + u} = x + y
+		\itemstar \( q^2 + u pq = u^2; \quad u \sat_{x = 0, ~ y = -1} = u \sat_{x = -1, ~ y = 0} = -1 \)											% 2 sqrt(1 + u) + 2 arctanh sqrt(1 + u) = x + y + 1
+		\itemstar \( \frac{2}{p} - \drecp{y} = \frac{2}{q} + \drecp{x}; \quad u \sat_{x=0, ~ y=2} = 4, ~ u \sat_{x=-2, ~ y=-1} = \ln{4} - 6 \)	% u = 2(x+y) + 2 ln((y-1)/(x+1))
+		\itemstar \( 2 \pares{yq - px} = q^2; \quad u \sat_{y = x} = x^2, ~ u \sat_{x=1, ~ y=1} = 1 \) 												% u = y^2
+		\itemstar \( px^2 + y = \pares{qx-1}^2; \quad u \sat_{y=1} = x - 2\ln{x}, ~ u \sat_{x=1} = 2y - 1 \)										% u = x - 2lnx - 1/x + y + y/x - 1
+		
+	\end{enumtasks}

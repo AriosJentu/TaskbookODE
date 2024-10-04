@@ -1,0 +1,45 @@
+\subsection{Задачи}
+
+	Привести следующие уравнения к обобщенному уравнению Клеро, и найти общее решение:
+
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{charpit_clauret:simple_changes}
+			\item \( u - 1 = q \cdot \pares{pq + y} + px \) 								% u = C1 x + C2 y + C1 C2 + 1
+			\item \( \pares{u - 3q^2 - qy} \cdot x^2 = \frac{p^2}{4} + \frac{px^3}{2} \) 	% u = C1 x^2 + C2 y + C1^2 + 3 C2^2
+			\item \( u = pq^2 e^{-x} + p + qy \) 											% u = C1 e^x + C2 y + C1 C2^2 
+			\item \( 2y \pares{u - p^2 - px - 1} = 2pq + q y^2 \) 							% u = C1 x + C2 y^2 + C1^2 + 2 C1 C2 + 1 
+			\item \( u = px + q - 2qe^{-y} + 3 e^{p} \) 									% u = C1 x + C2 e^y + 3 e^C1 - 2 C2
+			\item \( u - p = pe^{-x} \cos{2q} + q y \) 										% u = C1 e^x + C2 y + C1 cos{2 C2} 
+			\item \( u = 2 p^2 x^2 + px \ln{x} + qy + e^{-q} \) 							% u = C1 lnx + C2 y + 2 C1^2 + e^{-C2} 
+			\item \( u - px = \pares{qy}^p + qy \cdot \ln{y} \)								% u = C1 x + C2 lny + C2^C1
+			
+			\label{charpit_clauret:simple_changes_part2}
+			\item \( 2u = px + qy + 2 \tan{\frac{q}{2y}} + 2 \cot{\frac{p}{2x}} \) 			% u = C1 x^2 + C2 y^2 + tan{C2} + cot{C1}
+			\item \( u^{2} - 2u \pares{px + qy} = 2 qu e^{2 up} + 1 \) 						% u^2 = C1 x + C2 y + C2 e^C1 + 1 
+			\item \( u \ln{u} = p x + 2 p + q y + q \sin{\frac{p}{u}}  \) 					% lnu = C1 x + C2 y + 2 C1 + C2 sin{C1} 
+			\item \( p x + 3 q^{2} e^{u} + q y + e^{-u} \pares{\ln{p} + u} = 1 \) 			% e^u = C1 x + C2 y + 3 C2^2 + ln{C1} 
+			\itemstar \( 2x \cdot \pares{1 + e^{-u} - qy} = p x^2 + p \ln{q} + pu \) 			% e^u = C1 x^2 + C2 y + C1 ln{C2} - 1
+			\itemstar \( 1 + e^{-u}\cdot \sin qy e^u \cdot\cos p e^{u-x} = p+qy \cdot \ln{y} \)	% e^u = C1 e^x + C2 lny - sinC2 cosC1
+
+		\end{enumtasks}
+	\end{multicols}
+
+	% \pagebreak
+
+	Найти обобщенные замены $t = \varphi \pares{x, y}, ~ s = \psi \pares{x, y}, ~ v = v \pares{u, x, y}$ такие, для которых следующие уравнения примут вид обобщенного уравнения Клеро, и найти общее решение.
+
+	\begin{enumtasks}
+
+		\label{charpit_clauret:multivar_changes}
+		\item \( ux^2 + q^2 y = qpx + px^3 \) 											% u = C1 x + C2 xy + C1 C2
+		\item \( u + 2p^2 e^{-y} = q - p + 2pq e^{-y} + p \cdot \pares{x+y} + 1 \)		% u = C1 (x + y) + C2 e^y + 2 C1 C2 + 1
+		\item \( 4y^2 \pares{u - qy} = p^2 x^2 - q^2 y^2 \)								% u = C1 y/x + C2 xy - C1 C2
+		\item \( px^2 = u + px + 2qxy \) 												% ux = C1 xy + C2 y + C1 + C2
+		\itemstar \( px + 2 qy + 3 e^u \cdot \pares{px + qy} \cdot \pares{qy + 1} = 0 \) 	% ye^u = C1 x + C2 y/x + 3 C1 C2
+		\itemstar \( 2u \cdot \pares{xy -2x^2 +1} +2px^3 = px+qy +2qxy \cdot \pares{x+y} \)	% u/x = C1 y/x + C2 xy + 2 C1 + C2
+		\itemstar \( y^3 \sin{y} \cdot \pares{2u+px} = \pares{px^2 + ux - y^2 \cos{y}} \cdot \pares{px+qy-u} \) % u/y = C1 y/x + C2 cosy + C1 C2	
+		\itemstar \( e^{-y} \cdot \pares{u+px+qy} + px + qy = u \pares{y-1} - py \pares{x+y} \) % uxy = C1 x/y + C2 e^y + C1 + C2
+
+	\end{enumtasks}

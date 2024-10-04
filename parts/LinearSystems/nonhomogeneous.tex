@@ -1,0 +1,49 @@
+\section{Системы линейных неоднородных уравнений с постоянными коэффициентами}
+	
+	В данном разделе рассматривать будем системы следующего вида:
+	\[ \dot{x} = Ax + f\pares{t}, \]
+	где $A$ -- квадратная постоянная матрица $n \times n$, $f$ -- правая часть, вектор функций неоднородности уравнения. Будем полагать, что однородное решение уравнения известно в следующем виде:
+	\[ x\pares{t} = \Phi\pares{t} \cdot \vec{C}, \]
+	где $\Phi$ -- фундаментальная матрица, при этом $\dot{\Phi} = A \Phi$. Для построения общего неоднородного решения можно воспользоваться методом вариации произвольных постоянных. Положим $\vec{C} = \vec{C}\pares{t}$. Тогда общее неоднородное решение будем искать в следующем виде:
+	\[ x_{nh}\pares{t} = \Phi\pares{t} \cdot \vec{C}\pares{t}. \]
+	Найдем производную:
+	\[ \dot{x} = \dot{\Phi} \cdot \vec{C} + \Phi \cdot \dot{\vec{C}} = A \Phi \cdot \vec{C} + \Phi \cdot \dot{\vec{C}}. \]
+	Подставим в исходное неоднородное уравнение:
+	\[ A\Phi \cdot \vec{C} + \Phi \cdot \dot{\vec{C}} = A \Phi \cdot \vec{C} + f\pares{t}. \]
+	Упростим выражение, и домножим всё уравнение слева на обратную матрицу к матрице $\Phi$. При этом, $\Phi^{-1}$ существует, так как содержит в себе $n$ линейно-независимых столбцов частных однородных решений. Получим:
+	\[ \vec{\dot{C}} = \Phi^{-1} \cdot f \pares{t}. \]
+	Выпишем $k$-е уравнение системы:
+	\[ \dot{C}_k = \Phi^{-1}_{k} \cdot f \pares{t}. \]
+	Здесь $\Phi^{-1}_{k}$ -- $k$-я строка матрицы $\Phi^{-1}$. В общем случае будем полагать, что применение оператора интегрирования на вектор функций является тем же, что и применение оператора интегрирования на каждый компонент этого вектора: 
+	\[ \vec{C} \pares{t} = \int \Phi^{-1} \pares{t} \cdot \vec{f} \pares{t} ~ dt = \begin{pmatrix} \int \Phi^{-1}_1 \pares{t} \cdot f \pares{t} ~ dt \\ \vdots \\ \int \Phi^{-1}_n \pares{t} \cdot f \pares{t} ~ dt \end{pmatrix}. \]
+	Интегрируя, и переобозначая вектор-функцию, полученную в результате интегрирования за $\vec{F} \pares{t}$, получим:
+	\[ \vec{C} \pares{t} = \vec{F} \pares{t} + \vec{\tilde{C}}. \]
+	Подставляя данное выражение вместо $C\pares{t}$ в общее неоднородное решение, получим:
+	\[ x \pares{t} = \Phi \pares{t} \cdot \pares{\vec{F} \pares{t} + \vec{C}}. \]
+
+	\subsection{Примеры}
+
+		Рассмотрим следующий пример:
+		\[ \syst{\dot{x} &= 3x + 2y - \frac{2}{t}, \\ \dot{y} &= -4x - 3y + \frac{3}{t} + \ln{t}.} \]
+		Выпишем матрицу системы, и найдем ее собственные значения и собственные вектора:
+		\[ A = \begin{pmatrix} 3 & 2 \\ -4 & -3 \end{pmatrix}, ~ \lambda_1 = -1, \lambda_2 = 1, ~ \vec{v}_1 = \begin{pmatrix} -1 \\ 2 \end{pmatrix}, ~ \vec{v}_2 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}. \]
+		Выпишем жорданову форму и матрицу преобразований:
+		\[ J = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}, ~ P = \begin{pmatrix} -1 & 1 \\ 2 & -1 \end{pmatrix}. \]
+		Фундаментальная матрица принимает следующий вид:
+		\[ \Phi = Pe^{Jt} = \begin{pmatrix} -1 & 1 \\ 2 & -1 \end{pmatrix} \cdot \begin{pmatrix} e^{-t} & 0 \\ 0 & e^{t} \end{pmatrix} = \begin{pmatrix} -e^{-t} & e^{t} \\ 2e^{-t} & -e^{t} \end{pmatrix}. \]
+		Тогда общее однородное решение принимает следующий вид:
+		\[ \begin{pmatrix} x_{h} \\ y_{h} \end{pmatrix} = \Phi \cdot \vec{C} = \begin{pmatrix} -e^{-t} & e^{t} \\ 2e^{-t} & -e^{t} \end{pmatrix} \cdot \begin{pmatrix} C_1 \\ C_2 \end{pmatrix}. \]
+		Правая часть уравнения в векторной форме выглядит таким образом:
+		\[ \begin{pmatrix} f_1 \pares{t} \\ f_2 \pares{t} \end{pmatrix} = \begin{pmatrix} - \frac{2}{t} \\ \frac{3}{t} + \ln{t} \end{pmatrix} \]
+		Далее методом вариации произвольных постоянных, будем полагать, что общее неоднородное решение можно записать в следующем виде:
+		\[ \begin{pmatrix} x_{nh} \\ y_{nh} \end{pmatrix} = \begin{pmatrix} -e^{-t} & e^{t} \\ 2e^{-t} & -e^{t} \end{pmatrix} \cdot \begin{pmatrix} C_1 \pares{t} \\ C_2 \pares{t} \end{pmatrix} \]
+		Подставим общее неоднородное решение в уравнение, и выпишем систему для произвольных постоянных, согласно алгоритму. Но сначала найдем обратную матрицу для фундаментальной:
+		\[ \Phi^{-1} = \begin{pmatrix} e^{t} & e^{t} \\ 2e^{-t} & e^{-t} \end{pmatrix}. \]
+		Тогда
+		\[ \begin{pmatrix} \dot{C}_1 \pares{t} \\ \dot{C}_2 \pares{t} \end{pmatrix} = \begin{pmatrix} e^{t} & e^{t} \\ 2e^{-t} & e^{-t} \end{pmatrix} \cdot \begin{pmatrix} - \frac{2}{t} \\ \frac{3}{t} + \ln{t} \end{pmatrix} = \begin{pmatrix} \pares{\ln{t} + \frac{1}{t}} e^{t} \\ \pares{\ln{t} - \frac{1}{t}}e^{-t} \end{pmatrix}. \]
+		Интегрируя каждый компонент вектора отдельно, получим:
+		\[ \begin{pmatrix} C_1 \pares{t} \\ C_2 \pares{t} \end{pmatrix} = \begin{pmatrix} e^{t} \ln{t} + \tilde{C}_1 \\ e^{-t} \ln{t} + \tilde{C}_2 \end{pmatrix}. \]
+		Подставим полученный вектор в общее неоднородное решение:
+		\[ \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} -e^{-t} & e^{t} \\ 2e^{-t} & -e^{t} \end{pmatrix} \cdot \begin{pmatrix} e^{t} \ln{t} + C_1 \\ e^{-t} \ln{t} + C_2 \end{pmatrix} = \begin{pmatrix} -e^{-t} & e^{t} \\ 2e^{-t} & -e^{t} \end{pmatrix} \cdot \begin{pmatrix} C_1 \\ C_2 \end{pmatrix} + \begin{pmatrix} -2 \ln{t} \\ 3 \ln{t} \end{pmatrix}. \]
+		Таким образом получено решение исходного уравнения. В виде системы решение можно представим так:
+		\[ \syst{x &= -C_1 e^{-t} + C_2 e^{t} - 2 \ln{t}, \\ y &= 2C_1 e^{-t} - C_2 e^{t} + 3 \ln{t}. } \]

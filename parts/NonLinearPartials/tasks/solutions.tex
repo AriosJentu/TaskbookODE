@@ -1,0 +1,78 @@
+\subsection*{Метод Лагранжа-Шарпи}
+
+	\begin{enumsols}
+
+		% \label{sol:charpit_lagrange:general_solution}
+		\item \( u = C_1 x + \pares{C_1^2 + 1} y + C_2 \); \sfill % \( q = p^2 + 1 \)
+		\item \( C_1 u = C_1 \pares{C_1^2 - 1} x + y + C_2 \); \sfill % \( q \sqrt{p - 1} = 1 \)
+		\item \( u = x \pares{1 + 3C_1^2} \sin{C_1} + C_1 y + C_2 \); \sfill % \( p \cosec{q} - 3q^2 = 1 \)
+		\item \( C_1 u = \pares{1 + C_1^2} x + C_1^2 y + C_2 \); \sfill % \( pq - q^2 = 1 \)
+		\item \( u = x \cosh{C_1} + y \sinh{C_1} + C_2 \); \sfill % \( p^2 - q^2 = 1 \)
+		\item \( e^{-x} = t \implies C_1 u = C_1^2 e^{-x} + \pares{C_1 + 1} y + C_2 \); \sfill % \( pq e^x + 1 = p e^x \)
+		\item \( u^3 = C_1 x + 3y + C_2 \); \sfill % \( \pares{qu^2 - 1} \sin{p} = 0 \)
+		\item \( u - C_1^2 \ln\pares{u + C_1} = C_1^2 x + y + C_2 \); \sfill % \( 2p = u \pares{pq - 1} \)
+		\item \( \pares{C_1^2 + 1} \arctan{u} = C_1^2 x + C_1 y + C_2 \); \sfill % \( p \pares{u^2 + 1} = q^2 + p^2 \)
+		\item \( \pares{C_1^2 - 1} \tan{u} = C_1 x + y + C_2 \); \sfill % \( q \cos^2{u} = p^2 - q^2 \)
+		\item \( \frac{1 - C_1}{u} = C_1^3 x + C_1^2 y + C_2 \); \sfill % \( p^2 u^2 = q^2 \pares{p - q} \)
+		\item \( e^{x} = t \implies \pares{1 - C_1^2} \ln{u} = C_1^2 e^{x} + C_1 y + C_2 \); \sfill % \( pe^{x} u = q^2 e^{2x} - p^2 \)
+		\item \( 3C_1 u = C_1^2 x^3 + y^3 + C_2 \); \sfill % \( pq = x^2 y^2 \)
+		\item \( u = C_1 \pares{\sqrt{x} + \sqrt{y}} + C_2 \); \sfill % \( p^2 x = q^2 y \)
+		\item \( u = C_1^2 \sin{x} + C_1 \cos{y} + C_2 \); \sfill % \( p \sin^2{y} = q^2 \cos{x} \)
+		\item \( 2C_1 ux = C_1^2 x^2 + y^2 + C_2 \); \sfill % \( q\pares{px + u} = y \)
+		\item \( e^x = t, ~ v = ut \implies C_1 ue^x = C_1^2 x + \ln{y} + C_2 \); \sfill % \( yq \pares{p + u} = e^{-2x} \)
+		\item \( v = uy^2 \implies uy^2 = \pares{1 + C_1^2} \tan{x} + C_1 \sin{y} + C_2 \); \sfill % \( py^2 \cos^2{x} - 1 = \pares{qy + 2u}^2 y^2 \sec^2{y} \)
+
+		% \item \( y e^{u} + C_1 x = C_2 y + \frac{C_2^2}{C_1} \); \sfill % \( \pares{qy + 1}^2 = py^2 \pares{px + q} \)
+		% \item \( u + C_1 y = C_1 xy + \frac{C_1}{C_2} y + C_2 \); \sfill % \( p + qy = px + \frac{p}{u - qy} \)
+		% \item \( uy + 1 = C_1 x + \frac{C_1}{C_2} + C_2 y \); \sfill % \( py \pares{x + \frac{1}{qy + u}} + qy^2 = 1 \) 
+		% \item \( u = C_1 C_2 x + C_1 xy + C_2 \); \sfill % \( px \pares{q + 1} = q \pares{u + y} \)
+		% \item \( u = C_1 + C_2 xy + C_2 x \sqrt{C_1 + 1} \); \sfill % \( px = q \pares{y + \sqrt{u + 1 - p x}} \) 
+		% \item \( \sqrt{u} = C_1 x + C_2 \sqrt{C_2 + 1} + C_2 y \); \sfill % \( 2u = px + qy + p \sqrt{1 + \frac{q}{2\sqrt{u}}} \) 
+		% \item \( e^{-u} = C_1 C_2 + C_1 \sin{x} + C_2 y^2 \); \sfill % \( y \pares{2 + qy} \cos{x} = p \pares{q e^{-u} - 2y \sin{x}} \)
+		% \item \( u^2 = C_1 x^2 + \frac{C_1}{C_2} + \frac{C_2}{y} + 1 \); \sfill % \( u^2 + \frac{p}{2qxy^2} = u \pares{px - 2qy} + 1 \)
+
+		\label{sol:charpit_lagrange:cauchy_problems}
+		\item \( u = x + y \); \sfill % \( q = 1 + \sqrt{1 - p}; \quad u \sat_{x = 0} = y, ~ u \sat_{y = 0} = x \)
+		\item \( u = \frac{1}{1 - x - y} \); \sfill % \( q^4 = u^2 p^3; \quad u \sat_{x = 0} = \frac{1}{1 - y}, ~ u \sat_{y = 0} = \frac{1}{1 - x} \)
+		\item \( e^u = x + y - 1 \); \sfill % \( qe^u \pares{p^2+1} = p^2 + q^2 e^{2u}; \quad u \sat_{x=1} = \ln{y}, ~ u \sat_{y=1} = \ln{x} \)
+		\item \( 2 \sqrt{1 + u} = x + y \); \sfill % \( pq = u + 1; \quad u \sat_{x = -y} = -1, ~ u \sat_{y = 0} = \frac{x^2}{4} - 1 \)
+		\item \( 2 \sqrt{1 + u} + 2 \artanh{\sqrt{1 + u}} = x + y + 1 \); \sfill % \( q^2 + u pq = u^2; \quad u \sat_{x = 0, ~ y = -1} = u \sat_{x = -1, ~ y = 0} = -1 \)
+		\item \( u = 2 \pares{x + y} + 2 \ln{\frac{y-1}{x+1}} \); \sfill % \( \frac{2}{p} - \drecp{y} = \frac{2}{q} + \drecp{x}; \quad u \sat_{x=0, ~ y=2} = 4, ~ u \sat_{x=-2, ~ y=-1} = \ln{4} - 6 \)
+		\item \( u = y^2 \); \sfill % \( 2 \pares{yq - px} = q^2; \quad u \sat_{y = x} = x^2, ~ u \sat_{x=1, ~ y=1} = 1 \)
+		\item \( u = x - 2\ln{x} + \frac{y - 1}{x} + y - 1 \); \sfill % \( px^2 + y = \pares{qx-1}^2; \quad u \sat_{y=1} = x - 2\ln{x}, ~ u \sat_{x=1} = 2y - 1 \)
+		
+	\end{enumsols}
+
+\subsection*{Обобщенное уравнение Клеро}
+
+	\begin{enumsols}
+
+		% \label{sol:charpit_clauret:simple_changes}
+		\item \( u = C_1 x + C_2 y + C_1 C_2 + 1 \); \sfill % \( u - 1 = q \cdot \pares{pq + y} + px \)
+		\item \( u = C_1 x^2 + C_2 y + C_1^2 + 3 C_2^2 \); \sfill % \( \pares{u - 3q^2 - qy} \cdot x^2 = \frac{p^2}{4} + \frac{px^3}{2} \)
+		\item \( u = C_1 e^x + C_2 y + C_1 C_2^2 \); \sfill % \( u = pq^2 e^{-x} + p + qy \) 
+		\item \( u = C_1 x + C_2 y^2 + C_1^2 + 2 C_1 C_2 + 1 \); \sfill % \( 2y \pares{u - p^2 - px - 1} = 2pq + q y^2 \) 
+		\item \( u = C_1 x + C_2 e^y + 3 e^C_1 - 2 C_2 \); \sfill % \( u = px + q - 2qe^{-y} + 3 e^{p} \)
+		\item \( u = C_1 e^x + C_2 y + C_1 \cos{2 C_2}  \); \sfill % \( u - p = pe^{-x} \cos{2q} + q y \)
+		\item \( u = C_1 \ln{x} + C_2 y + 2 C_1^2 + e^{-C_2}  \); \sfill % \( u = 2 p^2 x^2 + px \ln{x} + qy + e^{-q} \)
+		\item \( u = C_1 x + C_2 \ln{y} + C_2^{C_1} \); \sfill % \( u - px = \pares{qy}^p + qy \cdot \ln{y} \)
+		
+		\label{sol:charpit_clauret:simple_changes_part2}
+		\item \( u = C_1 x^2 + C_2 y^2 + \tan{C_2} + \cot{C_1} \); \sfill % \( 2u = px + qy + 2 \tan{\frac{q}{2y}} + 2 \cot{\frac{p}{2x}} \)
+		\item \( u^2 = C_1 x + C_2 y + C_2 e^{C_1} + 1 \); \sfill % \( u^{2} - 2u \pares{px + qy} = 2 qu e^{2 up} + 1 \) 
+		\item \( \ln{u} = C_1 x + C_2 y + 2 C_1 + C_2 \sin{C_1}  \); \sfill % \( u \ln{u} = p x + 2 p + q y + q \sin{\frac{p}{u}}  \)
+		\item \( e^u = C_1 x + C_2 y + 3 C_2^2 + \ln{C_1}  \); \sfill % \( p x + 3 q^{2} e^{u} + q y + e^{-u} \pares{\ln{p} + u} = 1 \)
+		\item \( e^u = C_1 x^2 + C_2 y + C_1 \ln{C_2} - 1 \); \sfill % \( 2x \cdot \pares{1 + e^{-u} - qy} = p x^2 + p \ln{q} + pu \)
+		\item \( e^u = C_1 e^x + C_2 \ln{y} - \cos{C_1} \sin{C_2} \); \sfill % \( 1 + e^{-u}\cdot \sin qy e^u \cdot\cos p e^{u-x} = p+qy \cdot \ln{y} \)
+
+		\label{sol:charpit_clauret:multivar_changes}
+		\item \( u = C_1 x + C_2 xy + C_1 C_2 \); \sfill % \( ux^2 + q^2 y = qpx + px^3 \)
+		\item \( u = C_1 \pares{x + y} + C_2 e^y + 2 C_1 C_2 + 1 \); \sfill % \( u + 2p^2 e^{-y} = q - p + 2pq e^{-y} + p \cdot \pares{x+y} + 1 \)
+		\item \( u = C_1 \frac{y}{x} + C_2 xy - C_1 C_2 \); \sfill % \( 4y^2 \pares{u - qy} = p^2 x^2 - q^2 y^2 \)
+		\item \( ux = C_1 xy + C_2 y + C_1 + C_2 \); \sfill % \( px^2 = u + px + 2qxy \)
+		\item \( ye^u = C_1 x + C_2 \frac{y}{x} + 3 C_1 C_2 \); \sfill % \( px + 2 qy + 3 e^u \cdot \pares{px + qy} \cdot \pares{qy + 1} = 0 \)
+		\item \( \frac{u}{x} = C_1 \frac{y}{x} + C_2 xy + 2 C_1 + C_2 \); \sfill % \( 2u \cdot \pares{xy -2x^2 +1} +2px^3 = px+qy +2qxy \cdot \pares{x+y} \)
+		\item \( \frac{u}{y} = C_1 \frac{y}{x} + C_2 \cos{y} + C_1 C_2 \); \sfill % \( y^3 \sin{y} \cdot \pares{2u+px} = \pares{px^2 + ux - y^2 \cos{y}} \cdot \pares{px+qy-u} \)	
+		\item \( uxy = C_1 \frac{x}{y} + C_2 e^y + C_1 + C_2 \); \sfill % \( e^{-y} \cdot \pares{u+px+qy} + px + qy = u \pares{y-1} - py \pares{x+y} \)
+
+	\end{enumsols}

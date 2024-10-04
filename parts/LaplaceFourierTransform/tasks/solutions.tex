@@ -1,0 +1,229 @@
+% Convolution
+\subsection*{Оператор свертки}
+
+	\begin{enumsols}
+
+		\item \( t \); \sfill % \( 1 * 1 \)
+		\item \( 2t \); \sfill % \( 1 * 2 \)
+		\item \( t^2 \); \sfill % \( 2 * t \)
+		\item \( t^3 \); \sfill % \( 2t * 3t \)
+		\item \( \frac{t^4}{12} \); \sfill % \( t^2 * t \)
+		\item \( e^t - t - 1 \); \sfill % \( t * e^t \)
+		\item \( e^{2t} - e^t \); \sfill % \( e^t * e^{2t} \)
+
+		\item \( \frac{1}{2} \pares{e^t - \sin{t} - \cos{t}} \); \sfill % \( e^t * \sin{t} \)
+		\item \( \frac{t^2}{2} \pares{2\ln{t} - 3} \); \sfill % \( t * \ln{t} \)
+		\item \( \frac{e}{2} \pares{\sin(t+1) + \cos(t+1) - e^{-t} \sin{1} - e^{-t} \cos{1}} \); \sfill % \( e^{1-t} * \cos(1+t) \)
+		\item \( \frac{t\sqrt{t}}{15} \pares{4t - 10} \); \sfill % \( (1-t) * \sqrt{t} \)
+		\item \( 2 \cos{2t} - 2 \cos{3t} \); \sfill % \( 5 \sin{2t} * \cos{3t} \)
+		\item \( \cos{t} - \cosh{t} \); \sfill %\( \cosh{t} * 2 \sin(-t) \)
+		\item \( \frac{t^3}{3} \ln{3t} - \frac{11}{18}t^3 \); \sfill %\( \ln{3t} * t^2 \)
+		\item \( \frac{t^8}{280} \); \sfill %\( \left( 12 t * t^2 \right) * t^3 \)
+		\item \( \frac{1}{2} \pares{t - t\ln\pares{t^2+1} - \pares{t^2-1} \arctan{t}} \); \sfill %\( t * \arctan{t} \)
+		\item \( \sqrt{1 - t^2} + t \arcsin{t} - 1 \); \sfill %\( t * \frac{1}{\sqrt{1 - t^2}} \)
+		\item \( \frac{1}{2} \pares{\sqrt{\pi} t \erfi{t} - e^{t^2} + 1} \); \sfill %\( t * e^{t^2} \)
+
+		\item \( t \pares{2u(t) - 1} \); \sfill % \( t * \delta(t) \)
+		\item \( (t-1)^2 u(t-1) \); \sfill % \( t^2 * \delta(t-1) \)
+		\item \( \pares{2u(t) - 1} \sin{t^2} \); \sfill % \( \sin{t^2} * \delta(t) \)
+		\item \( u(t-2) \log_4\pares{2t-4} \); \sfill % \( \log_4{2t} * \delta(t-2) \)
+		\item \( -u(-t-2) \arctan(t+2) \); \sfill % \( \arctan{t} * \delta(t+2) \)
+		\item \( u(t)\pares{1 - \cos{t}} \); \sfill % \( \sin{t} * u(t) \)
+		\item \( u(t-x) \sin(x-1) \); \sfill % \( \cos{t} * u(t-1) \)
+		\item \( (t-1) \cdot u(t-1) \cdot \pares{\ln(t-1) - 1} \); \sfill % \( \ln{t} * u(t-1) \)
+		\item \( u(t-1) \sin(t-1) \); \sfill % \( \left( \cos{t} * \delta(t) \right) * u(t-1) \)
+		\item \( 0 \); \sfill % \( u(t-1) * \delta(t+2) \)
+		\item \( 0 \); \sfill % \( \ln(t+1) * \delta'(t) \)
+		\item \( 0 \); \sfill % \( \tan{t} * \delta'(t-1) \)
+
+	\end{enumsols}
+
+\subsection*{Преобразование Лапласа}
+
+	\begin{enumsols}
+
+		\item \( \frac{1}{s} \); \sfill % \( f(t) = 1 \)
+		\item \( \frac{4}{s^2} \); \sfill % \( f(t) = 4t \)
+		\item \( \frac{2}{s^3} - \frac{1}{s} \); \sfill % \( f(t) = t^2 - 1 \)
+		\item \( \frac{1}{s - 1} \); \sfill % \( f(t) = e^{t} \)
+		\item \( \frac{1}{s - 2} - \frac{24}{s^5} \); \sfill % \( f(t) = e^{2t} - t^4 \)
+		\item \( \frac{1}{s - 1} + \frac{1}{s + 1} \); \sfill % \( f(t) = e^t + e^{-t} \)
+		\item \( \frac{1}{s^2 + 1} \); \sfill % \( f(t) = \sin{t} \)
+		\item \( \frac{s}{s^2 + 4} \); \sfill % \( f(t) = \cos{2t} \)
+		\item \( \frac{1}{2} \pares{\frac{s}{s^2 + 4} + \frac{1}{s}} \); \sfill % \( f(t) = \cos^2{t} \)
+		\item \( \frac{s}{s^2 - 4} \); \sfill % \( f(t) = \cosh{2t} \)
+		\item \( \frac{1}{\pares{s + 1}^2} \); \sfill % \( f(t) = t \cdot e^{-t} \)
+		\item \( \frac{2}{\pares{s + 2}^3} \); \sfill % \( f(t) = t^2 \cdot e^{-2t} \)
+		\item \( \frac{2s}{\pares{s^2 + 4}^2} \); \sfill % \( f(t) = t \cdot \sin{2t} \)
+		\item \( \frac{1}{2} \cdot \frac{1}{s^2 + 4} \); \sfill % \( f(t) = \sin{t} \cdot \cos{t} \)
+
+		\item \( 2 \); \sfill % \( f(t) = 2\delta(t) \)
+		\item \( e^{-s} \); \sfill % \( f(t) = \delta(t-1) \)
+		\item \( \frac{1}{s} \); \sfill % \( f(t) = u(t) \)
+		\item \( \frac{e^{-s}}{s} \); \sfill % \( f(t) = u(t-1) \)
+		\item \( \frac{1}{s} \pares{e^{-s} - e^{-3s}} \); \sfill % \( f(t) = \Pi_{1,3}(t) \)
+		\item \( \frac{1}{s} \pares{e^{-s} - e^{-2s}} \); \sfill % \( f(t) = \Pi_{0,1}(t-1) \)
+		\item \( \frac{1}{s^2} \cdot \frac{1}{s - 1} \); \sfill % \( f(t) = t * e^t \)
+		\item \( \frac{1}{s-1} \cdot \frac{2}{s^2 + 4} \); \sfill % \( f(t) = e^t * \sin{2t} \)
+
+		\item \( 0 \); \sfill % \( f(t) = \delta(t) \cdot \sin{t} \)
+		\item \( \frac{s e^{-s}}{s^2 + 1} \); \sfill % \( f(t) = u(t-1) \cdot \cos(t-1) \)
+
+		\item \( \frac{\Gamma(n+1)}{s^{n+1}} \); \sfill % \( f(t) = t^n, ~ n - \const \)
+		\item \( \frac{1}{s - a} \); \sfill % \( f(t) = e^{at}, ~ a - \const \)
+		\item \( e^{-as} f(a) \); \sfill % \( f(t) \cdot \delta(t-a), ~ a - \const \)
+		\item \( \frac{1}{a} F\pares{\frac{s}{a}} \); \sfill % \( f(at), ~ a - \const \)
+		\item \( e^{-as} \int\limits_0^{\infty} e^{-st} f(t+a) ~ dt \); \sfill % \( f(t) \cdot u(t-a), ~ a - \const \)
+		\item \( -F'(s) \); \sfill % \( f(t) \cdot t \)
+		\item \( (-1)^{n} F^{(n)}(s) \); \sfill % \( f(t) \cdot t^{n}, ~ n - \const \)
+		\item \( F(s - a) \); \sfill % \( f(t) \cdot e^{at}, ~ a - \const \)
+		\item \( \int\limits_s^{\infty} F(s) ~ ds \); \sfill % \( \frac{f(t)}{t} \)
+		\item \( \idotsint\limits_s^{\infty} F(s) ~ d^n s \); \sfill % \( \frac{f(t)}{t^n}, ~ n - \const \)
+		\item \( s F(s) - f(0) \); \sfill % \( f'(t) \)
+		\item \( s^n F(s) - s^{n-1} f(0) - s^{n-2} f'(0) - \dots - f^{(n-1)}(0) \); \sfill % \( f^{(n)}(t), ~ n - \const \)
+		\item \( \frac{F(s)}{s} \); \sfill % \( \int\limits_0^t f(\tau) ~ d \tau \)
+		\item \( \frac{F(s)}{s^n} \); \sfill % \( \int\limits_0^t f(\tau) ~ d \tau \)
+		\item \( F(s) \cdot G(s) \); \sfill % \( f(t) * g(t) \)
+
+		\item \( Y(s) = \frac{C_1}{s - 1} \); \sfill % \( y' - y = 0 \)
+		\item \( Y(s) = \frac{C_1}{s} + \frac{C_2}{s - 1} \); \sfill % \( y'' - y' = 0 \)
+		\item \( Y(s) = \frac{C_1}{s - 1} + \frac{C_2}{s - 2} \); \sfill % \( y'' - 3y' + 2y = 0 \)
+		\item \( Y(s) = \frac{C_1}{s - 1} + \frac{C_2}{s + 1} \); \sfill % \( y'' - y = 0 \)
+		\item \( Y(s) = \frac{C_1s}{s^2 + 1} + \frac{C_2}{s^2 + 1} \); \sfill % \( y'' + y = 0 \)
+		\item \( Y(s) = \frac{C_1}{s - 1} + \frac{C_2}{\pares{s - 1}^2} \); \sfill % \( y'' - 2y' + y = 0 \)
+		\item \( Y(s) = \frac{C_1}{s - 1} + \frac{C_2}{s + 5} \); \sfill % \( y'' + 4y' - 5y = 0 \)
+		\item \( Y(s) = \frac{C_1 s}{\pares{s + 1}^2 + 1} + \frac{C_2}{\pares{s + 1}^2 + 1} \); \sfill % \( y'' + 2y' + 2 = 0\)
+		\item \( Y(s) = \frac{C_1 s}{\pares{s - 1}^2 + 2^2} + \frac{C_2}{\pares{s - 1}^2 + 2^2} \); \sfill % \( y'' + 2y' + 2 = 0\)
+
+		\item \( Y(s) = \frac{y(0)}{s - 1} + \frac{1}{s^3 - s^2} \); \sfill % \( y' - y = t \)
+		\item \( Y(s) = \frac{y'(0)}{s^2 - s} - \frac{y(0)}{s} + \frac{s^2 + s + 1}{s^5 - s^3} \); \sfill % \( y'' - y' = t + e^{-t} \)
+		\item \( Y(s) = \frac{4 y(0) - 2y'(0) - 1}{2\pares{s-1}} + \frac{5y'(0) - 5y(0) + 4}{5\pares{s-2}} - \frac{1}{\pares{s-1}^2} - \frac{3s + 1}{10 \pares{s^2+1}} \); \sfill % \( y'' - 3y' + 2y = e^{t} - \sin{t} \)
+		\item \( Y(s) = \frac{2 y(0) + 2y'(0) - 1}{4 \pares{s-1}} + \frac{2 y(0) - 2y'(0) + 5}{4 \pares{s+1}} + \frac{1}{2 \pares{s-1}^2} + \frac{1}{\pares{s+1}^2} \); \sfill % \( y'' - y = 2\cosh{t} + t - e^{-t} \)
+
+	\end{enumsols}
+
+\subsection*{Обратное преобразование Лапласа}
+
+	\begin{enumsols}
+
+		\item \( 1 \); \sfill % \( F(s) = \frac{1}{s} \)
+		\item \( e^{-t} \); \sfill % \( F(s) = \frac{1}{s + 1} \)
+		\item \( \delta(t) \); \sfill % \( F(s) = 1 \)
+		\item \( \delta(t-1) \); \sfill % \( F(s) = e^{-s} \)
+		\item \( t \); \sfill % \( F(s) = \frac{1}{s^2} \)
+		\item \( \sin{t} \); \sfill % \( F(s) = \frac{1}{s^2 + 1} \)
+		\item \( \sinh{t} \); \sfill % \( F(s) = \frac{1}{s^2 - 1} \)
+		\item \( \cos{t} \); \sfill % \( F(s) = \frac{s}{s^2 + 1} \)
+		\item \( t - \sin{t} \); \sfill % \( F(s) = \frac{1}{s^4 + s^2} \)
+		\item \( e^t + e^{2t} \); \sfill % \( F(s) = \frac{1}{s-1} + \frac{1}{s-2} \)
+		\item \( 2e^{-2t} \pares{3 \cos{3t} - 2 \sin{3t}} \); \sfill % \( F(s) = \frac{6s}{s^2 + 4s + 13} \)
+		\item \( \frac{1}{7} \pares{12e^{5t} -  5e^{-2t}} \); \sfill % \( F(s) = \frac{s+7}{s^2 - 3s - 10} \)
+		\item \( \frac{1}{12} \pares{5e^{2t} - \sqrt{3} \sin{\sqrt{3}t} + 7 \cos{\sqrt{3}t}} \); \sfill % \( F(s) = \frac{s^2 + 1}{s^3 - 8} \)
+		\item \( \frac{1}{\Gamma\pares{\frac{1}{2}} \sqrt{t}} \); \sfill % \( F(s) = \frac{1}{\sqrt{s}} \)
+
+		\item \( u(t-1) \); \sfill % \( F(s) = \frac{e^{-s}}{s} \)
+		\item \( u(t-1) e^{-t + 1} \); \sfill % \( F(s) = \frac{e^{-s}}{s+1} \)
+		\item \( t - (t-1) \cdot u(t-1) \); \sfill % \( F(s) = \frac{1 - e^{-s}}{s^2} \)
+		\item \( \frac{e^{-t+2}}{\sqrt{3}} \cdot u(t-2) \cdot \sin{\sqrt{3}(t-2)} \); \sfill % \( F(s) = \frac{s + 2}{\left(s^3 + 8 \right) \cdot e^{2s}} \)
+
+		\item \( \sin{t} * \sinh{t} \); \sfill % \( F(s) = \frac{1}{s^2 + 1} \cdot \frac{1}{s^2 - 1} \)
+		\item \( -t \cos{t} \); \sfill % \( F(s) = \frac{1 - s^2}{\left( 1 + s^2 \right)^2} \)
+		\item \( \sin{t} - te^{-t} \); \sfill % \( F(s) = \frac{2s}{\left( s^2 + 1 \right) \cdot \left( s + 1 \right)^2} \)
+		\item \( \bpares{2\cos(t-1) - \sin(t-1)} \cdot u(t-1) \); \sfill % \( F(s) = \frac{e^{-s} \cdot \left( 2s - 1 \right)}{s^2 + 1} \)
+		\item \( \frac{u(t-1)}{4} \pares{ e^{-t+1} + \sin{2(t-1)} - \cos{2(t-1)} } \); \sfill % \( F(s) = \frac{2e^{-s}}{s^3 + 2s^2 + 4s + 8} \)
+		\item \( \frac{1}{t} \pares{2 \cos{t} - e^{-t}} \); \sfill % \( F(s) = \ln \frac{s+1}{s^2 + 1} \)
+		\item \( \frac{1}{t} \pares{1 - e^t} \); \sfill % \( F(s) = \ln\left( 1 - \frac{1}{s} \right) \)
+		\item \( \frac{1}{t} \sin{t} \); \sfill % \( F(s) = \arctan{\frac{1}{s}} \)
+
+		\item \( C \delta(t) \); \sfill % \( F(s) = C, ~ C - \const \)
+		\item \( \frac{t^{n-1}}{\Gamma(n)} \); \sfill % \( F(s) = \frac{1}{s^n}, ~ n - \const \)
+		\item \( f(t-a) \cdot u(t-a) \); \sfill % \( F(s) \cdot e^{-as}, ~ a - \const \)
+		\item \( f(t) \cdot g(t) \); \sfill % \( F(s) \cdot G(s) \)
+		\item \( f'(t) + \delta(t) \cdot f(0) - \delta(0) \cdot f(t) \); \sfill % \( s \cdot F(s) \)
+		\item \( \int\limits_0^t f(\tau) d \tau \); \sfill % \( \frac{F(s)}{s} \)
+		\item \( -t f(t) \); \sfill % \( F'(s) \)
+		\item \( \frac{f(t)}{t} \); \sfill % \( \int\limits_{s}^{\infty} F(\sigma) ~ d\sigma \);
+
+		\item \( y = 1 + 2t + \frac{t^2}{2} \); \sfill % \( y' = t + 2, ~ y(0) = 1 \)
+		\item \( y = 3 \cos{t} - 2 \); \sfill % \( y' = 3\sin{t}, ~ y(\pi) = 3 \)
+		\item \( y = 2e^{-t} + e^{2t} \); \sfill % \( y'' - y' = 6e^{-2t}, ~ y(0) = 3, ~ y'(0) = 0 \)
+		\item \( y = t \cosh{t} \); \sfill % \( y'' - y = e^{t} - e^{-t}, ~ y(0) = 0, ~ y'(0) = 1 \)
+		\item \( y = \frac{1}{2} \pares{t^2 - t + 1} e^{-t} + \frac{1}{2} \cosh{t} \); \sfill % \( y'' + 2y' + y = 2\cosh{t}, ~ y(0) = 1, ~ y'(0) = -1 \)
+		\item \( y = (t-1)^3 + (t-2) e^{t-1} \); \sfill % \( y'' = 6t + t \cdot e^{t-1} - 6, ~ y(1) = -1, ~ y'(1) = 0 \)
+
+		\item \( y = 1 \); \sfill % \( ty' + y = 1, ~ y(1) = 1 \)
+		\item \( y = t \); \sfill % \( ty'' - ty' + y = 0, ~ y(0) = 0, ~ y'(0) = 1 \)
+		\item \( y = \cosh{t} \); \sfill % \( y'' e^t - y' e^{t} = 1, ~ y(0) = 1, ~ y'(0) = 0 \)
+		\item \( e^t = x \implies y = \pares{\sqrt{t} - 1}^2 + \sqrt{t} \ln{t} \); \sfill % \( 4t^2 y'' + y = t + 1, ~ y(1) = 0, ~ y'(1) = 1 \)
+
+		\item \( y = u(t-1) \); \sfill % \( y' = \delta(t-1), ~ y(1) = 0 \)	
+		\item \( y = \delta(t-1) \cdot u(t-1) \); \sfill % \( y' = u(t-1) \cdot \frac{d}{dt} \delta(t-1), ~ y(0) = 0 \)
+		\item \( y = \pares{t + 2t^3} e^{-t} \); \sfill % \( y'' + 2y' + y = 12t \cdot e^{-t}, ~ y(0) = 0, ~ y'(0) = 1 \)
+		\item \( y = 1 - e^{-t} \); \sfill % \( y'' + y' = e^{-t} \cdot \delta(t), ~ y(0) = y'(0) = 0 \)
+		\item \( y = \frac{1}{2} \pares{ \cos{1}\sin{t} - t \cos{t-1} } \); \sfill % \( y'' + y = \sin{t} \cdot u(t-1), ~ y(0) = y'(0) = 0 \)
+		\item \( y = \frac{1}{4} e^{-t} + \frac{1}{4} \pares{2t^2 - 2t + 11} e^t - 2 \); \sfill % \( y'' - 2y' + y = 2t * \cosh{t}, ~ y(0) = 1, ~ y'(0) = 2 \)
+		\item \( y = 2 u(t-1) (t-1)^2 \); \sfill % \( y'' + \delta(t) \cdot y' = 4u(t-1), ~ y(0) = 0, ~ y'(0) = 1 \)
+		\item \( y = (t-1) e^{2-t} - 2 \sin(t-2) + \cos(t-2) + 2t - 6 \); \sfill % \( y'' + 2\delta(t-2) \cdot y' + u(t-2) \cdot y = 2(t-2) * e^{-t+2}, ~ y(2) = 0, ~ y'(2) = -1 \)
+
+	\end{enumsols}
+
+\subsection*{Преобразование Фурье}
+	
+	Положим \( \wh = 2 \pi \omega \).
+
+	\begin{enumsols}
+
+		\item \( - i \pi \delta\pares{\wh} \); \sfill % \( f(t) = 1 \)
+		\item \( - \pi \wh \sgn{\wh} \); \sfill % \( f(t) = \frac{1}{t^2} \)
+		\item \( \pi e^{-\abs{\wh}} \); \sfill % \( f(t) = \frac{1}{1+t^2} \)
+		\item \( \frac{2}{1 + \wh^2} \); \sfill % \( f(t) = e^{-\abs{t}} \)
+		\item \( \sqrt{\pi} e^{-\frac{\wh^2}{4}} \); \sfill % \( f(t) = e^{-t^2} \)
+		\item \( \frac{1}{2} i \wh \sqrt{\pi} e^{-\frac{\wh^2}{4}} \); \sfill % \( f(t) = t e^{-t^2} \)
+
+		\item \( \frac{i^{n} \pi}{\Gamma(n)} \wh^{n-1} \sgn{\wh} \); \sfill % \( f(t) = \frac{1}{t^n}, ~ n - \const, n \neq 1 \)
+		\item \( \frac{\pi}{a} e^{-\abs{a\wh}} \cdot \sgn{a} \); \sfill % \( f(t) = \frac{1}{a^2 + t^2}, ~ a - \const \)
+		\item \( \frac{\sqrt{\pi}}{a} e^{-\frac{\wh^2}{4a^2}} \cdot \sgn{a} \); \sfill % \( f(t) = e^{-a^2 t^2}, ~ a - \const \)
+		\item \( \frac{2 \abs{a}}{a^2 + \wh^2} \); \sfill % \( f(t) = e^{-\abs{at}}, ~ a - \const \)
+		\item \( i \wh F(\omega) \); \sfill % \( f'(t) \)
+		\item \( \pares{i \wh}^{n} F(\omega) \); \sfill % \( f^{(n)}(t), ~ n - \const \)
+
+		\item \( F(\omega, t) \); \sfill % \( f(x, t) \)
+		\item \( \dpart{F}{t}(\omega, t) \); \sfill % \( \dpart{f}{t} \)
+		\item \( i \wh F(\omega, t) \); \sfill % \( \dpart{f}{x} \)
+		\item \( \dpartn{F}{t}{2}(\omega, t) \); \sfill % \( \dpartn{f}{t}{2} \)
+		\item \( -\wh^2 F(\omega, t) \); \sfill % \( \dpartn{f}{x}{2} \)
+		\item \( i \wh \dpart{F}{t}(\omega, t) \); \sfill % \( \dpartmix{f}{x}{t} \)
+
+		\item \( i \pi \bpares{ \delta\pares{\wh - 1} - \delta\pares{\wh+1} } \); \sfill % \( f(t) = \sin{t} \)
+		\item \( 2\pi \bpares{ \delta\pares{\wh - 1} + \delta\pares{\wh+1} } + i \pi \bpares{ \delta\pares{\wh - 1} - \delta\pares{\wh+1}} \); \sfill % \( f(t) = \sin{t} + 2\cos{t} \)
+		\item \( i \pi \bpares{ 2 \delta\pares{\wh + 3} - 2 \delta\pares{\wh - 3} + \delta\pares{2\wh + 1} - \delta\pares{2\wh - 1} } \); \sfill % \( f(t) = \frac{1}{2} \sin{\frac{t}{2}} - 2 \sin{3t} \)
+		\item \( 2\pi \bpares{\delta\pares{\wh - 3} + \delta\pares{\wh - 3}} + \frac{i \pi}{2} \bpares{\delta\pares{\wh - 2} - \delta\pares{\wh + 2} + 6 \delta\pares{\wh - 1} - 6 \delta\pares{\wh + 3}} \); \sfill % \( f(t) = \sin{t} \cdot \cos{t} + 2\cos{3t} - 3\sin{t} \)
+
+		\item \( 1 \); \sfill % \( f(t) = \delta(t) \)
+		\item \( \cos{\wh t} + i \sin{\wh t} \); \sfill % \( f(t) = \delta(t-1) \)
+		\item \( \frac{2}{\wh} \sin{\frac{\wh}{2}} \); \sfill % \( f(t) = \Pi_{-\frac{1}{2}, \frac{1}{2}}(t) \)
+		\item \( \frac{i}{\wh} \pares{1 - e^{i\wh}} \); \sfill % \( f(t) = \Pi_{0, 1}(t) \)
+		\item \( \pi \delta\pares{\wh} + \frac{i}{\wh} \); \sfill % \( f(t) = u(t) \)
+		\item \( \pi \delta\pares{\wh} + \frac{i}{\wh} e^{i \wh} \); \sfill % \( f(t) = u(t-1) \)
+
+		\item \( \frac{i}{\wh} \pares{1 - e^{i \wh}}^2 \); \sfill % \( f(t) = g(t) \) \[ g(t) = \left\lbrace \begin{split} &1, \quad && 0 \le t < 1, \\ &-1, \quad && 1 \le t < 2; \end{split} \right. \]
+		\item \( \frac{\pares{1 + e^{i \pi \wh}}}{1 - \wh^2} \); \sfill % \( f(t) = g(t) \) \[ g(t) = \left\lbrace \begin{split} &\sin{t}, \quad && 0 \le t < \pi, \\ &\sin{-t}, \quad && \pi \le t < 2\pi; \end{split} \right. \]
+		\item \( \pares{e^{i\wh} + 1} \cdot \pares{ \Ci{2\wh} - \Ci{\wh} + i \Si{2\wh} - i \Si{\wh} } \); \sfill % \( f(t) = g(t) \) \[ g(t) = \left\lbrace \begin{split} &\frac{1}{t+1}, \quad && 0 \le t < 1, \\ &\frac{1}{t}, \quad && 1 \le t < 2; \end{split} \right. \]
+		\item TBS \( \); \sfill % \( \Ci{2\wh} - \Ci{\wh} + i \Si{2\wh} - i \Si{\wh} + \frac{\sqrt{\pi}}{2} e^{-\frac{\wh^2}{4}} \pares{\erf\pares{1 - \frac{i\wh\phn}{2}} + \frac{i}{2} \erfi{\wh}} \); \sfill 
+		% \( f(t) = g(t) \) \[ g(t) = \left\lbrace \begin{split} &e^{-t^2}, \quad && 0 \le t < 1, \\ &\frac{1}{t}, \quad && 1 \le t < 2; \end{split} \right. \]
+
+	\end{enumsols}
+
+\subsection*{Обратное преобразование Фурье}
+
+	\begin{enumsols}
+
+		\item \( u(t, x) = \frac{1}{2} \int\limits_{-\infty}^{\infty} e^{i \wh x - \wh^2 t - \abs{\wh}} ~ d\wh \); \sfill % \( \dpart{u}{t} = \dpartn{u}{x}{2}, ~ u(0, x) = \frac{1}{1+x^2} \)
+		\item \( u(t, x) = 4 \int\limits_{-\infty}^{\infty} e^{i \wh x - 4\wh^2 t - \abs{\wh}} \cdot \frac{1}{16 \pi^2 + \wh^2} ~ d\wh \); \sfill % \( \dpart{u}{t} = 4\dpartn{u}{x}{2}, ~ u(0, x) = \frac{\pi}{2} e^{-4 \pi \abs{x}} \)
+		\item \( u(t, x) = \frac{1}{2} \int\limits_{-\infty}^{\infty} e^{i \wh x - \wh^2 t - \abs{\wh}} ~ d\wh\); \sfill % \( \dpart{u}{t} = \dpartn{u}{x}{2} + t\sin{x}, ~ u(0, x) = \sin{x} \)
+		\item \( u(t, x) = \sin{x} \cdot \pares{1 - t - \frac{1}{2} \cosh{t}} \); \sfill % \( \dpart{u}{t} = \dpartn{u}{x}{2} + \cos{x} \sin{t}, ~ u(0, x) = \delta(x) \)
+
+		\item TBS \( \); \sfill % \( \dpartn{u}{t}{2} = \dpartn{u}{x}{2}, ~ u(0, x) = \frac{1}{1+x^2}, ~ \dpart{u}{t}(0, x) = H(x) \)
+		\item TBS \( \); \sfill % \( \dpartn{u}{t}{2} = \dpartn{u}{x}{2} + \Pi_{-\pi, \pi}(x) \cdot  \left( x^2 + 1 \right), ~ u(0, x) = \delta(x), ~ \dpart{u}{t}(0, x) = 0 \)
+
+	\end{enumsols}

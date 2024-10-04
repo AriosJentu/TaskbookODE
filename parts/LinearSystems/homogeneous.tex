@@ -1,0 +1,232 @@
+\section{Системы линейных однородных уравнений с постоянными коэффициентами}
+
+	В данном разделе будем рассматривать системы линейных уравнений вида:
+	\[ 
+		\dot{\vec{x}} = A \pares{t} \cdot \vec{x} + \vec{f}\pares{t}, ~ 
+		\vec{x} = \begin{pmatrix} x_1 \pares{t} \\ \vdots \\ x_n \pares{t} \end{pmatrix},
+		A \pares{t} = \begin{pmatrix} a_{11} \pares{t} & \cdots & a_{1n} \pares{t} \\ \vdots & \ddots & \vdots \\ a_{n1} \pares{t} & \cdots & a_{nn} \pares{t} \end{pmatrix}, ~
+		\vec{f} \pares{t} = \begin{pmatrix} f_1 \pares{t} \\ \vdots \\ f_n \pares{t} \end{pmatrix}.
+	\]
+	Здесь $\vec{x}$ -- вектор искомых функций, $A \pares{t}$ -- квадратная матрица размерности $n \times n$, $\vec{f} \pares{t}$ -- вектор функций неоднородности уравнения. Для систем линейных уравнений можно определить характеристику по следующим условиям:
+	\begin{enumerate}
+		\item Если \( \vec{f}\pares{t} = \vec{0} \) -- уравнение является однородным, иначе -- неоднородное;
+		\item Если \( A_{n \times n} - \const \) -- система является системой уравнений с постоянными коэффициентами. Если матрица в явном виде зависит от $t$ -- система является системой уравнений с переменными коэффициентами.
+	\end{enumerate}
+	В дальнейшем будем рассматривать системы линейных уравнений с вещественными постоянными коэффициентами:
+	\[ \dot{x} = A x + f\pares{t}. \]
+	Как и в случае линейных уравнений первого порядка, для построения общего решения необходимо согласно принципу суперпозиции найти все частные однородные решения, затем частное неоднородное решение, и сложить их:
+	\[ x = \sum_{k = 1}^n C_k x_k + x_p. \]
+	Общее однородное решение уравнения с постоянными коэффициентами возможно представить следующим образом:
+	\[ x\pares{t} = e^{At} \cdot \vec{C}. \]
+	Здесь $e^{At}$ -- фундаментальная матрица. Производная такой матричной функции выносит матрицу $A$ как сомножитель:
+	\[ \dot{x} = A \cdot e^{At} \cdot \vec{C} = A x, \]
+	что удовлетворяет однородному уравнению, а значит является однородным решением.
+
+	Положим, что матрицу $A$ можно разложить по собственным значениям и собственным векторам:
+	\[ A = PJP^{-1}, \]
+	где $J$ -- матрица жордановой формы, $P$ -- матрица преобразования. Тогда, проведем замену в уравнении:
+	\[ \dot{x} = PJP^{-1} x + f\pares{t}. \]
+	Домножим всё уравнение на $P^{-1}$ слева, и сделаем замену $y = P^{-1} x$, $g = P^{-1} f$. Тогда $\dot{y} = P^{-1} \dot{x}$ в силу постоянности матрицы $P$, и уравнение принимает следующий вид:
+	\[ \dot{y} = J y + g\pares{t}. \]
+	Матрица $J$ является обобщенной блочно-диагональной матрицей, блоки которой могут быть представлены матрицами следующего вида:
+	\[ 
+		J^{l \times l}_{p} = \begin{pmatrix} 
+			\lambda_1 & 0 & \cdots & 0 & 0 \\ 
+			0 & \lambda_2 & \cdots & 0 & 0 \\ 
+			\vdots & \vdots & \ddots & \vdots & \vdots \\ 
+			0 & 0 & \cdots & \lambda_{l-1} & 0 \\ 
+			0 & 0 & \cdots & 0 & \lambda_l 
+		\end{pmatrix}, ~ J^{l \times l}_{d} = \begin{pmatrix}
+			\lambda & 1 & 0 & \cdots & 0 & 0 \\
+			0 & \lambda & 1 & \cdots & 0 & 0 \\
+			0 & 0 & \lambda & \cdots & 0 & 0 \\
+			\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+			0 & 0 & 0 & \cdots & \lambda & 1 \\
+			0 & 0 & 0 & \cdots & 0 & \lambda
+		\end{pmatrix}, ~ J^{2 \times 2}_{c} = \begin{pmatrix}
+			\alpha & -\beta \\
+			\beta & \alpha
+		\end{pmatrix}
+	\]
+	и матрица $J$ представима в виде таких блоков:
+	\[ J = \begin{pmatrix} 
+		J_1 & 0 & 0 & \cdots & 0 & 0 \\ 
+		0 & J_2 & 0 & \cdots & 0 & 0 \\ 
+		0 & 0 & J_3 & \cdots & 0 & 0 \\ 
+		\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+		0 & 0 & 0 & \cdots & J_{k-1} & 0 \\ 
+		0 & 0 & 0 & \cdots & 0 & J_{k} 
+	\end{pmatrix} \]
+	при чем $\dim{J} = \sum_{m = 1}^k \dim{J_m} = n \times n$. Общее однородное решение уравнения представимо в виде:
+	\[ y = e^{Jt} \cdot \vec{C}. \]
+	Для построения общего однородного решения в явном виде, необходимо построить фундаментальную матрицу $e^{Jt}$. Разложим функцию $e^{z}$ в ряд Маклорена:
+	\[ e^{z} = \sum_{m = 0}^{\infty} \frac{z^m}{m!} = 1 + z + \frac{z^2}{2!} + \cdots. \]
+	Область сходимости этого ряда $z \in \mathbb{R}$, но можно показать, что данный ряд справедлив и для $z \in \mathbb{C}$. Подставим вместо $z$ матричное выражение $Jt$. Тогда:
+	\[ e^{Jt} = \sum_{m = 1}^{\infty} J^m \cdot \frac{t^m}{m!} = \begin{pmatrix} 
+		\sum\limits_{m = 1}^{\infty} J^m_1 \cdot \frac{t^m}{m!} & \cdots & 0 \\ 
+		\vdots & \ddots & \vdots \\
+		0 & \cdots & \sum\limits_{m = 1}^{\infty} J^m_k \cdot \frac{t^m}{m!}
+	\end{pmatrix} = \begin{pmatrix} 
+		e^{J_1 t} & 0 & \cdots & 0 & 0 \\
+		0 & e^{J_2 t} & \cdots & 0 & 0 \\
+		\vdots & \vdots & \ddots & \vdots & \vdots \\
+		0 & 0 & \cdots & e^{J_{k-1} t} & 0 \\
+		0 & 0 & \cdots & 0 & e^{J_k t} \\
+	\end{pmatrix}. \]
+	Выпишем каждый случай отдельно:
+	\begin{enumerate}
+		\item Вещественные простые собственные значения (случай матрицы $J^{l \times l}_p$):
+		\[ e^{J^{l \times l}_p t} = \begin{pmatrix} 
+			e^{\lambda_1 t} & 0 & \cdots & 0 & 0 \\ 
+			0 & e^{\lambda_2 t} & \cdots & 0 & 0 \\ 
+			\vdots & \vdots & \ddots & \vdots & \vdots \\ 
+			0 & 0 & \cdots & e^{\lambda_{l-1} t} & 0 \\ 
+			0 & 0 & \cdots & 0 & e^{\lambda_l t} 
+		\end{pmatrix}; \]
+		\item Вещественные кратные собственные значения (случай матрицы $J^{l \times l}_d$):
+		\[ e^{J^{l \times l}_d t} = \begin{pmatrix} 
+			e^{\lambda t} & \frac{t}{1!} e^{\lambda t} & \cdots & \frac{t^{l-2}}{(l-2)!} e^{\lambda t} & \frac{t^{l-1}}{(l-1)!} e^{\lambda t} \\ 
+			0 & e^{\lambda t} & \cdots & \frac{t^{l-3}}{(l-3)!} e^{\lambda t} & \frac{t^{l-2}}{(l-2)!} e^{\lambda t} \\ 
+			\vdots & \vdots & \ddots & \vdots & \vdots \\ 
+			0 & 0 & \cdots & e^{\lambda t} & \frac{t}{1!} e^{\lambda t} \\ 
+			0 & 0 & \cdots & 0 & e^{\lambda t} 
+		\end{pmatrix}; \]
+		\item Комплексно-сопряженные собственные значения (случай обобщенной матрицы $J^{2 \times 2}_c$):
+		\[ e^{J^{2 \times 2}_c t} = \begin{pmatrix} 
+			e^{\alpha t} \cos{\beta t} & -e^{\alpha t} \sin{\beta t} \\ 
+			e^{\alpha t} \sin{\beta t} & e^{\alpha t} \cos{\beta t}
+		\end{pmatrix}. \]
+	\end{enumerate}
+
+	Общее однородное решение исходного уравнения тогда можно представить в следующем виде:
+	\[ x = Py = P \cdot e^{Jt} \cdot \vec{C}, \]
+	где $P$ -- матрица преобразования.
+
+	С другой стороны, общее решение можно составить на основе собственных векторов и собственных значений матрицы $A$. Положим, что $\vec{v}_k$ -- собственный вектор для собственного значения $\lambda_k$. Тогда рассмотрим все возможные случаи общего решения:
+	\begin{enumerate}
+		\item Вещественные простые собственные значения $\lambda_1 \neq \lambda_2 \neq \cdots \neq \lambda_n$:
+		\[ x = \sum_{k = 1}^n C_k \vec{v}_k \cdot e^{\lambda_k t} = C_1 \vec{v}_1 e^{\lambda_1 t} + \cdots + C_n \vec{v}_n e^{\lambda_n t}; \]
+		\item Вещественные собственные значения кратности $p \leq n$, линейно-зависимые -- $\lambda_1 = \lambda_2 = \dots = \lambda_p \neq \lambda_{p+1} \neq \cdots \lambda_n$:
+		\[ \begin{split} 
+			x &= \sum_{k = 1}^p C_k \pares{\sum_{i = 1}^{k} \vec{v}_i \frac{t^{k-i}}{\pares{k-i}!}} e^{\lambda_k t} + \sum_{k = p+1}^{n} C_k \vec{v}_k e^{\lambda_k t} = \\
+			&= C_1 \vec{v}_1 e^{\lambda_1 t} + C_2 \pares{\vec{v}_1 t + \vec{v}_2} e^{\lambda_2 t} + C_3 \pares{\vec{v}_1 \frac{t^2}{2!} + \vec{v}_2 t + \vec{v}_3} e^{\lambda_3 t} + \cdots + C_{p+1} \vec{v}_{p+1} e^{\lambda_{p+1} t} + \cdots
+		\end{split}; \]
+		\item Комплексно-сопряженные собственные значения $\lambda_{1, 2} = \alpha \pm i \beta$:
+		\[ x = C_1 e^{\alpha t} \Ren\pares{\vec{v}_1 e^{i\beta t}} + C_2 e^{\alpha t} \Imn\pares{\vec{v}_1 e^{i\beta t}}. \]
+	\end{enumerate}
+
+	\subsection*{Замечание}
+	% Стоит заметить, что для комплексно-сопряженных собственных значений в случае нормальной жордановой формы:
+	% \[ \tilde{J}^{2 \times 2}_c = \begin{pmatrix} \alpha - i \beta & 0 \\ 0 & \alpha + i \beta \end{pmatrix}, \]
+	% построить вещественное решение возможно путем преобразования над произвольными постоянными:
+	% \[ x = C_1 e^{\alpha t} \Ren\pares{\vec{v}_1 \cdot e^{i\beta t}} + C_2 e^{\alpha t} \Imn\pares{\vec{v}_1 \cdot e^{i\beta t}}, \]
+	% где $\vec{v}_1$ -- собственный вектор матрицы $A$ для собственного значения $\lambda = \alpha + i \beta$.
+
+	Для представления $A = P J^{2 \times 2}_c P^{-1}$, матрица $P$ строится следующим образом:
+	\[ P = \begin{pmatrix} \vec{v}_1 & \vec{v}_2 \end{pmatrix} \cdot \begin{pmatrix} -\frac{i}{2} & \frac{1}{2} \\ \frac{i}{2} & \frac{1}{2} \end{pmatrix}, \]
+	где $\vec{v}_1$ -- собственный вектор-столбец, отвечающий за собственное значение $\alpha + i \beta$, а $\vec{v}_2$ -- комплексно-сопряженный собственный вектор.
+
+
+	% Найдем выражение для $J^m$:
+	% \[ J^m = \begin{pmatrix} 
+	% 	J_1 & 0 & \cdots & 0 & 0 \\ 
+	% 	0 & J_2 & \cdots & 0 & 0 \\ 
+	% 	\vdots & \vdots & \ddots & \vdots & \vdots \\
+	% 	0 & 0 & \cdots & J_{k-1} & 0 \\ 
+	% 	0 & 0 & \cdots & 0 & J_{k} 
+	% \end{pmatrix}^m = \begin{pmatrix} 
+	% 	J_1^m & 0 & \cdots & 0 & 0 \\ 
+	% 	0 & J_2^m & \cdots & 0 & 0 \\ 
+	% 	\vdots & \vdots & \ddots & \vdots & \vdots \\
+	% 	0 & 0 & \cdots & J_{k-1}^m & 0 \\ 
+	% 	0 & 0 & \cdots & 0 & J_{k}^m 
+	% \end{pmatrix}. \]
+	% Для матрицы $J^{l \times l}_p$ -- случай простых собственных значений, степенное выражение выглядит следующим образом:
+	% \[ \pares{J^{l \times l}_p}^m = \begin{pmatrix} 
+	% 	\lambda_1 & 0 & \cdots & 0 & 0 \\ 
+	% 	0 & \lambda_2 & \cdots & 0 & 0 \\ 
+	% 	\vdots & \vdots & \ddots & \vdots & \vdots \\ 
+	% 	0 & 0 & \cdots & \lambda_{l-1} & 0 \\ 
+	% 	0 & 0 & \cdots & 0 & \lambda_l 
+	% \end{pmatrix}^m = \begin{pmatrix} 
+	% 	\lambda_1^m & 0 & \cdots & 0 & 0 \\ 
+	% 	0 & \lambda_2^m & \cdots & 0 & 0 \\ 
+	% 	\vdots & \vdots & \ddots & \vdots & \vdots \\ 
+	% 	0 & 0 & \cdots & \lambda_{l-1}^m & 0 \\ 
+	% 	0 & 0 & \cdots & 0 & \lambda_l^m 
+	% \end{pmatrix}. \]
+	% Для матрицы $J^{l \times l}_d$ -- случай кратных собственных значений, степенное выражение выглядит следующим образом:
+	% \[ \pares{J^{l \times l}_d}^m = 
+	% % \begin{pmatrix} 
+	% % 	\lambda & 1 & 0 & \cdots & 0 & 0 \\ 
+	% % 	0 & \lambda & 1 & \cdots & 0 & 0 \\ 
+	% % 	0 & 0 & \lambda & \cdots & 0 & 0 \\ 
+	% % 	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 
+	% % 	0 & 0 & 0 & \cdots & \lambda & 1 \\ 
+	% % 	0 & 0 & 0 & \cdots & 0 & \lambda
+	% % \end{pmatrix}^m = 
+	% \begin{pmatrix} 
+	% 	\lambda^{m} & \frac{m!}{1! \pares{m-1}!} \lambda^{m-1} & \frac{m!}{2! \pares{m-2}!} \lambda^{m-2} & \cdots & \frac{m!}{(l-2)! \pares{m-l+2}!} \lambda^{m-(l-2)} & \frac{m!}{(l-1)! \pares{m-l+1}!} \lambda^{m-(l-1)} \\
+	% 	0 & \lambda^{m} & \frac{m!}{1! \pares{m-1}!} \lambda^{m-1} & \cdots & \frac{m!}{(l-3)! \pares{m-l+3}!} \lambda^{m-(l-3)} & \frac{m!}{(l-2)! \pares{m-l+2}!} \lambda^{m-(l-2)} \\
+	% 	0 & 0 & \lambda^{m} & \cdots & \frac{m!}{(l-4)! \pares{m-l+4}!} \lambda^{m-(l-4)} & \frac{m!}{(l-3)! \pares{m-l+3}!} \lambda^{m-(l-3)} \\
+	% 	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 
+	% 	0 & 0 & 0 & \cdots & \lambda^m & \frac{m!}{1! \pares{m-1}!} \lambda^{m-1} \\ 
+	% 	0 & 0 & 0 & \cdots & 0 & \lambda^m
+	% \end{pmatrix}. \]
+
+	\subsection{Примеры}
+
+		Рассмотрим пример:
+		\[ \syst{\dot{x} &= 5x + 4y,\\ \dot{y} &= -9x - 7y.} \]
+		Выпишем матрицу данной системы:
+		\[ A = \begin{pmatrix} 5 & 4 \\ -9 & -7 \end{pmatrix}. \]
+		Найдем ее собственные значения и собственные вектора:
+		\[ \det\abs{A - \lambda I} = \begin{vmatrix} 5 - \lambda & 4 \\ -9 & -7 - \lambda \end{vmatrix} = \lambda^2 + 2\lambda + 1 = 0 ~ \implies \lambda_{1, 2} = -1. \]
+		Данные собственные значения являются кратными, и $\rank\pares{A-\lambda_1 I} = 1$, тогда число линейно-независимых векторов: $2 - 1 = 1$. Таким образом, данные собственные значения линейно-зависимы. Построим первый ненулевой собственный вектор:
+		\[ \lambda_1 = -1: ~ \begin{pmatrix} 6 & 4 \\ -9 & -6 \end{pmatrix} \cdot \vec{v}_1 = \vec{0} \implies \vec{v}_1 = \begin{pmatrix} 2 \\ -3 \end{pmatrix}. \]
+		Найдем второй собственный вектор. Так как в системе возможно выделить всего один линейно-независимый собственный вектор, то второй является присоединенным к первому:
+		\[ \lambda_2 = -1: ~ \begin{pmatrix} 6 & 4 \\ -9 & -6 \end{pmatrix} \cdot \vec{v}_2 = \vec{v}_1 \implies \vec{v}_2 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}. \]
+		Запишем общее решение уравнения:
+		\[ \begin{pmatrix} x \\ y \end{pmatrix} = C_1 \begin{pmatrix} 2 \\ -3 \end{pmatrix} e^{-t} + C_2 \bracks{\begin{pmatrix} 2 \\ -3 \end{pmatrix} t + \begin{pmatrix} 1 \\ -1 \end{pmatrix}} e^{-t}. \]
+		Посмотрим, как выглядят жорданова форма решения и матрица преобразования. Так как $\vec{v}_1$ является единственным линейно-независимым вектором, а $\vec{v}_2$ построен на основе первого, то в жордановой форме справа от первого собственного значения появляется число $1$. Матрица преобразования строится по такому принципу -- в столбцах будут расположены собственные вектора в порядке возрастания зависимости. Тогда матрицы имеют следующий вид:
+		\[ J = \begin{pmatrix} -1 & 1 \\ 0 & -1 \end{pmatrix}, ~ P = \begin{pmatrix} 2 & 1 \\ -3 & -1 \end{pmatrix}. \]
+		Если перемножить $PJP^{-1}$, то получится в точности матрица $A$. Тогда в матричной форме, согласно случаю кратных собственных значений, решение можно записать так:
+		\[ \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 2 & 1 \\ -3 & -1 \end{pmatrix} \cdot \begin{pmatrix} e^{-t} & t e^{-t} \\ 0 & e^{-t} \end{pmatrix} \cdot \begin{pmatrix} C_1 \\ C_2 \end{pmatrix}. \]
+
+		Рассмотрим другой пример:
+		\[ \syst{\dot{x} &= 5x - 2y,\\ \dot{y} &= 5x - y.} \]
+		Выпишем матрицу данной системы:
+		\[ A = \begin{pmatrix} 5 & -2 \\ 5 & -1 \end{pmatrix}. \]
+		Найдем ее собственные значения и собственные вектора:
+		\[ \det\abs{A - \lambda I} = \begin{vmatrix} 5 - \lambda & -2 \\ 5 & -1 - \lambda \end{vmatrix} = \lambda^2 - 4 \lambda + 5 = 0 ~ \implies \lambda_{1, 2} = 2 \pm i. \]
+		В результате собственные значения представляют собой комплексно-сопряженную пару. Найдем первый собственный вектор:
+		\[ \lambda_1 = 2 + i: ~ \begin{pmatrix} 3 - i & -2 \\ 5 & -3 - i \end{pmatrix} \cdot \vec{v}_1 = \vec{0} \implies \vec{v}_1 = \begin{pmatrix} 3 + i \\ 5 \end{pmatrix}, ~ \vec{v}_2 = \begin{pmatrix} 3 - i \\ 5 \end{pmatrix}. \]
+		Распишем общее решение:
+		\[ \begin{split} 
+			\begin{pmatrix} x \\ y \end{pmatrix} &= C_1 \begin{pmatrix} 3 + i \\ 5 \end{pmatrix} e^{2t} \pares{\cos{t} + i \sin{t}} + C_2 \begin{pmatrix} 3 - i \\ 5 \end{pmatrix} e^{2t} \pares{\cos{t} - i \sin{t}} = \\ 
+			&= \begin{pmatrix} 3C_1 \cos{t} - C_1 \sin{t} + 3C_2 \cos{t} - C_2 \sin{t} + i \pares{C_1 \cos{t} + 3 C_1 \sin{t} - C_2 \cos{t} - 3C_2 \sin{t} } \\ 5C_1 \cos{t} + 5C_2 \cos{t} + i \pares{5C_1 \sin{t} - 5C_2 \sin{t}} \end{pmatrix} e^{2t} = \\
+			&= \begin{pmatrix} \pares{3C_1 + 3C_2 + iC_1 - iC_2} \cos{t} + \pares{-C_1 - C_2 + 3i C_1 - 3iC_2} \sin{t} \\ \pares{5C_1 + 5C_2} \cos{t} + \pares{5iC_1 - 5iC_2} \sin{t} \end{pmatrix} e^{2t} = \star
+		\end{split} \]
+		В силу произвольности постоянных, сделаем переобозначение \( \tilde{C}_1 = C_1 + C_2, ~ \tilde{C}_2 = iC_1 - iC_2 \):
+		\[ \star = \begin{pmatrix} \pares{3\tilde{C}_1 + \tilde{C}_2} \cos{t} + \pares{-\tilde{C}_1 + 3\tilde{C}_2} \sin{t} \\ 5\tilde{C}_1 \cos{t} + 5\tilde{C}_2 \sin{t} \end{pmatrix} e^{2t} = \tilde{C}_1 \begin{pmatrix} 3\cos{t} - \sin{t} \\5 \cos{t} \end{pmatrix} e^{2t} + \tilde{C}_2 \begin{pmatrix} 3\sin{t} + \cos{t} \\5 \sin{t} \end{pmatrix} e^{2t}. \]
+		При этом:
+		\[ \Ren\bracks{\begin{pmatrix} 3 + i \\ 5 \end{pmatrix} e^{it}} = \begin{pmatrix} 3\cos{t} - \sin{t} \\5 \cos{t} \end{pmatrix}, ~ \Imn\bracks{\begin{pmatrix} 3 + i \\ 5 \end{pmatrix} e^{it}} = \begin{pmatrix} 3\sin{t} + \cos{t} \\5 \sin{t} \end{pmatrix}. \]
+		Аналогично, построим жорданову форму и матрицу преобразования матрицы $A$. Для этого воспользуемся замечанием:
+		\[ P = \begin{pmatrix} 3 + i & 3 - i \\ 5 & 5 \end{pmatrix} \cdot \begin{pmatrix} -\frac{i}{2} & \frac{1}{2} \\ \frac{i}{2} & \frac{1}{2} \end{pmatrix} = \begin{pmatrix} 1 & 3 \\ 0 & 5 \end{pmatrix}, ~ J = \begin{pmatrix} 2 & -1 \\ 1 & 2 \end{pmatrix}. \]
+		При этом, $PJP^{-1} = A$. Таким образом, общее решение можно записать в следующем виде:
+		\[ \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 1 & 3 \\ 0 & 5 \end{pmatrix} \cdot \begin{pmatrix} e^{2t}\cos{t} & -e^{2t}\sin{t} \\ e^{2t}\sin{t} & e^{2t}\cos{t} \end{pmatrix} \cdot \begin{pmatrix} C_1 \\ C_2 \end{pmatrix}. \]
+
+		Рассмотрим последний пример:
+		\[ \syst{\dot{x} &= y, \\ \dot{y} &= -4x + 4y, \\ \dot{z} &= -2x + y + 2z.} \]
+		Выпишем матрицу данной системы:
+		\[ A = \begin{pmatrix} 0 & 1 & 0 \\ -4 & 4 & 0 \\ -2 & 1 & 2 \end{pmatrix}. \]
+		Для данной матрицы $\lambda_{1, 2, 3} = 2$. Построим собственные вектора:
+		\[ \lambda_1 = 2: ~ \begin{pmatrix} -2 & 1 & 0 \\ -4 & 2 & 0 \\ -2 & 1 & 0 \end{pmatrix} \vec{v}_1 = \vec{0} \implies \vec{v}_1 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}, ~ \vec{v}_2 = \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix}. \]
+		В данной системе существует два линейно-независимых собственых вектора: \( \rank\pares{A - \lambda_1 I} = 1, ~ 3 - 1 = 2 \). Соответственно, третий собственный вектор должен быть построен на основе предыдущего. Но в данном случае, невозможно построить третий вектор на основе или первого или второго. Но можно построить на основе вектора $\vec{v}_1 + \vec{v}_2 = \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix}$. Тогда переобозначим $\vec{\tilde{v}}_2 = \vec{v}_1 + \vec{v}_2$, и найдем присоединенный собственный вектор:
+		\[ \lambda_1 = 2: ~ \begin{pmatrix} -2 & 1 & 0 \\ -4 & 2 & 0 \\ -2 & 1 & 0 \end{pmatrix} \vec{v}_3 = \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} \implies \vec{v}_3 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}. \]
+		Построим жорданову форму и матрицу преобразования:
+		\[ J = \begin{pmatrix} 2 & 0 & 0 \\ 0 & 2 & 1 \\ 0 & 0 & 2 \end{pmatrix}, ~ P = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 2 & 1 \\ 1 & 1 & 0 \end{pmatrix}. \]
+		А общее решение принимает вид:
+		\[ \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 2 & 1 \\ 1 & 1 & 0 \end{pmatrix} \cdot \begin{pmatrix} e^{2t} & 0 & 0 \\ 0 & e^{2t} & te^{2t} \\ 0 & 0 & e^{2t} \end{pmatrix} \cdot \begin{pmatrix} C_1 \\ C_2 \\ C_3 \end{pmatrix}, \]
+		или, в другой форме:
+		\[ \begin{pmatrix} x \\ y \\ z \end{pmatrix} = C_1 \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} e^{2t} + C_2 \bracks{\begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} t + \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}} e^{2t} + C_3 \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} e^{2t}. \]

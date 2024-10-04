@@ -1,0 +1,60 @@
+\let\div\relax
+\let\vec\relax
+
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arcoth}{arcoth}
+\DeclareMathOperator{\St}{S}
+\DeclareMathOperator{\Ct}{C}
+\DeclareMathOperator{\Si}{Si}
+\DeclareMathOperator{\Ci}{Ci}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\erfi}{erfi}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\div}{div}
+\DeclareMathOperator{\Ren}{Re}
+\DeclareMathOperator{\Imn}{Im}
+\DeclareMathOperator{\rank}{rank}
+
+\newcommand{\Laplace}[1]{ \mathscr{L} \left\lbrace {#1} \right\rbrace }
+\newcommand{\LaplaceS}[2]{ \Laplace{#1} \left( #2 \right) }
+\newcommand{\InvLaplace}[1]{ \mathscr{L}^{-1} \left\lbrace {#1} \right\rbrace }
+\newcommand{\InvLaplaceS}[2]{ \InvLaplace{#1} \left( #2 \right) }
+
+\newcommand{\Fourier}[1]{ \mathscr{F} \left\lbrace {#1} \right\rbrace }
+\newcommand{\FourierRe}[1]{ \mathscr{F}_{\Re} \left\lbrace {#1} \right\rbrace }
+\newcommand{\FourierIm}[1]{ \mathscr{F}_{\Im} \left\lbrace {#1} \right\rbrace }
+\newcommand{\FourierS}[2]{ \Fourier{#1} \left( #2 \right) }
+\newcommand{\FourierWRT}[2]{ \mathscr{F}_{#2} \left\lbrace {#1} \right\rbrace }
+\newcommand{\InvFourier}[1]{ \mathscr{F}^{-1} \left\lbrace {#1} \right\rbrace }
+\newcommand{\InvFourierS}[2]{ \InvFourier{#1} \left( #2 \right) }
+
+\newcommand{\abs}[1]{ \left\vert #1 \right\vert }
+\newcommand{\norm}[1]{ \left\Vert #1 \right\Vert }
+\newcommand{\difft}[2]{ \dfrac{d #1}{d #2} }
+\newcommand{\diffn}[3]{ \dfrac{d^{#3} #1}{d #2^{#3}} }
+\newcommand{\dpart}[2]{ \dfrac{\partial #1}{\partial #2} }
+\newcommand{\dpartmix}[3]{ \dfrac{\partial^2 #1}{\partial #2 \partial #3} }
+\newcommand{\dpartn}[3]{ \dfrac{\partial^{#3} #1}{\partial #2^{#3}} }
+\newcommand{\at}{\Biggl\vert \Biggr.}
+\newcommand{\sat}{\Bigl\vert \Bigr.}
+\newcommand{\pares}[1]{ \left( #1 \right) }
+\newcommand{\bracks}[1]{ \left[ #1 \right] }
+\newcommand{\bracs}[1]{ \left\lbrace #1 \right\rbrace }
+\newcommand{\bpares}[1]{ \bigl( #1 \bigr) }
+\newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\drecp}[1]{\dfrac{1}{#1}}
+
+\newcommand{\vp}{\varphi}
+\newcommand{\wh}{\hat{\omega}}
+\newcommand{\phn}{{}^{\vphantom{1}}}
+
+\newcommand{\vec}[1]{\underline{#1}}
+\newcommand{\grad}[1]{\nabla{#1}}
+\newcommand{\const}{\mathrm{const}}
+\newcommand{\jac}[2]{\mathcal{J} \pares{\begin{matrix} #1 \\ #2 \end{matrix}}}
+
+\newcommand{\syst}[1]{\left\lbrace \begin{aligned} #1 \end{aligned} \right.}
+\newcommand{\systm}[1]{\left\lbrace \begin{matrix} #1 \end{matrix} \right.}

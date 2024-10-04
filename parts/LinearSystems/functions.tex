@@ -1,0 +1,102 @@
+\section{Матричные функции}
+
+	В данном разделе рассмотрим задачи, связанные с поиском функций от матриц $f\pares{A}$. Будем полагать, что функция $f$ -- разложима в ряд Маклорена, матрица $A$ -- квадратная, при этом множество, состоящее из любых степеней матрицы $A$ является коммутирующим множеством матриц: $A^n A^m = A^m A^n = A^{n+m}$. Тогда функцией $f$ над матрицей $A$ называется матрица следующего вида:
+	\[ f\pares{A} = \sum_{k = 0}^{\infty} \frac{f^{(k)}\pares{0}}{k!} \cdot A^k. \]
+	Положим, что матрица $A$ имеет разложение $A = PJP^{-1}$, где $P$ -- матрица преобразования, $J$ -- жорданова форма матрицы $A$. Тогда $A^2 = PJP^{-1} PJP^{-1} = PJ^2P^{-1}$. Аналогично считается и любая степень такой матрицы $A$: $A^k = P J^k P^{-1}$. Подставим данное разложение в матричную функцию:
+	\[ f\pares{A} =  \sum_{k=0}^{\infty} \frac{f^{(k)}\pares{0}}{k!} \cdot PJ^kP^{-1} = P \pares{\sum_{k=0}^{\infty} \frac{f^{(k)}\pares{0}}{k!} \cdot J^k} P^{-1} = P f\pares{J} P^{-1}. \]
+	Тогда при выполнении условий, справедливо следующее выражение:
+	\[ f\pares{A} = P f\pares{J} P^{-1}. \]
+	Рассмотрим степени для различных видов вещественных жордановых форм:
+	\begin{enumerate}
+		\item Случай простых собственных значений:
+		\[ 
+			J = \begin{pmatrix} 
+				\lambda_1 & 0 & \cdots & 0 \\ 
+				0 & \lambda_2 & \cdots & 0 \\ 
+				\vdots & \vdots & \ddots & \vdots \\ 
+				0 & 0 & \cdots & \lambda_n 
+			\end{pmatrix}, ~ 
+			J^k = \begin{pmatrix} 
+				\lambda_1^k & 0 & \cdots & 0 \\ 
+				0 & \lambda_2^k & \cdots & 0 \\ 
+				\vdots & \vdots & \ddots & \vdots \\ 
+				0 & 0 & \cdots & \lambda_n^k 
+			\end{pmatrix};
+		\]
+		\item Случай кратных собственных значений:
+		\[ 
+			J = \begin{pmatrix} 
+				\lambda & 1 & 0 & \cdots & 0 & 0 \\ 
+				0 & \lambda & 1 & \cdots & 0 & 0 \\ 
+				0 & 0 & \lambda & \cdots & 0 & 0 \\ 
+				\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 
+				0 & 0 & 0 & \cdots & \lambda & 1 \\ 
+				0 & 0 & 0 & \cdots & 0 & \lambda \\ 
+			\end{pmatrix}, ~ 
+			J^k = \begin{pmatrix} 
+				\lambda^k & \frac{k}{1!} \lambda^{k-1} & \frac{k\pares{k-1}}{2!} \lambda^{k-2} & \cdots & B_{n-1} \lambda^{k-(n-2)} &  B_n \lambda^{k-(n-1)} \\ 
+				0 & \lambda^k & \frac{k}{1!} \lambda^{k-1} & \cdots & B_{n-2} \lambda^{k-(n-3)} & B_{n-1} \lambda^{k-(n-2)} \\ 
+				0 & 0 & \lambda^k & \cdots & B_{n-3} \lambda^{k-(n-4)} & B_{n-2} \lambda^{k-(n-3)} \\ 
+				\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 
+				0 & 0 & 0 & \cdots & \lambda^k & \frac{k}{1!} \lambda^{k-1} \\ 
+				0 & 0 & 0 & \cdots & 0 & \lambda^k \\ 
+			\end{pmatrix}, ~ 
+		\]
+		где
+		\[ B_{n} = \frac{k \cdots \bpares{k-(n-2)}}{(n-1)!} = \frac{k!}{(n-1)! \bpares{k-(n-1)}!}. \]
+
+	\end{enumerate}
+	Случай матриц с комплексно-сопряженными собственными значениями может быть рассмотрен как случай простых собственных значений.
+
+	Положим $f_k = f^{(k)}(0)$. Рассмотрим случаи функций от таких матриц:
+	\begin{enumerate}
+		\item Случай простых собственных значений:
+		\[ 
+			f\pares{J} = \begin{pmatrix} 
+				\sum\limits_{k = 0}^{\infty} \frac{f_k}{k!} \lambda_1^k & \cdots & 0 \\ 
+				\vdots & \ddots & \vdots \\ 
+				0 & \cdots & \sum\limits_{k = 0}^{\infty} \frac{f_k}{k!} \lambda_n^k 
+			\end{pmatrix} = \begin{pmatrix} 
+				f\pares{\lambda_1} & 0 & \cdots & 0 \\ 
+				0 & f\pares{\lambda_2} & \cdots & 0 \\ 
+				\vdots & \vdots & \ddots & \vdots \\ 
+				0 & 0 & \cdots & f\pares{\lambda_n} 
+			\end{pmatrix}; \]
+		\item Случай кратных собственных значений:
+		\[ 
+			f \pares{J} = \begin{pmatrix} 
+				\sum\limits_{k = 0}^{\infty} \frac{f_k}{k!} \lambda^k & \frac{1}{1!} \sum\limits_{k = 0}^{\infty} \frac{f_k}{(k-1)!} \lambda^{k-1} & \cdots & \frac{1}{(n-1)!} \sum\limits_{k = 0}^{\infty} \frac{f_k}{\bpares{k-(n-1)}!} \lambda^{k-(n-1)} \\ 
+				0 & \sum\limits_{k = 0}^{\infty} \frac{f_k}{k!} \lambda^k & \cdots & \frac{1}{(n-2)!} \sum\limits_{k = 0}^{\infty} \frac{f_k}{\bpares{k-(n-2)}!} \lambda^{k-(n-2)} \\ 
+				\vdots & \vdots & \ddots & \vdots \\
+				0 & 0 & \cdots & \sum\limits_{k = 0}^{\infty} \frac{f_k}{k!} \lambda^k
+			\end{pmatrix} = \star
+		\]
+		Выпишем $i, j$-й элемент этой матрицы (полагая $j \ge i$):
+		\[ \begin{split} 
+			f \pares{J}_{i, j} &= \frac{1}{(j-i)!} \sum_{k = 0}^{\infty} \frac{f_k}{\bpares{k - (j-i)}!} \lambda^{k - (j-i)} = \frac{1}{(j-i)!} \sum_{k=0}^{\infty} \frac{f_{k+(j-i)}}{k!} \lambda^{k} = \\ 
+			&= \frac{1}{(j-i)!} \frac{d^{j-i}}{d\lambda^{j-i}} f\pares{\lambda} = \frac{1}{(j-i)!} f^{(j-i)}_{\lambda} \pares{\lambda}. 
+		\end{split} \]
+		Тогда
+		\[ \star = \begin{pmatrix}
+			f\pares{\lambda} & \frac{1}{1!} f'_{\lambda} \pares{\lambda} & \frac{1}{2!} f''_{\lambda} \pares{\lambda} & \cdots & \frac{1}{(n-1)!} f^{(n-1)}_{\lambda} \pares{\lambda} \\ 
+			0 & f\pares{\lambda} & \frac{1}{1!} f'_{\lambda} \pares{\lambda} & \cdots & \frac{1}{(n-2)!} f^{(n-2)}_{\lambda} \pares{\lambda} \\ 
+			0 & 0 & f\pares{\lambda} & \cdots & \frac{1}{(n-3)!} f^{(n-3)}_{\lambda} \pares{\lambda} \\ 
+			\vdots & \vdots & \vdots & \ddots & \vdots \\
+			0 & 0 & 0 & \cdots & f\pares{\lambda}
+		\end{pmatrix}. \]
+
+		В случае, если жорданов блок является транспонированным, то заполнение идет так-же транспонировано.
+
+	\end{enumerate}
+
+	\subsection{Примеры}
+
+		Рассмотрим следующий пример. Найти функцию $\sin$ от матрицы:
+		\[ \sin\begin{pmatrix} \frac{\pi}{4} & 0 & 0 & 0 \\ 0 & \frac{\pi}{2} & 1 & 0 \\ 0 & 0 & \frac{\pi}{2} & 1 \\ 0 & 0 & 0 & \frac{\pi}{2} \end{pmatrix}. \]
+		Представленная матрица является матрицей жордановой формы. Выделим жордановы блоки: первый блок с собственным значением $\lambda = \frac{\pi}{4}$ размерности $1 \times 1$; второй блок с собственным значением $\lambda = \frac{\pi}{2}$ размерности $3 \times 3$, верхнетреугольный. В таком случае необходимо найти две производные функции $\sin$: $f\pares{\lambda} = \sin{\lambda}, ~ f'_{\lambda} \pares{\lambda} = \cos{\lambda}, ~ f''_{\lambda} \pares{\lambda} = - \sin{\lambda}$. Найдем значения функции и её производных в заданных собственных значениях: $\sin{\frac{\pi}{4}} = \frac{\sqrt{2}}{2}, ~ \sin{\frac{\pi}{2}} = 1, ~ \cos{\frac{\pi}{2}} = 0$. Заполним результирующую матрицу:
+		\[ \sin\begin{pmatrix} \frac{\pi}{4} & 0 & 0 & 0 \\ 0 & \frac{\pi}{2} & 1 & 0 \\ 0 & 0 & \frac{\pi}{2} & 1 \\ 0 & 0 & 0 & \frac{\pi}{2} \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{2}}{2} & 0 & 0 & 0 \\ 0 & 1 & 0 & -\frac{1}{2} \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}. \]
+
+		Рассмотрим другой пример. Найти $\arctan{At}$, где $A$ -- известная матрица:
+		\[ A = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 \\ 0 & 0 & 2 & 1 \\ 0 & 0 & 0 & 2 \end{pmatrix}. \]
+		Представленная матрица так же является матрицей жордановой формы. Выделим жордановы блоки: первый блок с собственным значением $\lambda = 1$ размерности $2 \times 2$, нижнетреугольный; второй блок с собственным значением $2$ размерности $2 \times 2$, верхнетреугольный. Тогда необходимо найти дополнительно только первую производную функции $\arctan$: $f\pares{\lambda, t} = \arctan{\lambda t}, ~ f'_{\lambda} \pares{\lambda, t} = \frac{t}{\lambda^2 t^2 + 1}$. Стоит обратить внимание, что функция также зависит от переменной $t$, а производная вычисляется по аргументу $\lambda$ как частная (полагая $t$ константой). Найдем значения функции и её производной в заданных собственных значениях: $f\pares{1, t} = \arctan{t}, ~ f'_{\lambda}\pares{1, t} = \frac{t}{t^2 + 1}, ~ f\pares{2, t} = \arctan(2t), ~ f'_{\lambda}\pares{2, t} = \frac{t}{4t^2 + 1}$. Заполним результирующую матрицу:
+		\[ \arctan\bracks{\begin{pmatrix} 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 \\ 0 & 0 & 2 & 1 \\ 0 & 0 & 0 & 2 \end{pmatrix} t} = \begin{pmatrix} \arctan{t} & 0 & 0 & 0 \\ \frac{t}{t^2 + 1} & \arctan{t} & 0 & 0 \\ 0 & 0 & \arctan{2t} & \frac{t}{4t^2 + 1} \\ 0 & 0 & 0 & \arctan{2t} \end{pmatrix}. \]

@@ -1,0 +1,59 @@
+\subsection{Задачи}
+
+	Найти и классифицировать точки покоя для следующих систем дифференциальных уравнений со степенными функциями:
+	\begin{multicols}{2}
+		\begin{enumtasks}
+			
+			\label{stability_points:types_poly1}
+			\item \( \dot{x} = x + y - 3, ~ \dot{y} = 4 x - 2 y \) % \( M_1 \pares{1, 2} \) -- седловая точка
+			\item \( \dot{x} = - 2x - 4y, ~ \dot{y} = - x - 2y \) % \( M_1 \pares{2C, -C} \) -- сходящееся семейство параллельных прямых
+			\item \( \dot{x} = x - 2y + 6, ~ \dot{y} = 2x - 2y + 8 \) % \( M_1 \pares{-2, 2} \) -- устойчивый фокус
+			\item \( \dot{x} = 6 - x - y, ~ \dot{y} = 3x \pares{2 - y} + 3 y \) % \( M_1 \pares{3, 3} \) -- устойчивый узел
+			\item \( \dot{x} = 7y - 2xy + 1, ~ \dot{y} = 4y - x \) % \( M_1 \pares{4, 1} \) -- седловая точка
+			\item \( \dot{x} = 1 - xy, ~ \dot{y} = x \pares{y - 1}^2 + x - y^2 \) % \( M_1 \pares{1, 1} \) -- устойчивый фокус
+			\item \( \dot{x} = 2xy - 10y - 8, ~ \dot{y} = 2xy - 9y - 4 \) % \( M_1 \pares{4, -4} \) -- седловая точка
+			\item \( \dot{x} = 8y - x \pares{3y - 4}, ~ \dot{y} = x \pares{y + 2} + 8 \) % \( M_1 \pares{4, -4} \) -- неустойчивый узел
+			\item \( \dot{x} = y^2 \pares{x + 1} - y + 1, ~ \dot{y} = 2x - 4xy - 2 y \) % \( M_1 \pares{-1, 1} \) -- расходящееся семейство параллельных прямых
+			\item \( \dot{x} = x + y - xy \pares{x + 1}, ~ \dot{y} = - x - y \) % \( M_1 \pares{-1, 1} \) -- седловая точка
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{enumtasks}
+
+		\label{stability_points:types_poly2}
+		\item \( \dot{x} = 5 - x^2 - 2 y \pares{y + 1}, ~ \dot{y} = y\pares{y + 1} - x^2 - 1 \) % \( M_1 \pares{-1, 1} \) -- неустойчивый фокус, \( M_2 \pares{1, -2} \) -- устойчивый фокус
+		\item \( \dot{x} = - x \pares{x + y^2}, ~ \dot{y} = 2xy \pares{x - y + 2} + 2x \) % \( M_1 \pares{0, -1} \) -- сходящееся семейство параллельных прямых, \( M_2 \pares{-1, 1} \) -- неустойчивый фокус
+		\item \( \dot{x} = \pares{x - y}\pares{x + y - 3}, ~ \dot{y} = x\pares{x - 3} \pares{y + 2} - y^{2} + 3 y \) % \( M_0 \pares{0, 0} \) -- центр, \( M_1 \pares{3, 3} \) -- центр
+		\item \( \dot{x} = 2x \pares{x - y^2 + 12}, ~ \dot{y} = x\pares{x - 3} \pares{y + 1} + 9 - y^2 \) % \( M_1 \pares{0, 3} \) -- устойчивый вырожденный узел, \( M_2 \pares{3, -3} \) -- неустойчивый фокус
+		\item \( \dot{x} = x \pares{y - 2}^2 - 2x^2 y - 8x, ~ \dot{y} = 2x \pares{x + 2}\pares{y - 2} + 8 \) % \( M_1 \pares{-2, -2} \) -- седловая точка, \( M_2 \pares{0, 2} \) -- устойчивый дикритический узел
+		\item \( \dot{x} = 2xy \pares{x + 3} - \pares{y + 1} \pares{y - 2}, ~ \dot{y} = xy \pares{2x + y + 5} - 2 x \) % \( M_1 = \pares{0, 2} \) -- неустойчивый вырожденный узел, \( M_2 \pares{-3, -1} \) -- неустойчивый узел
+		
+		\label{stability_points:types_poly_hard}
+		\item \( \dot{x} = 6 - x \pares{x + 3} - 2 \pares{y-1}^2, ~ \dot{y} = xy \pares{2y - x - 7} - 6x - 2y \) % \( M_1 \pares{-2, 3} \) -- устойчивый узел, \( M_2 \pares{-1, -1} \) -- седловая точка
+		\itemstar \( \dot{x} = \pares{x + 2y}^2 - 2y^2 + 4xy + 2x - 4y, ~ \dot{y} = x y^2 - \pares{x + y}^2 - 2 x + 2 y \) % \( M_1 \pares{0, 2} \) -- центр, \( M_2 \pares{-2, 0} \) -- неустойчивый фокус
+		\itemstar \( \dot{x} = x \pares{2x - 5y - y^2 - 8}, ~ \dot{y} = x\pares{x - 1} - 2 y \pares{y + 5} - 12 \) % \( M_1 \pares{1, -3} \) -- неустойчивый узел, \( M_2 \pares{0, -2} \) -- устойчивый вырожденный узел
+		\itemstar \( \dot{x} = \pares{x - 1}^2 - 2xy \pares{y + 2} - 2 \pares{y + 1}^2 - 2, ~ \dot{y} = - y\pares{x - 1}^2 - 2y^2 \) % \( M_1 \pares{3, -2} \) -- седловая точка, \( M_2 \pares{-1, 0} \) -- устойчивый дикритический узел
+
+	\end{enumtasks}
+
+	Найти и классифицировать точки покоя для следующих систем дифференциальных уравнений:
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{stability_points:types_general}
+			\item \( \dot{x} = x \sin{y}, ~ \dot{y} = y \cos{y} \) % \( M_1 \pares{0, \frac{\pi}{2} + \pi k}, ~ k \in \mathbb{Z} \) -- седловая точка ($k \ge 0$), узел ($k \% 2 = 0$ -- устойчивый, $k \% 2 = 1$ -- неустойчивый), \( M_2 \pares{C, 0} \) -- расходящееся семейство прямых
+			\item \( \dot{x} = y^2 - \pi^2, ~ \dot{y} = x^2 + \cos{y} \) % \( M_1 \pares{-1, -\pi} \) -- седловая точка, \( M_2 \pares{-1, \pi} \) -- центр, \( M_3 \pares{1, -\pi} \) -- центр, \( M_4 \pares{1, \pi} \) -- седловая точка
+			\item \( \dot{x} = ye^{-x}, ~ \dot{y} = \frac{\sin{y}}{x} \) % \( M_1 \pares{C, 0}, C \neq 0 \) -- семейство параллельных прямых (сходится при $C < 0$, расходится при $C > 0$)
+			\item \( \dot{x} = \sin{y} - \cos{x}, ~ \dot{y} = xy \) % \( M_1 \pares{\frac{\pi}{2} + \pi k, 0} \) -- седловая точка ($k > 0, ~ k \% 2 = 1$ или $k < 0, ~ k \% 2 = 0$), узел ($k > 0, ~ k \% 2 = 0$ -- неустойчивый, $k < 0, ~ k \% 2 = 1$ -- устойчивый)
+			\item \( \dot{x} = \arctan\pares{y-x}, ~ \dot{y} = x \tan\pares{x + y} \) % \( M_0 \pares{0, 0} \) -- сходящееся семейство параллельных прямых
+			\item \( \dot{x} = x \cosh{2y}, ~ \dot{y} = y \cosh\pares{y - 2x} \) % \( M_0 \pares{0, 0} \) -- неустойчивый дикритический узел
+			
+			\label{stability_points:types_general_hard}
+			\item \( \dot{x} = y - xe^{-x}, ~ \dot{y} = y^2 - xy - 2y \) % \( M_0 \pares{0, 0} \) -- устойчивый узел
+			\itemstar \( \dot{x} = \frac{2}{x^2 - y} + y, ~ \dot{y} = y^2 + \cos{\pi x} \) % \( M_1 \pares{-1, -1} \) -- седловая точка, \( M_2 \pares{1, -1} \) -- устойчивый узел
+			\itemstar \( \dot{x} = \frac{\cos{x}}{y + 1}, \dot{y} = \frac{\sinh{y}}{x + 1} \) % \( M_1 \pares{\frac{\pi}{2} + \pi k, 0}, ~ k \in \mathbb{Z} \) -- седловая точка ($k > 0, ~ k \% 2 = 0$ или $k < 0, ~ k \% 2 = 1$), узел ($k < 0, ~ k \% 2 = 0$ -- устойчивый, $k > 0, ~ k \% 2 = 1$ -- неустойчивый)
+			\itemstar \( \dot{x} = \frac{x}{y} - \frac{y}{x}, ~ \dot{y} = \sin\pares{x + y} \) % \( M_1 \pares{\pi k, \pi k}, ~ k \in \mathbb{Z} \setminus \braces{0} \) -- сходящееся семейство параллельных прямых
+
+		\end{enumtasks}
+	\end{multicols}

@@ -1,0 +1,155 @@
+\subsection*{Устойчивость по Ляпунову, устойчивость по первому приближению}
+
+	\begin{enumsols}
+
+		% \label{sol:stability_zeros:geometrical}
+		\item \( y = 0 \) -- неуст.; % \( y' = y, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+		\item \( y = -1 \) -- уст., \( y = 1 \) -- неуст.; % \( y' = y^2 - 1, ~ y \in \pares{-2, 2} \) % \( y = -1 \) -- уст., \( y = 1 \) -- неуст.;
+		\item \( y = 0 \) -- неуст.; % \( y' = \frac{y}{y + 1}, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+		\item \( y = -1 \) -- неуст.; % \( y' = \frac{1 + y}{1 - y}, y \in \pares{-2, 0} \) % \( y = -1 \) -- неуст.;
+		\item \( y = -1 \) -- уст., \( y = 3 \) -- неуст.; % \( y' = \frac{y^2 - 2y - 3}{y + 3}, ~ y \in \pares{-2, 5} \) % \( y = -1 \) -- уст., \( y = 3 \) -- неуст.;
+		\item \( y = 1 \) -- неуст.;  % \( y' = \ln{y}, ~ y \in \pares{0, 2} \) % \( y = 1 \) -- неуст.; 
+		\item \( y = 0 \) -- неуст.; % \( y' = e^y - 1, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+		\item \( y = 1 \) -- неуст.; % \( y' = y \ln{y}, ~ y \in \pares{0, 1} \) % \( y = 1 \) -- неуст.;
+		\item \( y = 0 \) -- неуст.; % \( y' = ye^{-y}, ~ y \in \pares{-2, 2} \) % \( y = 0 \) -- неуст.;
+		\item \( y = 0 \) -- неуст.; % \( y' = \sinh{2y}, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+		
+		\label{sol:stability_zeros:geometrical_part2}
+		\item \( y = 0 \) -- уст.; % \( y' = -e^{-y} \sinh{y}, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- уст.;
+		\item \( y = -\frac{\pi}{2}, \frac{3\pi}{2} \) -- уст., \( y = -\frac{3\pi}{2}, \frac{\pi}{2} \) -- неуст.; % \( y' = \cos{y}, ~ y \in \pares{-2\pi, 2\pi} \) % \( y = -\frac{3\pi}{2}, \frac{\pi}{2} \) -- неуст.; \( y = -\frac{\pi}{2}, \frac{3\pi}{2} \) -- уст.
+		\item \( y = -\pi, 0, \pi \) -- стац.; % \( y' = \sin^2{y}, ~ y \in \pares{-2\pi, 2\pi} \) % \( y = -\pi, 0, \pi \) -- стац.;
+		\item \( y = -\pi, 0, \pi \) -- уст.;  % \( y' = \tan{y}, ~ y \in \pares{-\frac{3\pi}{2}, \frac{3\pi}{2}} \) % \( y = -\pi, 0, \pi \) -- уст.; 
+		\item \( y = -\pi, 0, \pi \) -- стац.; % \( y' = 1 - \sec{2y}, ~ y \in \pares{-\frac{3\pi}{2}, \frac{3\pi}{2}} \) % \( y = -\pi, 0, \pi \) -- стац.;
+		\item \( y = -\pi, 0 \) -- уст., \( y = -1, \pi \) -- неуст.; % \( y' = \pares{y + 1} \sin{y}, ~ y \in \pares{-\frac{3\pi}{2}, \frac{3\pi}{2}} \) % \( y = -\pi, 0 \) -- уст., \( y = -1, \pi \) -- неуст.;
+		\item \( y = \pi \) -- уст., \( y = \frac{\pi}{2}, \frac{3\pi}{2} \) -- неуст.; % \( y' = \pares{y - \pi} \cos{y}, ~ y \in \pares{-1, 2\pi} \) % \( y = \pi \) -- уст., \( y = \frac{\pi}{2}, \frac{3\pi}{2} \) -- неуст.;
+		\item \( y = \frac{\pi}{2} \) -- неуст.; % \( y' = \frac{\cos{y}}{1 - \sin{y}}, ~ y \in \pares{-\pi, 0} \) % \( y = \frac{\pi}{2} \) -- неуст.;
+		\item \( y = 0 \) -- уст.; % \( y' = \arccot{y} - \frac{\pi}{2}, ~ y \in \pares{-\pi, \pi} \) % \( y = 0 \) -- уст.;
+		\item \( y = 0 \) -- неуст.; % \( y' = y\arctan{\frac{\pi}{y + \pi}}, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+
+		\label{sol:stability_zeros:firstapprox2d}
+		\item \( M_0 \pares{0, 0} \) -- уст., \( M_1 \pares{1, 1} \) -- неуст.; % \( \dot{x} = y^2 - x, ~ \dot{y} = x^2 - y \) % \( M_0 \pares{0, 0} \) -- уст., \( M_1 \pares{1, 1} \) -- неуст.;
+		\item \( M_1 \pares{-1, 1} \) -- неуст., \( M_2 \pares{1, -1} \) -- неуст.; % \( \dot{x} = xy + 1, ~ \dot{y} = x^2 - y^2 \) % \( M_1 \pares{-1, 1} \) -- неуст., \( M_2 \pares{1, -1} \) -- неуст.;
+		\item \( M_0 \pares{0, 0} \) -- неуст., \( M_1 \pares{0, 1} \) -- неуст.;  % \( \dot{x} = x \pares{y^2 + x}, ~ \dot{y} = y \pares{x^2 - y + 1} \) % \( M_0 \pares{0, 0} \) -- неуст., \( M_1 \pares{0, 1} \) -- неуст.; 
+		\item \( M_1 \pares{0, -1} \) -- неуст., \( M_2 \pares{1, 0} \) -- уст.; % \( \dot{x} = 1 - x^4 - y^2, ~ \dot{y} = x - y - 1 \) % \( M_1 \pares{0, -1} \) -- неуст., \( M_2 \pares{1, 0} \) -- уст.;
+		\item \( M_1 \pares{-2, -1} \) -- неуст., \( M_2 \pares{-2, 1} \) -- уст., \( M_3 \pares{2, -1} \) -- уст., \( M_4 \pares{2, 1} \) -- неуст.; % \( \dot{x} = \frac{x^2 - 4}{y}, ~ \dot{y} = \frac{y^2 - 1}{x + 1} \) % \( M_1 \pares{-2, -1} \) -- неуст., \( M_2 \pares{-2, 1} \) -- уст., \( M_3 \pares{2, -1} \) -- уст., \( M_4 \pares{2, 1} \) -- неуст.;
+		\item \( M_0 \pares{0, 0} \) -- уст.; % \( \dot{x} = y - xe^y, ~ \dot{y} = x^2 - y \) % \( M_0 \pares{0, 0} \) -- уст.;
+		\item \( M_0 \pares{0, 0} \) -- неуст., \( M_1 \pares{-2, -2} \) -- неуст.; % \( \dot{x} = e^x - e^y, ~ \dot{y} = x^2 + 2y \) % \( M_0 \pares{0, 0} \) -- неуст., \( M_1 \pares{-2, -2} \) -- неуст.;
+		\item \( M_0 \pares{0, 0} \) -- уст.; % \( \dot{x} = \sin{y} - x, ~ \dot{y} = - y \cos{x} \) % \( M_0 \pares{0, 0} \) -- уст.;
+		\item \( M_1 \pares{-\frac{\pi}{2}, 0} \) -- уст., \( M_2 \pares{\frac{\pi}{2}, 0} \) -- неуст.; % \( \dot{x} = \frac{\cos{x}}{y^2 - 1}, ~ \dot{y} = xy, ~ x \in \pares{-\pi, \pi} \) % \( M_1 \pares{-\frac{\pi}{2}, 0} \) -- уст., \( M_2 \pares{\frac{\pi}{2}, 0} \) -- неуст.;
+		\item \( M_0 \pares{0, 0} \) -- неуст.; % \( \dot{x} = \arctan{x} + 2y, ~ \dot{y} = \sinh{x} - \tanh{y} \) % \( M_0 \pares{0, 0} \) -- неуст.;
+
+		\label{sol:stability_zeros:firstapprox3d}
+		\item \( M_0 \pares{0, 0, 0} \) -- неуст., \( M_1 \pares{0, 1, 0} \) -- неуст., \( M_2 \pares{1, 0, 1} \) -- неуст., \( M_3 \pares{1, 1, 1} \) -- уст.; % \( \dot{x} = z - x^2, ~ \dot{y} = y - y^2, ~ \dot{z} = x - z^2 \) % \( M_0 \pares{0, 0, 0} \) -- неуст., \( M_1 \pares{0, 1, 0} \) -- неуст., \( M_2 \pares{1, 0, 1} \) -- неуст., \( M_3 \pares{1, 1, 1} \) -- уст.;
+		\item \( M_0 \pares{0, 0, 0} \) -- стац., \( M_1 \pares{-2, -4, -4} \) -- уст., \( M_2 \pares{2, -4, 4} \) -- неуст.; % \( \dot{x} = x^2 + y, ~ \dot{y} = z^2 + x^2 y, ~ \dot{z} = 2xz - y^2 \) % \( M_0 \pares{0, 0, 0} \) -- стац., \( M_1 \pares{-2, -4, -4} \) -- уст., \( M_2 \pares{2, -4, 4} \) -- неуст.;
+		\item \( M_1 \pares{-1, -1, 1} \) -- неуст., \( M_2 \pares{0, 0, 1} \) -- неуст.; % \( \dot{x} = x - y + z - 1, ~ \dot{y} = x^2 + yz, ~ \dot{z} = 1 - z^2 \) % \( M_1 \pares{-1, -1, 1} \) -- неуст., \( M_2 \pares{0, 0, 1} \) -- неуст.;
+		\item \( M_1 \pares{-\frac{\pi}{4}, -\frac{\pi}{4}, \frac{\pi}{4}} \) -- неуст., \( M_2 \pares{\frac{\pi}{4}, \frac{\pi}{4}, -\frac{\pi}{4}} \) -- неуст.; % \( \dot{x} = \sin{x} + \sin{z}, ~ \dot{y} = e^y - e^x, ~ \dot{z} = \cos^2{2z} \) % \( M_1 \pares{-\frac{\pi}{4}, -\frac{\pi}{4}, \frac{\pi}{4}} \) -- неуст., \( M_2 \pares{\frac{\pi}{4}, \frac{\pi}{4}, -\frac{\pi}{4}} \) -- неуст.;
+
+		\label{sol:stability_zeros:firstapprox3d_zero}
+		\item \( M_0 \pares{0, 0, 0} \) -- неуст.;  % \( \dot{x} = xy - 2z, ~ \dot{y} = y^2 - x, ~ \dot{z} = y - 2x^2 - 3z \) % \( M_0 \pares{0, 0, 0} \) -- неуст.;
+		\item \( M_0 \pares{0, 0, 0} \) -- неуст.; % \( \dot{x} = 2 \tan{x} - yz, ~ \dot{y} = 3x^2 - 2y, ~ \dot{z} = \arcsin{z} \) % \( M_0 \pares{0, 0, 0} \) -- неуст.;
+		\item \( M_0 \pares{0, 0, 0} \) -- уст.;  % \( \dot{x} = x^3 - x, ~ \dot{y} = x - y - 3yz^3, ~ \dot{z} = \sin{x} - 2z \) % \( M_0 \pares{0, 0, 0} \) -- уст.; 
+		\item \( M_0 \pares{0, 0, 0} \) -- неуст.; % \( \dot{x} = \cos{z} - e^y, ~ \dot{y} = 2\tan{z} + x, ~ \dot{z} = \ln\pares{y+1} - xz \) % \( M_0 \pares{0, 0, 0} \) -- неуст.;
+		\item \( M_0 \pares{0, 0, 0} \) -- уст.; % \( \dot{x} = 3z - \arctan{x}, ~ \dot{y} = x^2 - \ln\pares{y+1}, ~ \dot{z} = xy - z \) % \( M_0 \pares{0, 0, 0} \) -- уст.;
+		\item \( M_0 \pares{0, 0, 0} \) -- уст.; % \( \dot{x} = \sqrt{xy + 9} - x - 3\cos{z}, ~ \dot{y} = x^2 - \tan\pares{y + z} + z, ~ \dot{z} = \pares{z - 1}^2 + z - e^{-y} \)  % \( M_0 \pares{0, 0, 0} \) -- уст.;
+
+	\end{enumsols}
+
+\subsection*{Классификация точек покоя}
+
+	\begin{enumsols}
+
+		% \label{sol:stability_points:types_poly1}
+		\item \( M_1 \pares{1, 2} \) -- седл.; % \( \dot{x} = x + y - 3, ~ \dot{y} = 4 x - 2 y \) % \( M_1 \pares{1, 2} \) -- седл.
+		\item \( M_1 \pares{2C, -C} \) -- сход. сем. пар. пр.; % \( \dot{x} = - 2x - 4y, ~ \dot{y} = - x - 2y \) % \( M_1 \pares{2C, -C} \) -- сход. сем. пар. пр.
+		\item \( M_1 \pares{-2, 2} \) -- уст. фокус; % \( \dot{x} = x - 2y + 6, ~ \dot{y} = 2x - 2y + 8 \) % \( M_1 \pares{-2, 2} \) -- уст. фокус
+		\item \( M_1 \pares{3, 3} \) -- уст. узел; % \( \dot{x} = 6 - x - y, ~ \dot{y} = 3x \pares{2 - y} + 3 y \) % \( M_1 \pares{3, 3} \) -- уст. узел
+		\item \( M_1 \pares{4, 1} \) -- седл.; % \( \dot{x} = 7y - 2xy + 1, ~ \dot{y} = 4y - x \) % \( M_1 \pares{4, 1} \) -- седл.
+		\item \( M_1 \pares{1, 1} \) -- уст. фокус; % \( \dot{x} = 1 - xy, ~ \dot{y} = x \pares{y - 1}^2 + x - y^2 \) % \( M_1 \pares{1, 1} \) -- уст. фокус
+		\item \( M_1 \pares{4, -4} \) -- седл.; % \( \dot{x} = 2xy - 10y - 8, ~ \dot{y} = 2xy - 9y - 4 \) % \( M_1 \pares{4, -4} \) -- седл.
+		\item \( M_1 \pares{4, -4} \) -- неуст. узел; % \( \dot{x} = 8y - x \pares{3y - 4}, ~ \dot{y} = x \pares{y + 2} + 8 \) % \( M_1 \pares{4, -4} \) -- неуст. узел
+		\item \( M_1 \pares{-1, 1} \) -- расход. сем. пар. пр.; % \( \dot{x} = y^2 \pares{x + 1} - y + 1, ~ \dot{y} = 2x - 4xy - 2 y \) % \( M_1 \pares{-1, 1} \) -- расход. сем. пар. пр.
+		\item \( M_1 \pares{-1, 1} \) -- седл.; % \( \dot{x} = x + y - xy \pares{x + 1}, ~ \dot{y} = - x - y \) % \( M_1 \pares{-1, 1} \) -- седл.
+
+		\label{sol:stability_points:types_poly2}
+		\item \( M_1 \pares{-1, 1} \) -- неуст. фокус, \( M_2 \pares{1, -2} \) -- уст. фокус; % \( \dot{x} = 5 - x^2 - 2 y \pares{y + 1}, ~ \dot{y} = y\pares{y + 1} - x^2 - 1 \) % \( M_1 \pares{-1, 1} \) -- неуст. фокус, \( M_2 \pares{1, -2} \) -- уст. фокус
+		\item \( M_1 \pares{0, -1} \) -- сход. сем. пар. пр., \( M_2 \pares{-1, 1} \) -- неуст. фокус; % \( \dot{x} = - x \pares{x + y^2}, ~ \dot{y} = 2xy \pares{x - y + 2} + 2x \) % \( M_1 \pares{0, -1} \) -- сход. сем. пар. пр., \( M_2 \pares{-1, 1} \) -- неуст. фокус
+		\item \( M_0 \pares{0, 0} \) -- центр, \( M_1 \pares{3, 3} \) -- центр; % \( \dot{x} = \pares{x - y}\pares{x + y - 3}, ~ \dot{y} = x\pares{x - 3} \pares{y + 2} - y^{2} + 3 y \) % \( M_0 \pares{0, 0} \) -- центр, \( M_1 \pares{3, 3} \) -- центр
+		\item \( M_1 \pares{0, 3} \) -- уст. вырожд. узел, \( M_2 \pares{3, -3} \) -- неуст. фокус; % \( \dot{x} = 2x \pares{x - y^2 + 12}, ~ \dot{y} = x\pares{x - 3} \pares{y + 1} + 9 - y^2 \) % \( M_1 \pares{0, 3} \) -- уст. вырожд. узел, \( M_2 \pares{3, -3} \) -- неуст. фокус
+		\item \( M_1 \pares{-2, -2} \) -- седл., \( M_2 \pares{0, 2} \) -- уст. дикрит. узел; % \( \dot{x} = x \pares{y - 2}^2 - 2x^2 y - 8x, ~ \dot{y} = 2x \pares{x + 2}\pares{y - 2} + 8 \) % \( M_1 \pares{-2, -2} \) -- седл., \( M_2 \pares{0, 2} \) -- уст. дикрит. узел
+		\item \( M_1 = \pares{0, 2} \) -- неуст. вырожд. узел, \( M_2 \pares{-3, -1} \) -- неуст. узел; % \( \dot{x} = 2xy \pares{x + 3} - \pares{y + 1} \pares{y - 2}, ~ \dot{y} = xy \pares{2x + y + 5} - 2 x \) % \( M_1 = \pares{0, 2} \) -- неуст. вырожд. узел, \( M_2 \pares{-3, -1} \) -- неуст. узел
+		
+		\label{sol:stability_points:types_poly_hard}
+		\item \( M_1 \pares{-2, 3} \) -- уст. узел, \( M_2 \pares{-1, -1} \) -- седл.; % \( \dot{x} = 6 - x \pares{x + 3} - 2 \pares{y-1}^2, ~ \dot{y} = xy \pares{2y - x - 7} - 6x - 2y \) % \( M_1 \pares{-2, 3} \) -- уст. узел, \( M_2 \pares{-1, -1} \) -- седл.
+		\item \( M_1 \pares{0, 2} \) -- центр, \( M_2 \pares{-2, 0} \) -- неуст. фокус; % \( \dot{x} = \pares{x + 2y}^2 - 2y^2 + 4xy + 2x - 4y, ~ \dot{y} = x y^2 - \pares{x + y}^2 - 2 x + 2 y \) % \( M_1 \pares{0, 2} \) -- центр, \( M_2 \pares{-2, 0} \) -- неуст. фокус
+		\item \( M_1 \pares{1, -3} \) -- неуст. узел, \( M_2 \pares{0, -2} \) -- уст. вырожд. узел; % \( \dot{x} = x \pares{2x - 5y - y^2 - 8}, ~ \dot{y} = x\pares{x - 1} - 2 y \pares{y + 5} - 12 \) % \( M_1 \pares{1, -3} \) -- неуст. узел, \( M_2 \pares{0, -2} \) -- уст. вырожд. узел
+		\item \( M_1 \pares{3, -2} \) -- седл., \( M_2 \pares{-1, 0} \) -- уст. дикрит. узел; % \( \dot{x} = \pares{x - 1}^2 - 2xy \pares{y + 2} - 2 \pares{y + 1}^2 - 2, ~ \dot{y} = - y\pares{x - 1}^2 - 2y^2 \) % \( M_1 \pares{3, -2} \) -- седл., \( M_2 \pares{-1, 0} \) -- уст. дикрит. узел
+
+		\label{sol:stability_points:types_general}
+		\item \( M_1 \pares{0, \frac{\pi}{2} + \pi k}, ~ k \ge 0 \in \mathbb{Z} \) -- седл., \( k < 0 \in \mathbb{Z} \) -- узел ($k \% 2 = 0$ -- неуст., $k \% 2 = 1$ -- уст.), \( M_2 \pares{C, 0} \) -- расх. сем. пар. пр. % \( \dot{x} = x \sin{y}, ~ \dot{y} = y \cos{y} \) % \( M_1 \pares{0, \frac{\pi}{2} + \pi k}, ~ k \ge 0 \in \mathbb{Z} \) -- седл., \( k < 0 \in \mathbb{Z} \) -- узел ($k \% 2 = 0$ -- неуст., $k \% 2 = 1$ -- уст.), \( M_2 \pares{C, 0} \) -- расх. сем. пар. пр.
+		\item \( M_1 \pares{-1, -\pi} \) -- седл., \( M_2 \pares{-1, \pi} \) -- центр, \( M_3 \pares{1, -\pi} \) -- центр, \( M_4 \pares{1, \pi} \) -- седл. % \( \dot{x} = y^2 - \pi^2, ~ \dot{y} = x^2 + \cos{y} \) % \( M_1 \pares{-1, -\pi} \) -- седл., \( M_2 \pares{-1, \pi} \) -- центр, \( M_3 \pares{1, -\pi} \) -- центр, \( M_4 \pares{1, \pi} \) -- седл.
+		\item \( M_1 \pares{C, 0}, C \neq 0 \) -- сем. пар. пр. (сх. при $C < 0$, расх. при $C > 0$) % \( \dot{x} = ye^{-x}, ~ \dot{y} = \frac{\sin{y}}{x} \) % \( M_1 \pares{C, 0}, C \neq 0 \) -- сем. пар. пр. (сходится при $C < 0$, расходится при $C > 0$)
+		\item \( M_1 \pares{\frac{\pi}{2} + \pi k, 0} \) -- седл. ($k > 0, ~ k \% 2 = 1$ или $k < 0, ~ k \% 2 = 0$), узел ($k > 0, ~ k \% 2 = 0$ -- неуст., $k < 0, ~ k \% 2 = 1$ -- уст.) % \( \dot{x} = \sin{y} - \cos{x}, ~ \dot{y} = xy \) % \( M_1 \pares{\frac{\pi}{2} + \pi k, 0} \) -- седл. ($k > 0, ~ k \% 2 = 1$ или $k < 0, ~ k \% 2 = 0$), узел ($k > 0, ~ k \% 2 = 0$ -- неуст., $k < 0, ~ k \% 2 = 1$ -- уст.)
+		\item \( M_0 \pares{0, 0} \) -- сход. сем. пар. пр. % \( \dot{x} = \arctan\pares{y-x}, ~ \dot{y} = x \tan\pares{x + y} \) % \( M_0 \pares{0, 0} \) -- сход. сем. пар. пр.
+		\item \( M_0 \pares{0, 0} \) -- неуст. дикрит. узел % \( \dot{x} = x \cosh{2y}, ~ \dot{y} = y \cosh\pares{y - 2x} \) % \( M_0 \pares{0, 0} \) -- неуст. дикрит. узел
+		
+		\label{sol:stability_points:types_general_hard}
+		\item \( M_0 \pares{0, 0} \) -- уст. узел % \( \dot{x} = y - xe^{-x}, ~ \dot{y} = y^2 - xy - 2y \) % \( M_0 \pares{0, 0} \) -- уст. узел
+		\item \( M_1 \pares{-1, -1} \) -- седл., \( M_2 \pares{1, -1} \) -- уст. узел % \( \dot{x} = \frac{2}{x^2 - y} + y, ~ \dot{y} = y^2 + \cos{\pi x} \) % \( M_1 \pares{-1, -1} \) -- седл., \( M_2 \pares{1, -1} \) -- уст. узел
+		\item \( M_1 \pares{\frac{\pi}{2} + \pi k, 0}, ~ k \in \mathbb{Z} \) -- седл. ($k > 0, ~ k \% 2 = 0$ или $k < 0, ~ k \% 2 = 1$), узел ($k < 0, ~ k \% 2 = 0$ -- уст., $k > 0, ~ k \% 2 = 1$ -- неуст.) % \( \dot{x} = \frac{\cos{x}}{y + 1}, \dot{y} = \frac{\sinh{y}}{x + 1} \) % \( M_1 \pares{\frac{\pi}{2} + \pi k, 0}, ~ k \in \mathbb{Z} \) -- седл. ($k > 0, ~ k \% 2 = 0$ или $k < 0, ~ k \% 2 = 1$), узел ($k < 0, ~ k \% 2 = 0$ -- уст., $k > 0, ~ k \% 2 = 1$ -- неуст.)
+		\item \( M_1 \pares{\pi k, \pi k}, ~ k \in \mathbb{Z} \setminus \bracs{0} \) -- сход. сем. пар. пр. % \( \dot{x} = \frac{x}{y} - \frac{y}{x}, ~ \dot{y} = \sin\pares{x + y} \) % \( M_1 \pares{\pi k, \pi k}, ~ k \in \mathbb{Z} \setminus \braces{0} \) -- сход. сем. пар. пр.
+
+	\end{enumsols}
+
+\subsection*{Критерий устойчивости уравнений с постоянными коэффициентами}
+
+	\begin{enumsols}
+		
+		% \label{sol:stability_hurwitz:simple_calc}
+		\item уст.; % \( y'' + 4y' + 2y = 0 \) % уст.
+		\item уст.; % \( y'' + 6y' + 8y = 0 \) % уст.
+		\item уст.; % \( y'' + 2y' + 5y = 0 \) % уст.
+		\item уст.; % \( y'' + 9y' + y = 0 \) % уст.
+		\item уст.; % \( y''' + 2y'' + 3y' + 2y = 0 \) % уст.
+		\item уст.; % \( y''' + 3y'' + 4y' + y = 0 \) % уст.
+		\item неуст.; % \( y''' + 4y'' + y' + 4y = 0 \) % неуст.
+		\item уст.; % \( y''' + 5y'' + 4y' + 2y = 0 \) % уст.
+		\item неуст.; % \( 2y''' + y'' + y' + 2y = 0 \) % неуст.
+		\item неуст.; % \( 2y''' + 3y'' + y' + 5y = 0 \) % неуст.
+		
+		\label{sol:stability_hurwitz:simple_calc_part2}
+		\item уст.; % \( 2y''' + 5y'' + 4y' + 2y = 0 \) % уст.
+		\item уст.; % \( 3y''' + y'' + 4y' + y = 0 \) % уст.
+		\item неуст.; % \( 3y''' + y'' + 3y' + 5y = 0 \) % неуст.
+		\item неуст.; % \( 3y''' + 2y'' + 3y' + 4y = 0 \) % неуст.
+		\item неуст.; % \( y^{IV} + y''' + 4y'' + y' + 3y = 0 \) % неуст.
+		\item неуст.; % \( y^{IV} + 3y''' + y'' + 2y' + y = 0 \) % неуст.
+		\item уст.; % \( y^{IV} + 5y''' + 3y'' + 4y' + 1y = 0 \) % уст.
+		\item уст.; % \( 2y^{IV} + 3y''' + 3y'' + 2y' + y = 0 \) % уст.
+		\item неуст.; % \( y^{V} + 2y^{IV} + y''' + y'' + 2y' + 4y = 0 \) % неуст.
+		\item неуст.; % \( y^{V} + 4y^{IV} + 5y''' + 2y'' + y' + 2y = 0 \) % неуст.
+
+		\label{sol:stability_hurwitz:params_ab}
+		\item \( -20 < a < 0 \); % \( y''' + 5y'' + 4y' - ay = 0 \) % \( -20 < a < 0 \)
+		\item \( 0 < a < 1 \); % \( ay''' + y'' + 5y' + 5y = 0 \) % \( 0 < a < 1 \)
+		\item \( 3a + 5 < 0 \); % \( y''' - ay'' + 3y' + 5y = 0 \) % \( 3a + 5 < 0 \)
+		\item \( a > 1 \); % \( 2y''' + 2y'' + ay' + y = 0 \) % \( a > 1 \)
+		\item \( a > 0, ~ 2b > 3a \); % \( ay''' + 2y'' + by' + 3y = 0 \) % \( a > 0, ~ 2b > 3a \)
+		\item \( a > 0, ~ ab + 2 < 0 \); % \( y''' + ay'' - by' + 2y = 0 \) % \( a > 0, ~ ab + 2 < 0 \)
+		\item \( b < 0, ~ 5a < b \); % \( y''' + 5y'' - ay' - by = 0 \) % \( b < 0, ~ 5a < b \)
+		\item \( b > 0, ~ a > b \); % \( 2y''' + ay'' + 2y' + by = 0 \) % \( b > 0, ~ a > b \)
+		\item \( a < 0, ~ b < 0, ~ ab + 6 > 0 \); % \( ay''' + 2y'' + 3y' - by = 0 \) % \( a < 0, ~ b < 0, ~ ab + 6 > 0 \)
+		\item \( a < 0, ~ b > 0, ~ ab + 9 < 0 \); % \( 3y''' - ay'' + by' + 3y = 0 \) % \( a < 0, ~ b > 0, ~ ab + 9 < 0 \)
+		
+		\label{sol:stability_hurwitz:params_ab_part2}
+		\item \( a < 0, ~ ab + 10 < 0 \); % \( 5y''' - ay'' + by' + 2y = 0 \) % \( a < 0, ~ ab + 10 < 0 \)
+		\item \( b < 0, ~ a > -2b \); % \( 4y''' + ay'' + 2y' - by = 0 \) % \( b < 0, ~ a > -2b \)
+		\item \( b < 0, ~ 3a - b + 9 < 0 \); % \( y^{IV} + y''' - ay'' + 3y' - by = 0 \) % \( b < 0, ~ 3a - b + 9 < 0 \)
+		\item \( b > 0, ~ a^2 + 5a + 25b < 0 \);\newline % \( y^{IV} + 5y''' + y'' - ay' + by = 0 \) % \( b > 0, ~ a^2 + 5a + 25b < 0 \)
+		\item \( b > 0, ~ 2a > 3, ~ 6a - 4b - 9 > 0 \); % \( y^{IV} + 2y''' + ay'' + 3y' + by = 0 \) % \( b > 0, ~ 2a > 3, ~ 6a - 4b - 9 > 0 \)
+		\item \( a > 0, ~ 4 - 6b + ab^2 < 0 \); % \( ay^{IV} + 2y''' + 3y'' + by' + y = 0 \) % \( a > 0, ~ 4 - 6b + ab^2 < 0 \)
+		\item неуст.; \newline % \( y^{V} + 4y^{IV} + y''' + 4y'' + ay' - by = 0 \) % неуст.
+		\item \( 2a < -1, ~ 2a^2 + 2a + 1 + ab < 0 \); % \( y^{V} - ay^{IV} + 2y''' + y'' + 2y' + by = 0 \) % \( 2a < -1, ~ 2a^2 + 2a + 1 + ab < 0 \)
+		\item неуст.; % \( 3y^{V} + 5y^{IV} + 5y''' + ay'' + by' + 5y = 0 \) % неуст.
+		\item \( a > 0, 14 - 10a + 5a^2 - 3b - 3 ab + a b^2 < 0 \); % \( ay^{V} + y^{IV} + 3y''' + by'' + 5y' + 5y = 0 \) % \( a > 0, 14 - 10a + 5a^2 - 3b - 3 ab + a b^2 < 0 \)
+
+	\end{enumsols}

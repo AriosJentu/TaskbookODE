@@ -1,0 +1,121 @@
+\subsection{Задачи}
+
+	Найти оригиналы $\InvLaplace{F}$ для следующих изображений:
+
+	\begin{multicols}{3}
+		\begin{enumtasks}
+
+			\item \( F(s) = \frac{1}{s} \)
+			\item \( F(s) = \frac{1}{s + 1} \)
+			\item \( F(s) = 1 \)
+			\item \( F(s) = e^{-s} \)
+			\item \( F(s) = \frac{1}{s^2} \)
+			\item \( F(s) = \frac{1}{s^2 + 1} \)
+			\item \( F(s) = \frac{1}{s^2 - 1} \)
+			\item \( F(s) = \frac{s}{s^2 + 1} \)
+			\item \( F(s) = \frac{1}{s^4 + s^2} \)
+			\item \( F(s) = \frac{1}{s-1} + \frac{1}{s-2} \)
+			\item \( F(s) = \frac{6s}{s^2 + 4s + 13} \)
+			\item \( F(s) = \frac{s+7}{s^2 - 3s - 10} \)
+			\item \( F(s) = \frac{s^2 + 1}{s^3 - 8} \)
+			\item \( F(s) = \frac{1}{\sqrt{s}} \)
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\vspace{10pt}
+
+	\begin{multicols}{3}
+		\begin{enumtasks}
+			
+			\item \( F(s) = \frac{e^{-s}}{s} \)
+			\item \( F(s) = \frac{e^{-s}}{s+1} \)
+			\item \( F(s) = \frac{1 - e^{-s}}{s^2} \)
+			\item \( F(s) = \frac{s + 2}{\pares{s^3 + 8} \cdot e^{2s}} \)
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\vspace{10pt}
+
+	\begin{multicols}{3}
+		\begin{enumtasks}
+			
+			\item \( F(s) = \frac{1}{s^2 + 1} \cdot \frac{1}{s^2 - 1} \)
+			\item \( F(s) = \frac{1 - s^2}{\left( 1 + s^2 \right)^2} \)
+			\item \( F(s) = \frac{2s}{\left( s^2 + 1 \right) \cdot \left( s + 1 \right)^2} \)
+			\item \( F(s) = \frac{e^{-s} \cdot \left( 2s - 1 \right)}{s^2 + 1} \)
+			\item \( F(s) = \frac{2e^{-s}}{s^3 + 2s^2 + 4s + 8} \)
+			\itemstar \( F(s) = \ln \frac{s+1}{s^2 + 1} \)
+			\itemstar \( F(s) = \ln\left( 1 - \frac{1}{s} \right) \)
+			\itemstar \( F(s) = \arctan{\frac{1}{s}} \)
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\vspace{15pt}
+
+	Определить результат применения обратного преобразования Лапласа для функций общего вида:
+
+	\begin{multicols}{3}
+		\begin{enumtasks}
+
+			\item \( F(s) = C, ~ C - \const \)
+			\item \( F(s) = \frac{1}{s^n}, ~ n - \const \)
+			\item \( F(s) \cdot e^{-as}, ~ a - \const \)
+			\item \( F(s) \cdot G(s) \)
+			\item \( s \cdot F(s) \)	% = f'(t) + delta(t)*f(0) - delta(0) * f(t)
+			\item \( \frac{F(s)}{s} \) % = int_0^t f(tau) d tau
+			\item \( F'(s) \)	% = -t f(t)
+			\item \( \int\limits_{s}^{\infty} F(\sigma) ~ d\sigma \) % = f(t)/t
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\vspace{15pt}
+
+	Найти общее решение следующих дифференциальных уравнений с помощью преобразования Лапласа:
+
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\item \( y' = t + 2, ~ y(0) = 1 \) 								% y = 1 + 2t + t^2 / 2
+			\item \( y' = 3\sin{t}, ~ y(\pi) = 3 \)							% y = 3 cost - 2
+			\item \( y'' - y' = 6e^{-2t}, ~ y(0) = 3, ~ y'(0) = 0 \)		% y = 2e^{-t} + e^{2t}
+			\item \( y'' - y = e^{t} - e^{-t}, ~ y(0) = 0, ~ y'(0) = 1 \)	% y = (delta(t) - 2sinht) [*] sinht = t cosht
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{enumtasks}
+
+		\item \( y'' + 2y' + y = 2\cosh{t}, ~ y(0) = 1, ~ y'(0) = -1 \)	% y = 2cosht [*] te^{-t} + e^{-t} = 1/2(t^2-t+1)e^{-t} + 1/2 cosht
+		\item \( y'' = 6t + t \cdot e^{t-1} - 6, ~ y(1) = -1, ~ y'(1) = 0 \) % (v = t-1) y = v^3 + v [*] (v+1)e^v - 1 = v^3 + (v-1)e^v
+	
+	\end{enumtasks}
+
+	\vspace{15pt}
+
+	\begin{enumtasks}
+
+		\item \( ty' + y = 1, ~ y(1) = 1 \)							% y = 1
+		\item \( ty'' - ty' + y = 0, ~ y(0) = 0, ~ y'(0) = 1 \)		% y = t
+		\item \( y'' e^t - y' e^{t} = 1, ~ y(0) = 1, ~ y'(0) = 0 \)	% y = cosht [Y = Y(s-1) = ( 1/s + 1/(s-2) )/2 = ( 1/(s-1+1 + 1/(s-1-1) )/2 ]
+		\item \( 4t^2 y'' + y = t + 1, ~ y(1) = 0, ~ y'(1) = 1 \)	% t = e^v -> y = (e^v+1) [*] ve^{v/2} + v e^{v/2} = (e^{v/2}-1)^2 + ve^{v/2} = (sqrt{t} - 1)^2 + sqrt{t} lnt
+
+	\end{enumtasks}
+
+	\vspace{15pt}
+
+	\begin{enumtasks}
+
+		\item \( y' = \delta(t-1), ~ y(1) = 0 \)								% y = 1, t>1; or y = u(t-1)
+		\item \( y' = u(t-1) \cdot \frac{d}{dt} \delta(t-1), ~ y(0) = 0 \)		% y = delta(t-1), t>1
+		\item \( y'' + 2y' + y = 12t \cdot e^{-t}, ~ y(0) = 0, ~ y'(0) = 1 \)	% y = (t + 2t^3) e^{-t}
+		\item \( y'' + y' = e^{-t} \cdot \delta(t), ~ y(0) = y'(0) = 0 \)		% y = 1 - e^{-t}, t>0
+		\item \( y'' + y = \sin{t} \cdot u(t-1), ~ y(0) = y'(0) = 0 \)			% y = sin1 ( sint [*] cost ) + cos1 (sint [*] cost) = sin1 * ( t sint )/2 + cos1 * ( sint - t cost )/2
+		\item \( y'' - 2y' + y = 2t * \cosh{t}, ~ y(0) = 1, ~ y'(0) = 2 \)		% y = 1/4e^{-t} + 1/4 e^t (2t^2 - 2t + 11) - 2
+		\item \( y'' + \delta(t) \cdot y' = 4u(t-1), ~ y(0) = 0, ~ y'(0) = 1 \)	% y = 2 u(t-1) (t-1)^2
+		\itemstar \( y'' + 2\delta(t-2) \cdot y' + u(t-2) \cdot y = 2(t-2) * e^{-t+2}, ~ y(2) = 0, ~ y'(2) = -1 \)	% v = t-2: y = (v + ve^{-v} - 1) [*] sinv + sinv = (v+1)e^{-v} + 2v - 2sinv + cosv - 2
+
+	\end{enumtasks}

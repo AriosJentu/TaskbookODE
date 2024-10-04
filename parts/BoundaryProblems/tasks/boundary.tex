@@ -1,0 +1,75 @@
+\subsection{Задачи}
+
+	Построить решение следующих краевых задач для линейных уравнений с постоянными коэффициентами:
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{bvp_bvp:constcoeffs_simple}
+			\item \( y'' = 0, ~ y(0) = 0, ~ y(1) = 0 \)		% y = 0
+			\item \( y'' = 0, ~ y(0) = 0, ~ y(1) = 1 \)		% y = x
+			\item \( y'' - y' = 0, ~ y(0) = 0, ~ y \pares{\ln{2}} = 1 \)		% y = e^{x} -1
+			\item \( y'' - 3 y' + 2 y = 0, ~ y(0) = 1, ~ y \pares{\ln{2}} = 0 \)		% y = 2 \cdot e^{x} - e^{2 x}
+			\item \( y'' - 4 y' + 3 y = 0, ~ y(0) = 2, ~ y \pares{\ln{2}} = 10 \)		% y = e^{3 x} + e^{x}
+			\item \( y'' - y' - 2 y = 0, ~ y(0) = -2, ~ y \pares{\ln{3}} = 8 \)		% y = e^{2 x} -3 \cdot e^{- x}
+			\item \( y'' - y' - 6 y = 0, ~ y(0) = -8, ~ y \pares{\ln{3}} = 26 \)		% y = e^{3 x} -9 \cdot e^{- 2 x}
+			\item \( y'' - 4 y' + 4 y = 0, ~ y(0) = 1, ~ y(1) = 0 \)		% y = e^{2 x} - x e^{2 x}
+			\item \( y'' - y = 0, ~ y(0) = -4, ~ y \pares{\ln{5}} = 4 \)		% y = e^{x} -5 \cdot e^{- x}
+			\item \( y'' - 4 y = 0, ~ y(0) = -2, ~ y \pares{\ln{2}} = 7 \)		% y = 2 \cdot e^{2 x} -4 \cdot e^{- 2 x}
+			\item \( y'' + y = 0, ~ y(0) = 1, ~ y \pares{\frac{\pi}{2}} = 0 \)		% y = \cos{x}
+			\item \( y'' + 4 y = 0, ~ y(0) = 2, ~ y \pares{\frac{\pi}{3}} = -1 \)		% y = 2 \cdot \cos{2 x}
+			\item \( y'' - 2 y' + 2 y = 0, ~ y(0) = 2, ~ y \pares{\pi} = - 2 e^{\pi} \)		% y = 2 \cdot e^{x} \cos{x} + 2 \cdot e^{x} \sin{x}
+			\item \( y'' - 2 y' + 5 y = 0, ~ y(0) = 1, ~ y \pares{\pi} = e^{\pi} \)		% y = e^{x} \cos{2 x} + e^{x} \sin{2 x}
+			\item \( y'' = 2, ~ y'(0) = -2, ~ y(1) = 0 \)		% y = 1 -2 \cdot x + x^{2}
+			
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{enumtasks}
+
+		\label{bvp_bvp:constcoeffs_nonhmg}
+		\item \( y'' - y' = -1, ~ y(-1) = e^{-1} - 1, ~ y'(1) = 1 + e \)		% y = -2 + e^{x} + x + 2
+		\item \( y'' - y = 2 e^{x}, ~ y(0) = -1, ~ y' \pares{\ln{2}} = \ln{4} + 5 \)		% y = e^{x} -2 \cdot e^{- x} + x e^{x}
+		\item \( y'' - 2 y' + 2 y = 2 - \sin{x} + 2 \cos{x}, ~ y'(-1) = y'(1) = - \cos{1} \)		% y = 1 - \sin{x}
+		\itemstar \( y'' + 4 y = 20 e^{4 x}, ~ 2 y(0) - y'(0) = -4, ~ y \pares{\frac{\pi}{4}} - y' \pares{\frac{\pi}{4}} = 1 - 3 e^{\pi} \)		% y = \sin{2 x} + e^{4 x}
+		\itemstar \( y'' + 4 y = \frac{2\pi^2}{x^3} \cdot \pares{2x^2 + 1}, ~ y \pares{-\pi} + y' \pares{-\pi} = - \pi - 1, ~ y \pares{\pi} - y' \pares{\pi} = \frac{4}{\pi} + 1 + \pi \)		% y = 2/pi \cdot \cos{2 x} -1/pi \cdot \sin{2 x} + \frac{\pi^2}{x}
+
+	\end{enumtasks}
+
+	Построить решение следующих краевых задач для линейных уравнений с переменными коэффициентами:
+	\begin{enumtasks}
+
+		\label{bvp_bvp:linear}
+		\item \( x^2 y'' + xy' - y = 0, ~ y(-1) = -2, ~ y(1) = 2 \) % y = x + \frac{1}{x}
+		\item \( y'' x \pares{x - 2} + 2y = 2y' \pares{x - 1}, ~ y(0) = 1, ~ y(1) = 1 \) % y = x^2 - x + 1
+		\item \( y'' \pares{x - 1} - xy' + y = 0, ~ y(0) = 1, ~ y' \pares{\ln{2}} = 1 \) % y = - x + e^{x}
+		\item \( y'' \pares{2x - 1} - 2y' = y \pares{2x - 3}, ~ y'(0) = 2, ~ y \pares{\ln{3}} = \ln{3} - 3 \) % y = 3 x e^{- x} - e^{x}
+		\item \( y'' + 2 \cos{x} = y' \tan{x} + y \sec^2{x}, ~ y(0) = 0, ~ y'\pares{\pi} = 4 \) % y = \cos{x} + 4 \tan{x} - \sec{x}
+		\item \( y'' \pares{2x \cot{2x} - 1}= 4 \pares{y - xy' - 1}, ~ y'(0) = 1, ~ y\pares{\pi} = 1 - \pi \) % y = \sin{2x} - x + 1
+		
+		\label{bvp_bvp:linear_hard}
+		\itemstar \( y'' \pares{x - 1} - xy' + y = 2xe^{-x}, ~ y(0) + y'(1) = 1 + 2 \sinh{1}, ~ y(1) - y'(1) = \frac{2}{e} \) % y = e^{x} + e^{- x} - x
+		\itemstar \( x y'' \pares{x \ln{x} + 1} + y' \pares{x^2 \ln{x} + 1} = \pares{y - 1} \pares{x - 1}, ~ y(1) + y'(1) = 3, ~ y(1) - y'(2) = \frac{1 + e}{e^2} \) % y = 2 \ln{x} + 1 + e^{- x}
+		\itemstar \( \syst{&\pares{x^2 + 1}^2 \pares{y'' - 2} \arctan{x} + x \pares{x^2 + 1} \pares{y'' - 2} + 2xy = 2x^2 \pares{y' - x}, \\ &y(0) + 2y(1) = \pi + 4, ~ y'(1) - y'(0) = 1} \) % y = x^{2} + x + 2 \arctan{x}
+		\itemstar \( \syst{&x^2 \ln{x} \pares{y'' - y'} - x \ln{x} \pares{y'' - y} - xy'' + y' + \pares{x - 1} y = x^2 - x + 1, \\ &y'(1) - y(1) = 2, ~ 2y'(1) + 2y'(2) - y(2) = 2e + e^2 + 10} \) % y = 2 x \ln{x} + x + e^{x}
+
+	\end{enumtasks}
+
+	Классифицировать следующие нелинейные краевые задачи, и построить решение с помощью метода подстановки:
+	\begin{enumtasks}
+
+		\label{bvp_bvp:nonlinear}
+		\item \( xyy'' + xy'^2 + yy' = 0, ~ y(1) = 0, ~ y(2) \cdot y'(2) = 1 \) % y^2 = 4 \ln{x}
+		\item \( y'' - y'^2 = \frac{y'}{x + 1}, ~ y(0) - y'(0) = 2, ~ y'(1) = -1 \) % e^{- y} = \pares{x + 1}^2
+		\item \( y'^2 \pares{y \tanh{y} + 2} = \pares{y' - y''} \cdot \pares{y + \tanh{y}}, ~ y(0) = 0, ~ y(\sinh{1}) = 1 \) % y \sinh{y} = x
+		\item \( x \pares{2 \ln{x} - 1} \cdot \pares{y'^2 - yy''} = yy' \cdot \pares{6 \ln{x} - 5}, ~ y(1) = e, ~ y(e) = 1 \) % x^2 \ln{y} = x^2 -  e^2 \ln{x}
+		\item \( 2yy' \pares{\cos^2{x} + 1} + \pares{yy'' + y'^2} \sin{2x} = 0, ~ y(0) = 0, ~ y \pares{\frac{\pi}{2}} = 1 \) % y = 1 
+		\item \( y'' + 2y'^2 \tan{y} = 2y' \tan{x}, ~ y\pares{\frac{\pi}{4}} = \frac{\pi}{4}, ~ y'(\pi) = 0 \) % \tan{y} = C_1 \tan{x} + C_2
+		
+		\label{bvp_bvp:nonlinear_hard}
+		\item \( y'' + y'^2 - y' = \frac{y'}{x + 1}, ~ y'(-1) - y(-1) = 1, ~ y(0) + y'(0) = e - 1 \) % e^y = (e - 1) \cdot x e^x + 1
+		\item \( xy'' + y' = xy'^2 \tan{y}, ~ y'(1) \cdot \cos{y(1)} = -1, ~ y(e) = 0 \) % \sin{y} = 1 - \ln{x}
+		\itemstar \( 2xyy' + \pares{x^2 + 1} \cdot \pares{yy'' + y'^2} = 0, ~ y(0) \cdot y'(0) = 2, ~ y^2(1) + 2y(0) \cdot y'(1) = \pi \) % y^2 = 4 \arctan{x} - 2
+		\itemdstar \( xy'^2 + xy'' + 2x = y' \pares{3x - 2} + 3, ~ y(1) = 1, ~ y(e) = e - 1 \) % x e^{y - x} = 1
+
+	\end{enumtasks}
+

@@ -1,0 +1,101 @@
+\subsection{Задачи}
+
+	Классифицировать и построить общее решение следующих систем нелинейных дифференциальных уравнений:
+	\begin{multicols}{3}
+		\begin{enumtasks}
+
+			\label{nonlinsys_systodes:systems2}
+			\item \( \syst{ \dot{x} &= 2 - \frac{x}{t}, \\ \dot{y} &= 2t; } \) % tx - t^2 = C_1; y - t^2 = C_2
+			\item \( \syst{ \dot{x} &= 2t, \\ \dot{y} &= - \frac{2 t y}{x}; } \) % xy = C_1; x - t^2 = C_2
+			\item \( \syst{ \dot{x} &= \frac{x}{t} + 2t, \\ \dot{y} &= \frac{3 - y^2}{2ty}; } \) % \frac{x}{t} - 2t = C_1; ty^2 - 3t = C_2
+			\item \( \syst{ \dot{x} &= \frac{x}{4y^2}, \\ \dot{y} &= \frac{1}{2y}; } \) % \frac{x^2}{y} = C_1; y^2 - t = C_2
+			\item \( \syst{ \dot{x} &= - \frac{9t^2 x}{2y} - \frac{1}{xy}, \\ \dot{y} &= 9t^2; } \) % 2t + x^2 y = C_1; y - 3t^2 = C_2
+			\item \( \syst{ \dot{x} &= \frac{3y^2 - 4t}{2y}, \\ \dot{y} &= -\frac{3y^2 + 4t}{2x}; } \) % \frac{x}{y} - 3t = C_1; 2 t^2 + xy = C_2
+			\item \( \syst{ \dot{x} &= \frac{x y}{t - 2 x^2}, \\ \dot{y} &= \frac{y}{2 x^2 - t}; } \) % x e^{y} = C_1; t y + x^{2} = C_2
+			\item \( \syst{ \dot{x} &= \frac{1 - 4xy}{y^2 - 4 x^2 y}, \\ \dot{y} &= \frac{2 \pares{y^2 - x}}{y^2 - 4 x^2 y}; } \) % x y^2 - t = C_1; x^2 + y - 2t = C_2
+			
+			\label{nonlinsys_systodes:systems2_hard}
+			\item \( \syst{ \dot{x} &= \frac{t^2 - x^2 e^y}{t \pares{t - x} e^y}, \\ \dot{y} &= \frac{x e^{y} - t}{t \pares{t - x} e^y}; } \) % x e^y - t = C_1; y + \frac{x}{t} = C_2
+			\item \( \syst{ \dot{x} &= \frac{xy}{t \tan{y} + x^2}, \\ \dot{y} &= - \frac{y}{t + x^2 \cot{y}}; } \) % x \sin{y} = C_1; x^2 - 2ty = C_2
+			\item \( \syst{ \dot{x} &= \frac{3}{2ty \cos{x}} - \frac{\tan{x}}{t}, \\ \dot{y} &= \frac{3}{2 y}; } \) % t \sin{x} - y = C_1; y^2 - 3t = C_2
+			\item \( \syst{ \dot{x} &= \frac{2 t + x e^{t - x}}{y \left(x - 1\right)}, \\ \dot{y} &= \frac{2t + e^{t - x}}{1 - x}; } \) % y e^x - e^t = C_1; t^2 + xy = C_2
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{multicols}{3}
+		\begin{enumtasks}
+
+			\label{nonlinsys_systodes:systems3}
+			\item \( \syst{ \dot{x} &= \frac{t + z}{x}, \\ \dot{y} &= -\frac{xy + z + t}{tx}, \\ \dot{z} &= 1; } \) % ty + x = C_1; z - t = C_2; x^2 - 2tz = C_3
+			\item \( \syst{ \dot{x} &= \frac{y}{x} \cos^2{y}, \\ \dot{y} &= \cos^2{y}, \\ \dot{z} &= - \frac{z}{y} \cos^2{y}; } \) % \tan{y} - t = C_1; yz = C_2; x^2 - y^2 = C_3
+			\item \( \syst{ \dot{x} &= \frac{2tx}{xy + z} + \frac{x}{t}, \\ \dot{y} &= \frac{2tz}{x \pares{xy + z}} - \frac{y}{t}, \\ \dot{z} &= \frac{2 t^2}{x \pares{xy + z}}; } \) % xy - t^2 = C_1; \frac{t}{x} + z = C_2; z^2 - 2ty = C_3
+			\item \( \syst{ \dot{x} &= -\frac{\pares{x^2 + 1} e^{t}}{x y^2}, \\ \dot{y} &= \frac{e^t}{y}, \\ \dot{z} &= \frac{z e^t}{y^2}; } \) % z \sqrt{x^2 + 1} = C_1; y^2 - 2 e^t = C_2; \frac{z}{y} = C_3
+			\item \( \syst{ \dot{x} &= \frac{e^{-y} \cos{t}}{1 - x}, \\ \dot{y} &= \frac{e^{-y} \cos{t}}{x - 1}, \\ \dot{z} &= \frac{2xe^{-y} \cos{t}}{1 - x}; } \) % x e^y - \sin{t} = C_1; z - x^2 = C_2; x + y = C_3
+			\item \( \syst{ \dot{x} &= - \frac{2xy \pares{t + 1} e^t}{z \pares{2yz - 1}}, \\ \dot{y} &= \frac{x \pares{t + 1} e^t}{z \pares{2yz - 1}}, \\ \dot{z} &= \frac{\pares{t + 1} e^t}{z}; } \) % x + y^2 = C_1; z^2 - 2te^t = C_2; xz + y = C_3
+			
+		\end{enumtasks}
+	\end{multicols}
+	
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{nonlinsys_systodes:systems3_hard}
+			\itemstar \( \syst{ \dot{x} &= - \frac{t x + z}{t^2 + x}, \\ \dot{y} &= -\frac{tx + z}{t \pares{t^2 + x}} \sec{y} - \frac{\tan{y}}{t}, \\ \dot{z} &= \frac{x^2 - tz}{t^2 + x}; } \) % x - t \sin{y} = C_1; 2tz + x^2 = C_2; z - tx = C_3
+			\itemstar \( \syst{ \dot{x} &= - \frac{e^x}{z \pares{2ye^x + z}}, \\ \dot{y} &= \frac{1}{z} - \frac{ye^x}{z \pares{2ye^x + z}}, \\ \dot{z} &= \frac{e^x}{2ye^x + z}; } \) % ze^x = C_1; t - yz = C_2; z - y e^x = C_3
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\vspace{10pt}
+	
+	Построить общее решение следующих симметрических систем из двух равенств:
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{nonlinsys_systodes:symmetrical2}
+			\item \( \frac{dx}{u + y} = dy = du \) 													% x - uy = C_1; y - u = C_2
+			\item \( \frac{dx}{2uy} = \frac{dy}{u} = \frac{du}{y} \) 								% y^2 - x = C_1; u^2 - x = C_2
+			\item \( \frac{dx}{2u} = \frac{x ~ dy}{2uy - x^2} = du \) 								% u + \frac{y}{x} = C_1; u^2 - x = C_2
+			\item \( \frac{dx}{4uy} = - \frac{dy}{2u} = \frac{du}{2y^2 - x} \) 						% x + y^2 = C_1; u^2 - xy = C_2
+			\item \( \frac{dx}{uy} = \frac{dy}{ux} = \frac{du}{xy} \) 								% x^2 - u^2 = C_1; y^2 - x^2 = C_2
+			\item \( y ~ dx = x ~ dy = \frac{xy}{u} ~ du \) 										% \frac{u}{x} = C_1; \frac{u}{y} = C_2
+			\item \( \frac{dx}{2 u^{2}} = \frac{x ~ dy}{2ux - u^2 y} = \frac{x ~ du}{u^3} \) 		% x - uy = C_1; \frac{u^2}{x} = C_2
+			\item \( y^2 ~ dx = - dy = \frac{x y^2 ~ du}{u + x^2 y^2} \) 							% \frac{1}{y} - x = C_1; \frac{u}{x} + y = C_2
+			\item \( y ~ dx = \frac{x^3 ~ dy}{x^2 + y} = \frac{x^2 y ~ du}{xu - x^2 y - y^2} \) 	% \frac{x}{y} - \frac{1}{x} = C_1; \frac{u}{x} + y = C_2
+			\item \( dx = \frac{u^2 x ~ dy}{1 - u^2 y} = \frac{x ~ du}{u} \) 						% uy + \frac{1}{u} = C_1; \frac{u}{x} = C_2
+
+			\label{nonlinsys_systodes:symmetrical2hard}
+			\item \( dx = - \frac{\tan{x}}{y} ~ dy = 2u ~ du \) 																	% y \sin{x} = C_1; u^2 - x = C_2
+			\item \( \frac{dx}{2y} = - dy = \frac{2u e^{-y} ~ du}{2y - x} \) 														% x + y^2 = C_1; xe^y - u^2 = C_2
+			\item \( \frac{dx}{u} = \frac{e^{x+y} ~ dy}{3 - ue^{x+y}} = du \) 														% e^{x+y} - 3u = C_1; u^2 - 2x = C_2
+			\item \( \frac{\cos^2{y}}{x} ~ dx = \frac{dy}{2 x^2} = \frac{du}{10x - u \sec^2{y}} \) 									% \tan{y} - x^2 = C_1; ux - 5y = C_2
+			\item \( - \frac{e^u ~ dx}{2 x e^u \cos{2y} + 3} = dy = \frac{du}{2 \cos{2y}} \) 										% \sin{2y} - u = C_1; x e^u + 3y = C_2
+			\item \( - \frac{dx}{4 y} = \frac{u + x}{3 e^{3x} - 2} ~ dy = \frac{e^{- 3 x}}{6 y} ~ du \) 							% \log{\pares{u + x}} - y^2 = C_1; 2u + e^{3x} = C_2
+			\item \( \frac{dx}{8 u y} = - \frac{\sqrt{x - 1}}{u} ~ dy = \frac{\sqrt{1 - x^2}}{4 y} ~ du \) 							% \arcsin{x} - u^2 = C_1; 2 y^2 + \sqrt{x - 1} = C_2
+			\item \( - \frac{dx}{15 y \sqrt[3]{\pares{x^2 - 4}^2}} = \frac{dy}{2x e^{u}} = \frac{du}{2 x y} \) 						% 5u + \sqrt[3]{x^2 - 4} = C_1; y^2 - 2e^u = C_2
+			\item \( \frac{\sqrt{y + 2} ~ dx}{3 u} = \frac{\sqrt{x} ~ dy}{u \sec^2{\sqrt{x}}} = \frac{2 \sqrt{y + 2} ~ du}{9} \) 	% \tan{\sqrt{x}} - 3 \sqrt{y + 2} = C_1; u^2 - 3x = C_2
+			\itemstar \( dx = \frac{\pares{x^2 + u^2}}{u - x - xe^{x - u}} ~ dy = \frac{du}{e^{x - u} + 1} \) 							% e^{u - x} - x = C_1; y + \arctan{\frac{u}{x}} = C_2
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\vspace{10pt}
+
+	Построить общее решение следующих симметрических систем из трех равенств:
+	\begin{enumtasks}
+
+		\label{nonlinsys_systodes:symmetrical3}
+		\item \( \frac{dx}{12 u} = - \frac{dy}{6 u} = \frac{dz}{4 u y} = \frac{du}{y} \) 																% x + 2y = C_1; y^2 + 3 z = C_2; 2 u^2 - z = C_3
+		\item \( \frac{dx}{x z^2} = \frac{dy}{z^2 \pares{x - y}} = \frac{dz}{yz \pares{x - y}} = \frac{du}{uy \pares{y - x} + xz} \)					% x^2 - 2xy = C_1; y^2 - z^2 = C_2; uz - x = C_3
+		\item \( \frac{y ~ dx}{1 - y^2} = \frac{x^2 ~ dy}{x + yz} = \frac{xy ~ dz}{xy + z} = \frac{y ~ du}{y^2 z - xy - 2z} \)							% \frac{x}{y} + z = C_1; u + xz = C_2; \frac{z}{x} - y = C_3
+		\item \( \frac{dx}{2 z} = - \frac{dy}{3 x + 2 z^2} = \frac{dz}{3} = \frac{du}{10 yz - 15 x^2 - 10 xz^2} \)										% xz + y = C_1; z^2 - 3x = C_2; u - 5xy = C_3
+		\item \( \frac{e^{- z} dx}{y^2} = \frac{e^{- z} dy}{3xy} = \frac{dz}{2xy^2} = \frac{du}{2xy - 3uxe^z} \)										% e^z - x^2 = C_1; uy - z = C_2; y^2 - 3x^2 = C_3
+		\item \( \frac{5 ~ dx}{2u - 1} = \frac{15 \sec{xz} ~ dy}{10 u x + z \pares{6 u - 3}} = \frac{3 ~ dz}{2 u} = du \)								% \sin{xz} - y = C_1; u^2 - 3z = C_2; u + 5x - 3z = C_3
+		\item \( \frac{2 ~ dx}{u + x^2} = \frac{dy}{z e^{-2x} - y \pares{x^2 + u}} = \frac{2x  ~ dz}{z \pares{u - x^2}} = \frac{du}{z} \) 				% u + \frac{z}{x} = C_1; u^2 - 2xz = C_2; y e^{2x} - u = C_3
+		\itemstar \( \frac{y ~ dx}{x^2} = \frac{dy}{x} = - \frac{y ~ dz}{xz + y} = \frac{y \pares{x^2 + 1} ~ du}{x^2 z - \pares{x z + y} \pares{x^2 + 1} \arctan{x}} \)											% z \arctan{x} - u = C_1; \frac{x}{y} = C_2; xz + y = C_3
+		\itemstar \( \frac{y ~ dx}{2z - x \pares{x + 1}} = \frac{\pares{x + 1} ~ dy}{2z + \pares{x + 1}^2} = \frac{\pares{x + 1} ~ dz}{2x + 1} = \frac{u \pares{x + 1} ~ du}{2z + \pares{x + 1}^2} \) 		% \frac{y}{x + 1} - z = C_1; z^2 - xy = C_2; u^2 - 2y = C_3
+		\itemstar \( \frac{dx}{2yz \cos{u} - 1} = \frac{\sec{u} ~ dy}{u - \tan{u}} = \frac{\sec{u} ~ dz}{2y \pares{u - \tan{u}}} = \frac{x ~ du}{u - 2yz \sin{u}} \) 										% x \sin{u} - y = C_1; y^2 - z = C_2; z^2 - 2ux = C_3
+
+	\end{enumtasks}
+

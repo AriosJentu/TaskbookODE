@@ -1,0 +1,47 @@
+\setcounter{tocdepth}{2}
+
+\newcounter{tasks}
+\setcounter{tasks}{0}
+\newcounter{solutions}
+\setcounter{solutions}{0}
+
+\everymath{\displaystyle}
+
+\newenvironment{enumtasks}{\begin{enumerate}[label=\textbf{\arabic*.}] \setcounter{enumi}{\value{tasks}}}{\setcounter{tasks}{\value{enumi}} \end{enumerate}}
+
+% \newenvironment{enumsols}{\begin{inparaenum}[1)] \setcounter{enumi}{\value{solutions}}}{\setcounter{solutions}{\value{enumi}} \end{inparaenum}}
+\newenvironment{enumsols}{\begin{enumerate*}[label=\textbf{\arabic*})] \setcounter{enumi}{\value{solutions}}}{\setcounter{solutions}{\value{enumi}} \end{enumerate*}}
+\newenvironment{enumsolsfull}{\begin{enumerate}[label=\textbf{\arabic*})] \setcounter{enumi}{\value{solutions}}}{\setcounter{solutions}{\value{enumi}} \end{enumerate}}
+
+% Make new part command
+\newcommand{\newpart}[1]{
+	\pagebreak
+
+	{
+		\thispagestyle{empty}
+		\vspace*{50pt}
+		\part{#1}
+	}
+
+	\pagebreak
+}
+
+%Disable section numbering
+% \renewcommand\thesection{}
+% \renewcommand\thesubsection{}
+
+\newcommand{\dotchar}{\textbf{.}}
+\newlength{\dotlen}
+\settowidth{\dotlen}{\dotchar}
+\newcommand{\itemstar}{\stepcounter{enumi} \item[\theenumi\hspace*{-\dotlen}\textbf{\large\textsuperscript{*}}]}
+\newcommand{\itemdstar}{\stepcounter{enumi} \item[\theenumi\hspace*{-1.5\dotlen}\textbf{\large\textsuperscript{**}}]}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\newcommand{\sfill}{\hfill\,}
+
+\parindent 1.25cm
+% \linespread{1.5}
+
+\sloppypar % Fixind boundaries of page

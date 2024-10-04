@@ -1,0 +1,148 @@
+\section{Однородные уравнения}
+
+    Общий вид 
+    \[
+        F\bpares{x, g(x, y), g'(x, y)} = 0.
+    \]
+    С помощью замены $ u = g(x,y), ~ u’ = g’(x, y) $ можно свести к уравнению вида $ F(x, u, u’) = 0 $, которое обычно считается более простым. Некоторые частные случаи замен:
+    \[
+        \begin{split}
+            y = ux, \\
+            u = xy.
+        \end{split}
+    \]
+    
+    Приводящимся к однородному уравнением называется уравнение вида:
+    \[
+        y' = f\left( \dfrac{ax + by + c}{fx + gy + h} \right), ~ a, b, c, f, g, h - \const.
+    \]
+    Метод решения: перенос центра системы координат в точку пересечения двух прямых $ ax + by + c = 0 $ и $ fx + gy + h = 0 $. В случае, если прямые не пересекаются, то они пропорциональны, а значит $ ax + by + c = k(fx + gy + h) + m $, где $ k, m - \const $.
+
+
+    Уравнение следующего вида:
+    \[
+        \sum_{k \geq 0}^n a_k x^{p_k} y^{q_k} (y')^{r_k} = 0, ~ p_k, q_k, r_k - \const ~ \forall k,
+    \]
+    называется обобщенным однородным уравнением (уравнением с показательной однородностью), если его соответствующая симметрическая характеристическая система уравнений имеет решение. Система строится по следующим правилам:
+    \begin{itemize}
+        \item операции сложения, вычитания и равенства заменяются на равенства;
+        \item операции умножения заменяются на сложение, деление на вычитание;
+        \item каждый $ x^p $ заменяется на $ p $;
+        \item каждый $ y^q $ заменяется на $ mq $, где $ m $ -- показатель однородности, пока неизвестен;
+        \item каждый $ (y')^r $ заменяется на $ (m - 1)r $.
+    \end{itemize}
+    Если из соответствующей системы удается найти значение $ m $, в таком случае решение такого уравнения можно искать в следующем виде:
+    \[
+        y= zx^m, ~ y = z^m.
+    \]
+
+    \subsection{Примеры}
+        \[
+            xy' = \tan{xy} - y.
+        \]
+
+        \[
+            y' = \dfrac{6 - 9x - 2y}{2x + 5y - 10}.
+        \]
+        Найдем точку пересечения двух прямых:
+        \[
+            \begin{split}
+                &\begin{cases}
+                    9x + 2y - 6 = 0, \\
+                    2x + 5y - 10 = 0;
+                \end{cases} \\ &
+                \begin{pmatrix}
+                    9 & 2 \\
+                    2 & 5
+                \end{pmatrix}
+                \begin{pmatrix}
+                    x \\
+                    y
+                \end{pmatrix}
+                =
+                \begin{pmatrix}
+                    6 \\
+                    10
+                \end{pmatrix}. \\
+                &\begin{pmatrix}
+                    x \\
+                    y
+                \end{pmatrix}
+                = \dfrac{1}{45 - 4}
+                \begin{pmatrix}
+                    5 & -2 \\
+                    -2 & 9
+                \end{pmatrix}
+                \begin{pmatrix}
+                    6 \\
+                    10
+                \end{pmatrix}
+                = \dfrac{1}{41}
+                \begin{pmatrix}
+                    10 \\
+                    78
+                \end{pmatrix}.
+            \end{split}
+        \]
+        Таким образом замена переменных будет иметь следующий вид:
+        \[
+            \begin{split}
+                x_0 = \dfrac{10}{41}, ~ y_0 = \dfrac{78}{41} \Longrightarrow
+                \begin{cases}
+                    u = x - \dfrac{10}{41}, \\\\
+                    v = y - \dfrac{78}{41}.
+                \end{cases} \\
+                \begin{cases}
+                    du = dx, \\
+                    dv = dy.
+                \end{cases}, ~
+                y' = \difft{y}{x} = \difft{v}{u} = v'_u = v'.
+            \end{split}
+        \]
+        А уравнение принимает вид
+        \[
+            v' = \dfrac{-9u - \tfrac{90}{41} - 2v - \tfrac{156}{41} + 6}{2u + \tfrac{20}{41} + 5v + \tfrac{390}{41} - 10} \Longrightarrow v' = -\dfrac{9u + 2v}{2u + 5v}.
+        \]
+        Получили однородное уравнение, для которого подойдет частный случай замены:
+        \[
+            v = zu, ~ z = z(u); ~ v' = z'u + z \Longrightarrow uz' + z = -\dfrac{9 + 2z}{2 + 5z}.
+        \]
+        Разделяя переменные, получим такое выражение:
+        \[
+            uz' = -\dfrac{9 + 2z}{2 + 5z} - \dfrac{2z + 5z^2}{2 + 5z} = -\dfrac{9 + 4z + 5z^2}{2 + 5z} \Longrightarrow \dfrac{5z + 2}{5z^2 + 4z + 9} dz = -\dfrac{du}{u}.
+        \]
+        Переменные разделены, можно интегрировать:
+        \[
+            \begin{split}
+                &\dfrac{1}{2} \dfrac{d\bpares{5z^2 + 4z + 9}}{5z^2 + 4z + 9} = -\dfrac{du}{u}, \\
+                &\ln{\abs{5z^2 + 4z + 9}} = -2 \ln{u} + C \Longrightarrow 5z^2 + 4z + 9 = \dfrac{C}{u^2}.
+            \end{split}
+        \]
+        Возвращаемся к исходным переменным:
+        \[
+            \begin{split}
+                5u^2 z^2 + 4u^2 z + 9u^2 = C &\Longrightarrow 5v^2 + 4uv + 9u^2 = C \Longrightarrow \\ &\Longrightarrow 5\pares{y - \dfrac{78}{41}}^2 + 4\pares{x - \dfrac{10}{41}} \pares{y - \dfrac{78}{41}} + 9\pares{x - \dfrac{10}{41}}^2 = C,
+            \end{split}
+        \]
+        что является общим решением.
+
+        \[
+            y' - \dfrac{y}{x} = y^2 + \drecp{x^2}.
+        \]
+        Составим соответствующую характеристическую симметрическую систему, и найдем показатель однородности
+        \[
+            m - 1 = m - 1 = 2m = -2 \Longrightarrow m = -1.
+        \]
+        Сделаем замену
+        \[
+            \begin{split}
+                y = \dfrac{z}{x}, ~ z = z(x); ~ y' = \dfrac{z'}{x} - \dfrac{z}{x^2}, \\
+                \dfrac{z'}{x} - \dfrac{z}{x^2} - \dfrac{z}{x^2} = \dfrac{z^2}{x^2} + \drecp{x^2} ~ \Bigg| \cdot x^2.
+            \end{split}
+        \]
+        Получим уравнение с разделяющимися переменными. Разделим, сделаем обратную замену:
+        \[
+            \begin{split}
+                xz' = z^2 + 2z + 1 &\Longrightarrow \dfrac{dz}{(z + 1)^2} = \dfrac{dx}{x} \Longrightarrow \\ &\Longrightarrow \drecp{z + 1} = C - \ln{x} \Longrightarrow \\ &\Longrightarrow z + 1 = \drecp{C - \ln{x}} \Longrightarrow \\ &\Longrightarrow xy + 1 = \drecp{C - \ln{x}}.
+            \end{split}
+        \]

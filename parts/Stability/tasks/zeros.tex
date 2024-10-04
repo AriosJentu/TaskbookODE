@@ -1,0 +1,75 @@
+\subsection{Задачи}
+
+	Найти точки покоя и геометрически исследовать поведение решений:
+	\begin{multicols}{2}
+		\begin{enumtasks}
+			
+			\label{stability_zeros:geometrical}
+			\item \( y' = y, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+			\item \( y' = y^2 - 1, ~ y \in \pares{-2, 2} \) % \( y = -1 \) -- уст., \( y = 1 \) -- неуст.;
+			\item \( y' = \frac{y}{y + 1}, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+			\item \( y' = \frac{1 + y}{1 - y}, y \in \pares{-2, 0} \) % \( y = -1 \) -- неуст.;
+			\item \( y' = \frac{y^2 - 2y - 3}{y + 3}, ~ y \in \pares{-2, 5} \) % \( y = -1 \) -- неуст., \( y = 3 \) -- уст.;
+			\item \( y' = \ln{y}, ~ y \in \pares{0, 2} \) % \( y = 1 \) -- неуст.; 
+			\item \( y' = e^y - 1, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+			\item \( y' = y \ln{y}, ~ y \in (0, 1] \) % \( y = 1 \) -- неуст.;
+			\item \( y' = ye^{-y}, ~ y \in \pares{-2, 2} \) % \( y = 0 \) -- неуст.;
+			\item \( y' = \sinh{2y}, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+			
+			\label{stability_zeros:geometrical_part2}
+			\item \( y' = -e^{-y} \sinh{y}, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- уст.;
+			\item \( y' = \cos{y}, ~ y \in \pares{-2\pi, 2\pi} \) % \( y = -\frac{3\pi}{2}, \frac{\pi}{2} \) -- неуст.; \( y = -\frac{\pi}{2}, \frac{3\pi}{2} \) -- уст.
+			\item \( y' = \sin^2{y}, ~ y \in \pares{-2\pi, 2\pi} \) % \( y = -\pi, 0, \pi \) -- стац.;
+			\item \( y' = \tan{y}, ~ y \in \pares{-\frac{3\pi}{2}, \frac{3\pi}{2}} \) % \( y = -\pi, 0, \pi \) -- уст.; 
+			\item \( y' = 1 - \sec{2y}, ~ y \in \pares{-\frac{3\pi}{2}, \frac{3\pi}{2}} \) % \( y = -\pi, 0, \pi \) -- стац.;
+			\item \( y' = \pares{y + 1} \sin{y}, ~ y \in \pares{-\frac{3\pi}{2}, \frac{3\pi}{2}} \) % \( y = -\pi, 0 \) -- уст., \( y = -1, \pi \) -- неуст.;
+			\item \( y' = \pares{y - \pi} \cos{y}, ~ y \in \pares{-1, 2\pi} \) % \( y = \pi \) -- уст., \( y = \frac{\pi}{2}, \frac{3\pi}{2} \) -- неуст.;
+			\item \( y' = \frac{\cos{y}}{1 - \sin{y}}, ~ y \in \pares{-\pi, 0} \) % \( y = \frac{\pi}{2} \) -- неуст.;
+			\item \( y' = \arccot{y} - \frac{\pi}{2}, ~ y \in \pares{-\pi, \pi} \) % \( y = 0 \) -- уст.;
+			\item \( y' = y\arctan{\frac{\pi}{y + \pi}}, ~ y \in \pares{-1, 1} \) % \( y = 0 \) -- неуст.;
+
+		\end{enumtasks}
+	\end{multicols}
+
+	Найти точки покоя следующих стационарных систем, и исследовать их устойчивость по первому приближению, полагая $x, y \in \mathbb{R}$:
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\label{stability_zeros:firstapprox2d}
+			\item \( \dot{x} = y^2 - x, ~ \dot{y} = x^2 - y \) % \( M_0 \pares{0, 0} \) -- уст., \( M_1 \pares{1, 1} \) -- неуст.;
+			\item \( \dot{x} = xy + 1, ~ \dot{y} = x^2 - y^2 \) % \( M_1 \pares{-1, 1} \) -- неуст., \( M_2 \pares{1, -1} \) -- неуст.;
+			\item \( \dot{x} = x \pares{y^2 + x}, ~ \dot{y} = y \pares{x^2 - y + 1} \) % \( M_0 \pares{0, 0} \) -- неуст., \( M_1 \pares{0, 1} \) -- неуст.; 
+			\item \( \dot{x} = 1 - x^4 - y^2, ~ \dot{y} = x - y - 1 \) % \( M_1 \pares{0, -1} \) -- неуст., \( M_2 \pares{1, 0} \) -- уст.;
+			\item \( \dot{x} = \frac{x^2 - 4}{y}, ~ \dot{y} = \frac{y^2 - 1}{x + 1} \) % \( M_1 \pares{-2, -1} \) -- неуст., \( M_2 \pares{-2, 1} \) -- уст., \( M_3 \pares{2, -1} \) -- уст., \( M_4 \pares{2, 1} \) -- неуст.;
+			\item \( \dot{x} = y - xe^y, ~ \dot{y} = x^2 - y \) % \( M_0 \pares{0, 0} \) -- уст.;
+			\item \( \dot{x} = e^x - e^y, ~ \dot{y} = x^2 + 2y \) % \( M_0 \pares{0, 0} \) -- неуст., \( M_1 \pares{-2, -2} \) -- неуст.;
+			\item \( \dot{x} = \sin{y} - x, ~ \dot{y} = - y \cos{x} \) % \( M_0 \pares{0, 0} \) -- уст.;
+			\item \( \dot{x} = \frac{\cos{x}}{y^2 - 1}, ~ \dot{y} = xy, ~ x \in \pares{-\pi, \pi} \) % \( M_1 \pares{-\frac{\pi}{2}, 0} \) -- уст., \( M_2 \pares{\frac{\pi}{2}, 0} \) -- неуст.;
+			\item \( \dot{x} = \arctan{x} + 2y, ~ \dot{y} = \sinh{x} - \tanh{y} \) % \( M_0 \pares{0, 0} \) -- неуст.;
+
+		\end{enumtasks}
+	\end{multicols}
+
+	Найти точки покоя следующих трехмерных стационарных систем, и исследовать их на устойчивость по первому приближению, полагая $x, y, z \in \mathbb{R}$:
+	\begin{enumtasks}
+
+		\label{stability_zeros:firstapprox3d}
+		\item \( \dot{x} = z - x^2, ~ \dot{y} = y - y^2, ~ \dot{z} = x - z^2 \) % \( M_0 \pares{0, 0, 0} \) -- неуст., \( M_1 \pares{0, 1, 0} \) -- неуст., \( M_2 \pares{1, 0, 1} \) -- неуст., \( M_3 \pares{1, 1, 1} \) -- уст.;
+		\item \( \dot{x} = x^2 + y, ~ \dot{y} = z^2 + x^2 y, ~ \dot{z} = 2xz - y^2 \) % \( M_0 \pares{0, 0, 0} \) -- стац., \( M_1 \pares{-2, -4, -4} \) -- уст., \( M_2 \pares{2, -4, 4} \) -- неуст.;
+		\item \( \dot{x} = x - y + z - 1, ~ \dot{y} = x^2 + yz, ~ \dot{z} = 1 - z^2 \) % \( M_1 \pares{-1, -1, 1} \) -- неуст., \( M_2 \pares{0, 0, 1} \) -- неуст.;
+		\item \( \dot{x} = \sin{x} + \sin{z}, ~ \dot{y} = e^y - e^x, ~ \dot{z} = \cos^2{2z} \) % \( M_1 \pares{-\frac{\pi}{4}, -\frac{\pi}{4}, \frac{\pi}{4}} \) -- неуст., \( M_2 \pares{\frac{\pi}{4}, \frac{\pi}{4}, -\frac{\pi}{4}} \) -- неуст.;
+
+	\end{enumtasks}
+
+	Доказать, что точка $M_0 \pares{0, 0, 0}$ является точкой покоя, и исследовать ее на устойчивость по первому приближению:
+	\begin{enumtasks}
+
+		\label{stability_zeros:firstapprox3d_zero}
+		\item \( \dot{x} = xy - 2z, ~ \dot{y} = y^2 - x, ~ \dot{z} = y - 2x^2 - 3z \) % \( M_0 \pares{0, 0, 0} \) -- уст.; 
+		\item \( \dot{x} = 2 \tan{x} - yz, ~ \dot{y} = 3x^2 - 2y, ~ \dot{z} = \arcsin{z} \) % \( M_0 \pares{0, 0, 0} \) -- неуст.;
+		\item \( \dot{x} = x^3 - x, ~ \dot{y} = x - y - 3yz^3, ~ \dot{z} = \sin{x} - 2z \) % \( M_0 \pares{0, 0, 0} \) -- уст.; 
+		\item \( \dot{x} = \cos{z} - e^y, ~ \dot{y} = 2\tan{z} + x, ~ \dot{z} = \ln\pares{y+1} - xz \) % \( M_0 \pares{0, 0, 0} \) -- неуст.;
+		\item \( \dot{x} = 3z - \arctan{x}, ~ \dot{y} = x^2 - \ln\pares{y+1}, ~ \dot{z} = xy - z \) % \( M_0 \pares{0, 0, 0} \) -- уст.;
+		\item \( \dot{x} = \sqrt{xy + 9} - x - 3\cos{z}, ~ \dot{y} = x^2 - \tan\pares{y + z} + z, ~ \dot{z} = \pares{z - 1}^2 + z - e^{-y} \)  % \( M_0 \pares{0, 0, 0} \) -- уст.;
+
+	\end{enumtasks}

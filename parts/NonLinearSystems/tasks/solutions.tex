@@ -1,0 +1,229 @@
+\subsection*{Нелинейные системы обыкновенных дифференциальных уравнений}
+	
+	\begin{enumsols}
+
+		% \label{sol:nonlinsys_systodes:systems2}
+		\item \( tx - t^2 = C_1, ~ y - t^2 = C_2 \); \sfill % \( \syst{ \dot{x} &= 2 - \frac{x}{t}, \\ \dot{y} &= 2t; } \)
+		\item \( xy = C_1, ~ x - t^2 = C_2 \); \sfill % \( \syst{ \dot{x} &= 2t, \\ \dot{y} &= - \frac{2 t y}{x}; } \)
+		\item \( \frac{x}{t} - 2t = C_1, ~ ty^2 - 3t = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{x}{t} + 2t, \\ \dot{y} &= \frac{3 - y^2}{2ty}; } \)
+		\item \( \frac{x^2}{y} = C_1, ~ y^2 - t = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{x}{4y^2}, \\ \dot{y} &= \frac{1}{2y}; } \)
+		\item \( 2t + x^2 y = C_1, ~ y - 3t^2 = C_2 \); \sfill % \( \syst{ \dot{x} &= - \frac{9t^2 x}{2y} - \frac{1}{xy}, \\ \dot{y} &= 9t^2; } \)
+		\item \( \frac{x}{y} - 3t = C_1, ~ 2 t^2 + xy = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{3y^2 - 4t}{2y}, \\ \dot{y} &= -\frac{3y^2 + 4t}{2x}; } \)
+		\item \( x e^y = C_1, ~ ty + x^2 = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{x y}{t - 2 x^2}, \\ \dot{y} &= \frac{y}{2 x^2 - t}; } \)
+		\item \( x y^2 - t = C_1, ~ x^2 + y - 2t = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{1 - 4xy}{y^2 - 4 x^2 y}, \\ \dot{y} &= \frac{2 \pares{y^2 - x}}{y^2 - 4 x^2 y}; } \)
+		
+		\label{sol:nonlinsys_systodes:systems2_hard}
+		\item \( x e^y - t = C_1, ~ y + \frac{x}{t} = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{t^2 - x^2 e^y}{t \pares{t - x} e^y}, \\ \dot{y} &= \frac{x e^{y} - t}{t \pares{t - x} e^y}; } \)
+		\item \( x \sin{y} = C_1, ~ x^2 - 2ty = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{xy}{t \tan{y} + x^2}, \\ \dot{y} &= - \frac{y}{t + x^2 \cot{y}}; } \)
+		\item \( t \sin{x} - y = C_1, ~ y^2 - 3t = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{3}{2ty \cos{x}} - \frac{\tan{x}}{t}, \\ \dot{y} &= \frac{3}{2 y}; } \)
+		\item \( y e^x - e^t = C_1, ~ t^2 + xy = C_2 \); \sfill % \( \syst{ \dot{x} &= \frac{2 t + x e^{t - x}}{y \left(x - 1\right)}, \\ \dot{y} &= \frac{2t + e^{t - x}}{1 - x}; } \)
+
+		\label{sol:nonlinsys_systodes:systems3}
+		\item \( ty + x = C_1, ~ z - t = C_2, ~ x^2 - 2tz = C_3 \); \sfill % \( \syst{ \dot{x} &= \frac{t + z}{x}, \\ \dot{y} &= -\frac{xy + z + t}{tx}, \\ \dot{z} &= 1; } \)
+		\item \( \tan{y} - t = C_1, ~ yz = C_2, ~ x^2 - y^2 = C_3 \); \sfill % \( \syst{ \dot{x} &= \frac{y}{x} \cos^2{y}, \\ \dot{y} &= \cos^2{y}, \\ \dot{z} &= - \frac{z}{y} \cos^2{y}; } \)
+		\item \( xy - t^2 = C_1, ~ \frac{t}{x} + z = C_2, ~ z^2 - 2ty = C_3 \); \sfill % \( \syst{ \dot{x} &= \frac{2tx}{xy + z} + \frac{x}{t}, \\ \dot{y} &= \frac{2tz}{x \pares{xy + z}} - \frac{y}{t}, \\ \dot{z} &= \frac{2 t^2}{x \pares{xy + z}}; } \)
+		\item \( z \sqrt{x^2 + 1} = C_1, ~ y^2 - 2 e^t = C_2, ~ \frac{z}{y} = C_3 \); \sfill % \( \syst{ \dot{x} &= -\frac{\pares{x^2 + 1} e^{t}}{x y^2}, \\ \dot{y} &= \frac{e^t}{y}, \\ \dot{z} &= \frac{z e^t}{y^2}; } \)
+		\item \( x e^y - \sin{t} = C_1, ~ z - x^2 = C_2, ~ x + y = C_3 \); \sfill % \( \syst{ \dot{x} &= \frac{e^{-y} \cos{t}}{1 - x}, \\ \dot{y} &= \frac{e^{-y} \cos{t}}{x - 1}, \\ \dot{z} &= \frac{2xe^{-y} \cos{t}}{1 - x}; } \)
+		\item \( x + y^2 = C_1, ~ z^2 - 2te^t = C_2, ~ xz + y = C_3 \); \sfill % \( \syst{ \dot{x} &= - \frac{2xy \pares{t + 1} e^t}{z \pares{2yz - 1}}, \\ \dot{y} &= \frac{x \pares{t + 1} e^t}{z \pares{2yz - 1}}, \\ \dot{z} &= \frac{\pares{t + 1} e^t}{z}; } \)
+		
+		\label{sol:nonlinsys_systodes:systems3_hard}
+		\item \( x - t \sin{y} = C_1, ~ 2tz + x^2 = C_2, ~ z - tx = C_3 \); \sfill % \( \syst{ \dot{x} &= - \frac{t x + z}{t^2 + x}, \\ \dot{y} &= -\frac{tx + z}{t \pares{t^2 + x}} \sec{y} - \frac{\tan{y}}{t}, \\ \dot{z} &= \frac{x^2 - tz}{t^2 + x}; } \)
+		\item \( ze^x = C_1, ~ t - yz = C_2, ~ z - y e^x = C_3 \); \sfill % \( \syst{ \dot{x} &= - \frac{e^x}{z \pares{2ye^x + z}}, \\ \dot{y} &= \frac{1}{z} - \frac{ye^x}{z \pares{2ye^x + z}}, \\ \dot{z} &= \frac{e^x}{2ye^x + z}; } \)
+
+		\label{sol:nonlinsys_systodes:symmetrical2}
+		\item \( uy - x = C_1, ~ y - u = C_2 \); \sfill % \( \frac{dx}{u + y} = dy = du \)
+		\item \( y^2 - x = C_1, ~ u^2 - x = C_2 \); \sfill % \( \frac{dx}{2uy} = \frac{dy}{u} = \frac{du}{y} \)
+		\item \( u + \frac{y}{x} = C_1, ~ u^2 - x = C_2 \); \sfill % \( \frac{dx}{2u} = \frac{x ~ dy}{2uy - x^2} = du \)
+		\item \( x + y^2 = C_1, ~ u^2 - xy = C_2 \); \sfill % \( \frac{dx}{4uy} = - \frac{dy}{2u} = \frac{du}{2y^2 - x} \)
+		\item \( x^2 - u^2 = C_1, ~ y^2 - x^2 = C_2 \); \sfill % \( \frac{dx}{uy} = \frac{dy}{ux} = \frac{du}{xy} \)
+		\item \( \frac{u}{x} = C_1, ~ \frac{u}{y} = C_2 \); \sfill % \( y ~ dx = x ~ dy = \frac{xy}{u} ~ du \)
+		\item \( x - uy = C_1, ~ \frac{u^2}{x} = C_2 \); \sfill % \( \frac{dx}{2 u^{2}} = \frac{x ~ dy}{2ux - u^2 y} = \frac{x ~ du}{u^3} \)
+		\item \( \frac{1}{y} - x = C_1, ~ \frac{u}{x} + y = C_2 \); \sfill % \( y^2 ~ dx = - dy = \frac{x y^2 ~ du}{u + x^2 y^2} \)
+		\item \( \frac{x}{y} - \frac{1}{x} = C_1, ~ \frac{u}{x} + y = C_2 \); \sfill % \( y ~ dx = \frac{x^3 ~ dy}{x^2 + y} = \frac{x^2 y ~ du}{xu - x^2 y - y^2} \)
+		\item \( uy + \frac{1}{u} = C_1, ~ \frac{u}{x} = C_2 \); \sfill % \( dx = \frac{u^2 x ~ dy}{1 - u^2 y} = \frac{x ~ du}{u} \)
+		
+		\label{sol:nonlinsys_systodes:symmetrical2hard}
+		\item \( y \sin{x} = C_1, ~ u^2 - x = C_2 \); \sfill % \( dx = - \frac{\tan{x}}{y} ~ dy = 2u ~ du \)
+		\item \( x + y^2 = C_1, ~ xe^y - u^2 = C_2 \); \sfill % \( \frac{dx}{2y} = - dy = \frac{2u e^{-y} ~ du}{2y - x} \)
+		\item \( e^{x + y} - 3u = C_1, ~ u^2 - 2x = C_2 \); \sfill % \( \frac{dx}{u} = \frac{e^{x+y} ~ dy}{3 - ue^{x+y}} = du \)
+		\item \( \tan{y} - x^2 = C_1, ~ ux - 5y = C_2 \); \sfill % \( \frac{\cos^2{y}}{x} ~ dx = \frac{dy}{2 x^2} = \frac{du}{10x - u \sec^2{y}} \)
+		\item \( \sin{2y} - u = C_1, ~ x e^u + 3y = C_2 \); \sfill % \( - \frac{e^u ~ dx}{2 x e^u \cos{2y} + 3} = dy = \frac{du}{2 \cos{2y}} \)
+		\item \( \ln{\abs{u + x}} - y^2 = C_1, ~ 2u + e^{3x} = C_2 \); \sfill % \( - \frac{dx}{4 y} = \frac{u + x}{3 e^{3x} - 2} ~ dy = \frac{e^{- 3 x}}{6 y} ~ du \)
+		\item \( \arcsin{x} - u^2 = C_1, ~ 2 y^2 + \sqrt{x - 1} = C_2 \); \sfill % \( \frac{dx}{8 u y} = - \frac{\sqrt{x - 1}}{u} ~ dy = \frac{\sqrt{1 - x^2}}{4 y} ~ du \)
+		\item \( 5u + \sqrt[3]{x^2 - 4} = C_1, ~ y^2 - 2e^u = C_2 \); \sfill % \( - \frac{dx}{15 y \sqrt[3]{\pares{x^2 - 4}^2}} = \frac{dy}{2x e^{u}} = \frac{du}{2 x y} \)
+		\item \( \tan{\sqrt{x}} - 3 \sqrt{y + 2} = C_1, ~ u^2 - 3x = C_2 \); \sfill % \( \frac{\sqrt{y + 2} ~ dx}{3 u} = \frac{\sqrt{x} ~ dy}{u \sec^2{\sqrt{x}}} = \frac{2 \sqrt{y + 2} ~ du}{9} \)
+		\item \( e^{u - x} - x = C_1, ~ y + \arctan{\frac{u}{x}} = C_2 \); \sfill % \( dx = \frac{\pares{x^2 + u^2}}{u - x - xe^{x - u}} ~ dy = \frac{du}{e^{x - u} + 1} \)
+
+		\label{sol:nonlinsys_systodes:symmetrical3}
+		\item \( x + 2y = C_1, ~ y^2 + 3 z = C_2, ~ 2 u^2 - z = C_3 \); \sfill % \( \frac{dx}{12 u} = - \frac{dy}{6 u} = \frac{dz}{4 u y} = \frac{du}{y} \)
+		\item \( x^2 - 2xy = C_1, ~ y^2 - z^2 = C_2, ~ uz - x = C_3 \); \sfill % \( \frac{dx}{x z^2} = \frac{dy}{z^2 \pares{x - y}} = \frac{dz}{yz \pares{x - y}} = \frac{du}{uy \pares{y - x} + xz} \)
+		\item \( \frac{x}{y} + z = C_1, ~ u + xz = C_2, ~ \frac{z}{x} - y = C_3 \); \sfill % \( \frac{y ~ dx}{1 - y^2} = \frac{x^2 ~ dy}{x + yz} = \frac{xy ~ dz}{xy + z} = \frac{y ~ du}{y^2 z - xy - 2z} \)
+		\item \( xz + y = C_1, ~ z^2 - 3x = C_2, ~ u - 5xy = C_3 \); \sfill % \( \frac{dx}{2 z} = - \frac{dy}{3 x + 2 z^2} = \frac{dz}{3} = \frac{du}{10 yz - 15 x^2 - 10 xz^2} \)
+		\item \( e^z - x^2 = C_1, ~ uy - z = C_2, ~ y^2 - 3x^2 = C_3 \); \sfill % \( \frac{e^{- z} dx}{y^2} = \frac{e^{- z} dy}{3xy} = \frac{dz}{2xy^2} = \frac{du}{2xy - 3uxe^z} \)
+		\item \( \sin{xz} - y = C_1, ~ u^2 - 3z = C_2, ~ u + 5x - 3z = C_3 \); \sfill % \( \frac{5 ~ dx}{2u - 1} = \frac{15 \sec{xz} ~ dy}{10 u x + z \pares{6 u - 3}} = \frac{3 ~ dz}{2 u} = du \)
+		\item \( u + \frac{z}{x} = C_1, ~ u^2 - 2xz = C_2, ~ y e^{2x} - u = C_3 \); \sfill % \( \frac{2 ~ dx}{u + x^2} = \frac{dy}{z e^{-2x} - y \pares{x^2 + u}} = \frac{2x  ~ dz}{z \pares{u - x^2}} = \frac{du}{z} \)
+		\item \( z \arctan{x} - u = C_1, ~ \frac{x}{y} = C_2, ~ xz + y = C_3 \); \sfill % \( \frac{y ~ dx}{x^2} = \frac{dy}{x} = - \frac{y ~ dz}{xz + y} = \frac{y \pares{x^2 + 1} ~ du}{x^2 z - \pares{x z + y} \pares{x^2 + 1} \arctan{x}} \)
+		\item \( \frac{y}{x + 1} - z = C_1, ~ z^2 - xy = C_2, ~ u^2 - 2y = C_3 \); \sfill % \( \frac{y ~ dx}{2z - x \pares{x + 1}} = \frac{\pares{x + 1} ~ dy}{2z + \pares{x + 1}^2} = \frac{\pares{x + 1} ~ dz}{2x + 1} = \frac{u \pares{x + 1} ~ du}{2z + \pares{x + 1}^2} \)
+		\item \( x \sin{u} - y = C_1, ~ y^2 - z = C_2, ~ z^2 - 2ux = C_3 \); \sfill % \( \frac{dx}{2yz \cos{u} - 1} = \frac{\sec{u} ~ dy}{u - \tan{u}} = \frac{\sec{u} ~ dz}{2y \pares{u - \tan{u}}} = \frac{x ~ du}{u - 2yz \sin{u}} \)
+	
+	\end{enumsols}
+
+
+\subsection*{Линейные и квазилинейные уравнения первого порядка}
+
+	\begin{enumsols}
+
+		% \label{sol:nonlinsys_quazilinear:dim2}
+		\item \( \Phi \pares{u, x^2 - y^3} = 0 \); \sfill % \( 2x \dpart{u}{y} + 3 y^2 \dpart{u}{x} = 0 \)
+		\item \( \Phi \pares{u, y^2 + \sin{x}} = 0 \); \sfill % \( \cos{x} \dpart{u}{y} - 2y \dpart{u}{x} = 0 \)
+		\item \( \Phi \pares{u + x^2, xy} = 0 \); \sfill % \( y \dpart{u}{y} - x \dpart{u}{x} = 2 x^2 \)
+		\item \( \Phi \pares{u - xy, y^2 - e^{2x}} = 0  \); \sfill % \( y e^{-x} \dpart{u}{x} + e^x \dpart{u}{y} = xe^x + y^2 e^{-x} \)
+		\item \( \Phi \pares{u + \sin{x}, \tan{y} - \cos{x}} = 0 \); \sfill % \( \sec^2{y} \dpart{u}{x} + \cos{x}\sec^2{y} = \sin{x} \dpart{u}{y} \)
+		\item \( \Phi \pares{u^2 - x, u + y^2} = 0 \); \sfill % \( 4uy \dpart{u}{x} - \dpart{u}{y} = 2y \)
+		\item \( \Phi \pares{u^2 - \cos{x}, ux + y^2} = 0 \); \sfill % \( 4uy \dpart{u}{x} + \pares{x \sin{x} - 2u^2} \dpart{u}{y} + 2y \sin{x} = 0 \)
+		\item \( \Phi \pares{u^2 x - y^2, u + xy} = 0 \); \sfill % \( u^2 \dpart{u}{y} + 2\pares{ux^2 + y} \dpart{u}{x} = 2uxy \dpart{u}{y} - u^2 x - 2y^2 \)
+		
+		\label{sol:nonlinsys_quazilinear:dim2_part2}
+		\item \( \Phi \pares{x \ln{u} - y, x + \ln{y}} = 0 \); \sfill % \( x y \dpart{u}{y} - x \dpart{u}{x} = u \pares{y + \ln{u}} \)
+		\item \( \Phi \pares{e^u - x^2, u - xy} = 0 \); \sfill % \( x \dpart{u}{x} + \pares{2 x e^{-u} - y} \dpart{u}{y} = 2x^2 e^{-u} \)
+		\item \( \Phi \pares{ux + \sin{u}, u - \cos{y}} = 0 \); \sfill % \( \dpart{u}{y} \cosec{y} + 1 + \frac{x + \cos{u}}{u} \dpart{u}{x} = 0 \) 
+		\item \( \Phi \pares{u^2 - u + x, x^2 - y^2 + \ln{u}} = 0 \); \sfill % \( u \cdot \pares{4u - 2} \cdot \pares{x \dpart{u}{y} + y \dpart{u}{x}} = \dpart{u}{y} - 2ux \)
+		\item \( \Phi \pares{ux + y, \frac{y}{x} - u^2} = 0 \); \sfill % \( 2ux^2 \cdot \pares{x \dpart{u}{y} - \dpart{u}{x}} = ux + x \cdot \pares{x \dpart{u}{x} + y \dpart{u}{y} } + y \)
+		\item \( \Phi \pares{u \sin{x}, u^2 - 5xy} = 0 \); \sfill % \( 5 \tan{x} \cdot \pares{x \dpart{u}{x} - y \dpart{u}{y}} = 2u^2 \dpart{u}{y} - 5ux \)
+		\item \( \Phi \pares{u e^u + x^2, uy} = 0 \); \sfill % \( 2x \pares{u + y\dpart{u}{y}} + ue^{u} \pares{u + 1} \dpart{u}{x} = 0 \)
+		\item \( \Phi \pares{u^3 - 4ux^2, \frac{e^y}{x}} = 0 \); \sfill % \( \pares{3u^2 - 4x^2} \cdot \pares{x \dpart{u}{x} + \dpart{u}{y}} = 8ux^2 \)
+		
+		\label{sol:nonlinsys_quazilinear:dim2_hard}
+		\item \( \Phi \pares{u \arctan{x} - y^2, y + \frac{e^u}{x}} = 0 \); \sfill % \( \frac{ux^2}{x^2 + 1} + \pares{\frac{ux}{x^2 + 1} + \arctan{x}} e^u \dpart{u}{y} + \pares{x^2 \arctan{x} + 2 xy e^u} \dpart{u}{x} = 2 y e^{u} \)
+		\item \( \Phi \pares{\frac{u}{x^{2} - y}, \frac{u^{2} + x}{y}} = 0 \); \sfill % \( \frac{u}{x^2 - y} + \pares{\frac{2 u^2}{x^2 - y} + \frac{u^2 + x}{y}} \dpart{u}{x} + \pares{\frac{4 u^2 x}{x^2 - y} + 1} \dpart{u}{y} = \frac{2 u x \pares{u^2 + x}}{y \pares{x^2 - y}} \)
+
+		\label{sol:nonlinsys_quazilinear:dim3}
+		\item \( \Phi \pares{u, x^2 - y + z^2, x + z} = 0 \); \sfill % \( \dpart{u}{x} + 2 x \dpart{u}{y} = \dpart{u}{z} + 2 z \dpart{u}{y} \)
+		\item \( \Phi \pares{u, yz + \sin{x}, y + z^2} = 0 \); \sfill % \( \pares{y - 2z^2} \cdot \dpart{u}{x} + \pares{2z \dpart{u}{y} - \dpart{u}{z}} \cdot \cos{x} = 0 \)
+		\item \( \Phi \pares{\frac{x}{y}, \frac{y}{z}, z \pares{u^2 - x^2}} = 0 \); \sfill % \( x \dpart{u}{x} + y \dpart{u}{y} + z \dpart{u}{z} = \frac{3 x^2 - u^2}{2u} \)
+		\item \( \Phi \pares{xy, uz, y^2 + z^2} = 0 \); \sfill % \( u y^2 + x z^2 \dpart{u}{x} + y^2 z \dpart{u}{z} = y z^2 \dpart{u}{y} \)
+		\item \( \Phi \pares{u + x \sin{y}, x - z^2, xy} = 0 \); \sfill % \( 2z \pares{ x \dpart{u}{x} - y \dpart{u}{y} } + x \dpart{u}{z} = 2xz \cdot \pares{y \cos{y} - \sin{y}} \)
+		\item \( \Phi \pares{x \sec{y}, u^2 \pares{x - y}, yz} = 0 \); \sfill % \( xy \tan{y} \dpart{u}{x} + z \dpart{u}{z} - y \dpart{u}{y} = \frac{uy \pares{x\tan{y} + 1}}{2 \pares{y - x}} \)
+		\item \( \Phi \pares{u^2 + x, y^2 - z, xy + z^2} = 0 \); \sfill % \( 2yu \pares{y \dpart{u}{z} + \dpart{u}{y} - 4z \dpart{u}{x}} = 2ux \dpart{u}{x} + x + 4yz \)
+		\item \( \Phi \pares{uz + y, x \sec{z}, u y^2} = 0 \); \sfill % \( uy \dpart{u}{y} + \bpares{2uz - y} \cdot \pares{\dpart{u}{z} - x \tan{z} \dpart{u}{x}} + 2u^2 = 0 \)
+		\item \( \Phi \pares{\sqrt{x} + \sqrt{y}, y^2 - z^2, \frac{u - y}{x}} = 0 \); \sfill % \( z \sqrt{x} \pares{u - x \dpart{u}{x}} - yz\sqrt{x} + xy \sqrt{y} \dpart{u}{z} = x z \sqrt{y} \pares{1 - \dpart{u}{y}} \)
+		\item \( \Phi \pares{\frac{x z}{y}, 4u^2 \pares{x + y}, z \pares{x + y}} = 0 \); \sfill % \( x^2 \dpart{u}{x} + y^2 \dpart{u}{y} = \pares{x + y} \pares{z \dpart{u}{z} - u} - 2xy \dpart{u}{x} \)
+		
+		\label{sol:nonlinsys_quazilinear:dim3_part2}
+		\item \( \Phi \pares{y \tan{2x}, z e^{u}, y^2 - 5u^2} = 0 \); \sfill % \( 5u \pares{2y \sec^2{2x} - \tan{2x} \dpart{u}{x}} = 2 y^2 \sec^2{2x} \pares{z\dpart{u}{z} + 1} \)
+		\item \( \Phi \pares{u^4 - e^y, z e^u, x y^2} = 0 \); \sfill % \( 4 u^3 \pares{ y \dpart{u}{y} - 2x \dpart{u}{x} } = y e^{y} \pares{1 + z\dpart{u}{z}} = 0 \)
+		\item \( \Phi \pares{x \cos{u} - z, y z^2, x + y} = 0 \); \sfill % \( 2xy \pares{\dpart{u}{x} - \dpart{u}{y}} + xz \dpart{u}{z} = 2y \cot{u} - z \cosec{u} \)
+		\item \( \Phi \pares{x e^{2u}, y e^{-uz}, x + z^2} = 0 \); \sfill % \( x \cdot \pares{ 2 z \dpart{u}{x} - \dpart{u}{z}} + z = y \cdot \pares{ux + y z^2} \dpart{u}{y}  \)
+		\item \( \Phi \pares{u e^{- x} + \ln{y}, x^2 + \tan{z}, \frac{u}{z}} = 0 \); \sfill % \( z \sec^2{z} \pares{e^x \dpart{u}{x} + uy \dpart{u}{y}} + 2ux \pares{y \dpart{u}{y} + e^x} = 2xz e^x \dpart{u}{z} \)
+		\item \( \Phi \pares{y + z\tan{x}, y^2 - u^2, ux + y} = 0 \); \sfill % \( u \tan{x} \pares{u \dpart{u}{y} - y} + \pares{u + xy} \cdot \pares{z \sec^2{x} \dpart{u}{z} - \tan{x} \dpart{u}{x}} = u^2 \dpart{u}{z} \)
+		\item \( \Phi \pares{z \arctan{x}, \frac{y}{z}, u^2 + z^2} = 0 \) % \( y \dpart{u}{y} + z \dpart{u}{z} + \frac{z^2}{u} = \pares{x^2 + 1} \arctan{x} \cdot \dpart{u}{x} \)
+		\item \( \Phi \pares{\frac{z}{x^2 + 1}, \frac{u}{y}, y^2 - xz} = 0 \); \sfill % \( 2x \dpart{u}{z} + \frac{3x^2 + 1}{2y^2} \pares{y\dpart{u}{y} - u} + \frac{\pares{x^2 + 1}}{z} \dpart{u}{x} = 0 \)
+		\item \( \Phi \pares{z \sin{2x} - y^2, \frac{u}{x}, ux + z} = 0 \); \sfill % \( uy \pares{1 + 2x \dpart{u}{z}} + x \pares{u \sin{2x} - z \cos{2x}} \dpart{u}{y} = xy \dpart{u}{x} \)
+		\item \( \Phi \pares{\frac{u}{x} - 2 \tan{x}, xy, 3u + z^2} = 0 \); \sfill % \( 2z \pares{x \dpart{u}{x} - y\dpart{u}{y} - u} - 2x^2 \sec^2{x} \pares{2z + 3 \dpart{u}{z}} = 3u \dpart{u}{z} \)
+		
+		\label{sol:nonlinsys_quazilinear:dim3_hard}
+		\item \( \Phi \pares{\frac{e^u}{x} - y^2, u - z^2, x - y + z} = 0 \); \sfill % \( 2 x^2 y e^{-u} \pares{2 z + \dpart{u}{x} - \dpart{u}{z}} + 2z = 2xz \pares{ \dpart{u}{x} + \dpart{u}{y} } + e^u \pares{\dpart{u}{y} + \dpart{u}{z}} \)
+		\item \( \Phi \pares{u^2 + \arcsin{\frac{z}{2}}, e^{2 x} - 3y, u - x + y} = 0 \); \sfill % \( 2e^{2x} \pares{2u \sqrt{4 - z^2} \dpart{u}{z} + \dpart{u}{y} + 1} = 3 \pares{2u \sqrt{4 - z^2} \dpart{u}{z} - \dpart{u}{x} + 1} \)
+
+	\end{enumsols}
+
+\subsection*{Системы уравнений с частными производными}
+
+	\begin{enumsols}
+
+		% \label{sol:nonlinsys_partialsyst:systems2}
+		\item \( u = x + y + C \); \sfill % \( \dpart{u}{x} = 1, ~ \dpart{u}{y} = 1 \) % u - x - y = C
+		\item \( u = 2y - x^2 + C \); \sfill % \( \dpart{u}{x} = -2x, ~ \dpart{u}{y} = 2 \) % u + x**2 - 2*y = C
+		\item \( u = \sin{x} - \ln{y} + C \); \sfill % \( \dpart{u}{x} = \cos{x}, ~ \dpart{u}{y} = -\frac{1}{y} \) % u + log(y) - sin(x) = C
+		\item \( u = xy + C \); \sfill % \( \dpart{u}{x} = y, ~ \dpart{u}{y} = x \) % u - x*y = C
+		\item \( u = \sin\pares{x + y} + C \); \sfill % \( \dpart{u}{x} = \cos\pares{x + y}, ~ \dpart{u}{y} = \cos\pares{x + y} \) % u - sin(x + y) = C
+		\item \( u = 3x^2 y - 2xy^2 + C \); \sfill % \( \dpart{u}{x} = 2y \pares{3x - y}, ~ \dpart{u}{y} = x \pares{3x - 4y} \) % u - 3*x**2*y + 2*x*y**2 = C
+		\item \( u = C - x e^{u} \); \sfill % \( \dpart{u}{x} = - e^{y}, ~ \dpart{u}{y} = - x e^{y} \) % u + x*exp(y) = C
+		\item \( u = e^{2x} \ln{y} + C \); \sfill % \( \dpart{u}{x} = 2 e^{2 x} \ln{y}, ~ \dpart{u}{y} = \frac{e^{2x}}{y} \) % u - exp(2*x)*log(y) = C
+		\item \( u = y \tan{x} - y^2 + C \); \sfill % \( \dpart{u}{x} = y \sec^2{x}, ~ \dpart{u}{y} = \tan{x} - 2y \) % u + y**2 - y*tan(x) = C
+		\item \( u = \sec{x} \tan{y} + C \); \sfill % \( \cos{x} \cdot \dpart{u}{x} = \tan{x} \tan{y}, ~ \cos{x} \cdot \dpart{u}{y} = \sec^2{y} \) % u - tan(y)*sec(x) = C
+		\item \( u^2 = 2xy + C \); \sfill % \( \dpart{u}{x} = \frac{y}{u}, ~ \dpart{u}{y} = \frac{x}{u} \) % u**2 - 2*x*y = C
+		\item \( ux = y^2 + C \); \sfill % \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = \frac{2 y}{x} \) % u*x - y**2 = C
+		\item \( ux^2 = x e^{-y} + C \); \sfill % \( x^2 \dpart{u}{x} + 2xu = e^{-y}, ~ x\dpart{u}{y} = -e^{-y} \) % u*x**2 - x*exp(-y) = C
+		\item \( e^u = y \ln{x} + C \); \sfill % \( x\dpart{u}{x} = y e^{-u}, ~ \dpart{u}{y} = e^{-u} \ln{x} \) % -y*log(x) + exp(u) = C
+		\item \( x e^{-u} = y^2 - 2xy + C \); \sfill % \( x\dpart{u}{x} = 2 y e^{u} + 1, ~ x\dpart{u}{y} = 2 \left(x - y\right) e^{u} \) % 2*x*y + x*exp(-u) - y**2 = C
+		\item \( uxy - y^2 - 2e^{2x} + C \); \sfill % \( \dpart{u}{x} = -\frac{u y + 4 e^{2 x}}{x y}, ~ \dpart{u}{y} = \frac{2}{x} - \frac{u}{y} \) % u*x*y - y**2 + 2*exp(2*x) = C
+		\item \( y \sin{u} = 2xy + C \); \sfill % \( \dpart{u}{x} = 2 \sec{u}, ~ y \dpart{u}{y} = 2x \sec{u} - \tan{u} \) % -2*x*y + y*sin(u) = C
+		\item \( e^{ux} = \ln{y} + C \); \sfill % \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = \frac{e^{-ux}}{xy} \) % exp(u*x) - log(y) = C
+		
+		\label{sol:nonlinsys_partialsyst:systems2star}
+		\item \( u^2 - 2ux = C - xy^2 \); \sfill % \( 2\dpart{u}{x} = \frac{2u - y^2}{u - x}, ~ \dpart{u}{y} = -\frac{xy}{u - x} \) % u**2 - 2*u*x + x*y**2 = C
+		\item \( u^3 - 3u^2 + ux = y + C \); \sfill % \( \dpart{u}{x} = - \frac{u}{3 u^{2} - 6 u + x}, ~ \dpart{u}{y} = \frac{1}{3 u^{2} - 6 u + x} \) % u**3 - 3*u**2 + u*x - y = C
+
+		\label{sol:nonlinsys_partialsyst:systems2cauchy}
+		\item \( u = y^2 - x + 1 \); \sfill % \( \dpart{u}{x} = -1, ~ \dpart{u}{y} = 2 y, ~ u(0, 0) = 1 \) % u + x - y**2 = 1
+		\item \( u^2 = 2x - e^y \); \sfill % \( \dpart{u}{x} = \frac{1}{u}, ~ \dpart{u}{y} = - \frac{e^y}{2u}, ~ u(1, 0) = 1 \) % u**2 - 2*x + exp(y) = 0
+		\item \( uxy + 1 = 0 \); \sfill % \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = \frac{1}{x y^2}, ~ u(1, 1) = -1 \) % u*x + 1/y = 0
+		\item \( uy + x^2 = xy \); \sfill % \( \dpart{u}{x} = \frac{u}{x} - \frac{x}{y}, ~ \dpart{u}{y} = \pares{\frac{x}{y}}^2, ~ u(1, -1) = 2 \) % u/x + x/y = 1
+		
+		\label{sol:nonlinsys_partialsyst:systems2cauchy_hard}
+		\item \( e^u = x \ln{y} \); \sfill % \(  \dpart{u}{x} = e^{-u} \ln{y}, ~ y\dpart{u}{y} = x e^{-u}, ~ u(0, 1) = 0 \) % -x*log(y) + exp(u) = 0
+		\item \( u \cos{x} = xy^2 - 1 \); \sfill % \(  \cos{x} \cdot \dpart{u}{x} = u \sin{x} + y^2, ~ \cos{x} \cdot \dpart{u}{y} = 2 x y, ~ u(\pi, 0) = 1 \) % u*cos(x) - x*y**2 = -1
+		\item \( \ln\pares{u+x} = xy^2 + 1 \); \sfill % \(  \dpart{u}{x} = y^2 \pares{u + x} - 1, ~ \dpart{u}{y} = 2xy \pares{u + x}, ~ u(-1, 1) = 2 \) % -x*y**2 + log(u + x) = 1
+		\item \( \cos{u} = \sin{x} - xy + \pi - 1 \); \sfill % \(  \sin{u} \dpart{u}{x} = y - \cos{x}, ~ \dpart{u}{y} = x \csc{u}, ~ u(\pi, 1) = \pi \) % x*y - sin(x) + cos(u) = pi - 1
+		\item \( u e^{u} = y^2 - x + e \); \sfill % \(  \dpart{u}{x} = - \frac{e^{-u}}{u + 1}, ~ \dpart{u}{y} = \frac{2 y e^{-u}}{u + 1}, ~ u(0, 0) = 1 \) % u*exp(u) + x - y**2 = e
+		\item \( ux \ln{u} = x^2 - \ln{y} + 1 \); \sfill % \(  x\dpart{u}{x} = \frac{2x - u \ln{u}}{\ln{u} + 1}, ~ xy \dpart{u}{y} = - \frac{1}{\ln{u} + 1}, ~ u(1, e) = e \) % u*x*log(u) - x**2 + log(y) = 1
+		
+		\label{sol:nonlinsys_partialsyst:systems3}
+		\item \( u = xy - z + C \); \sfill % \( \dpart{u}{x} = y, ~ \dpart{u}{y} = x, ~ \dpart{u}{z} = -1 \) % u - x*y + z = C
+		\item \( u = 3xz^2 - y^4 + C \); \sfill % \( \dpart{u}{x} = 3 z^2, ~ \dpart{u}{y} = - 4 y^3, ~ \dpart{u}{z} = 6xz \) % u - 3*x*z**2 + y**4 = C
+		\item \( u = xy^2 z + Cx \); \sfill % \( \dpart{u}{x} = \frac{u}{x}, ~ \dpart{u}{y} = 2xyz, ~ \dpart{u}{z} = x y^2 \) % u/x - y**2*z = C
+		\item \( uz = x^2 y + Cy \); \sfill % \( \dpart{u}{x} = \frac{2 x y}{z}, ~ \dpart{u}{y} = \frac{u}{y}, ~ \dpart{u}{z} = - \frac{u}{z} \) % u*z/y - x**2 = C
+		\item \( uxy = z^4 - y + C \); \sfill % \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = -\frac{ux + 1}{xy}, ~ \dpart{u}{z} = \frac{4 z^3}{xy} \) % u*x*y + y - z**4 = C
+		\item \( u e^z = C - x^3 e^{-y} \); \sfill % \( e^{y + z} \dpart{u}{x} = - 3 x^2, ~ e^{y + z} \dpart{u}{y} = x^3, ~ \dpart{u}{z} = - u \) % u*exp(z) + x**3*exp(-y) = C
+		
+		\label{sol:nonlinsys_partialsyst:systems3hard}
+		\item \( ux + e^u = yz + C \); \sfill % \( \dpart{u}{x} = - \frac{u}{x + e^u}, ~ \dpart{u}{y} = \frac{z}{x + e^u}, ~ \dpart{u}{z} = \frac{y}{x + e^u} \) % u*x - y*z + exp(u) = C
+		\item \( u \sin{u} = z^2 - e^{xy} + C \); \sfill % \( \cos{u} \cdot \dpart{u}{x} = - \frac{y e^{xy}}{u + \tan{u}}, ~ \cos{u} \cdot \dpart{u}{y} = - \frac{x e^{x y}}{u + \tan{u}}, ~ \cos{u} \cdot \dpart{u}{z} = \frac{2 z}{u + \tan{u}} \) % u*sin(u) - z**2 + exp(x*y) = C
+		\item \( z \ln\pares{u + x} = ye^x + C \); \sfill % \( z \dpart{u}{x} = y \pares{u + x} e^x - z, ~ z\dpart{u}{y} = \pares{u + x} e^{x}, ~ z \dpart{u}{z} = - \pares{u + x} \ln\pares{u + x} \) % -y*exp(x) + z*log(u + x) = C
+		\item \( y \sin{ux} + z^2 \ln{y} = C \); \sfill % \( \dpart{u}{x} = - \frac{u}{x}, ~ \dpart{u}{y} = - \frac{y \sin{ux} + z^2}{x y^2 \cos{ux}}, ~ \dpart{u}{z} = - \frac{2z \ln{y}}{xy \cos{ux}} \) % y*sin(u*x) + z**2*log(y) = C
+
+	\end{enumsols}
+
+
+\subsection*{Уравнения Пфаффа}
+
+	\begin{enumsols}
+
+		% \label{sol:nonlinsys_pfaff:general}
+		\item \( y^2 - xz + \sin\pares{x + y} = C \); \sfill % \( 2 y ~ dy + \cos{(x + y)} \pares{dx + dy} - z ~ dx = x ~ dz \)
+		\item \( xy - 2y \ln{x} + z^2 = C \); \sfill % \( 2 z ~dz + \pares{x - 2 \ln{x}} ~dy + \pares{y - \frac{2 y}{x}} ~dx = 0 \)
+		\item \( x^2 + y \arctan{z} = C \); \sfill % \( 2 x ~dx + \frac{y ~dz}{z^{2} + 1} + \arctan{z} ~dy = 0 \)
+		\item \( xy^2 + \frac{x}{z} + \frac{y}{x} = C \); \sfill % \( \frac{x}{z^2} ~ dz - \pares{2xy + \recip{x}} ~ dy + \pares{\frac{y}{x^2} - y^2 - \recip{z}} ~dx = 0 \)
+		\item \( xz - \frac{y}{z^2} + \frac{y}{x} = C \); \sfill % \( \pares{x + \frac{2 y}{z^3}} ~dz + \pares{\frac{1}{x} - \frac{1}{z^2}} ~dy + \pares{z - \frac{y}{x^2}} ~dx = 0 \)
+		\item \( xz \cos{z} + y^2 \sin{x} = C \); \sfill % \( 2y\sin{x} ~ dy + y^2 \cos{x} ~ dx = xz \sin{z} ~ dz - \pares{x ~ dz + z ~ dx} \cos{z} \)
+		\item \( 4xy - xz + \tan\pares{y + z} = C \); \sfill % \( \pares{4y - z} ~dx + 4x ~ dy + \pares{dz + dy} \sec^2\pares{y+z} = x ~ dz \)
+		\item \( 2x e^y + \frac{x}{y} - z^2 = C \); \sfill % \( \pares{2 xe^{y} - \frac{x}{y^2}} ~dy + \pares{2 e^{y} + \frac{1}{y}} ~dx = 2z ~ dz \)
+		\item \( xy + xz + yz - xyz = C \); \sfill % \( x \pares{dy + dz} + y \pares{dx + dz} + z \pares{dx + dy} = xy ~ dz + xz ~ dy + yz ~ dx \)
+		\item \( x \sin{y} + z^2 e^x - 2xyz = C \); \sfill % \( 2 \pares{z e^x - xy} ~ dz + x \pares{\cos{y} - 2z} ~ dy = \pares{2yz - z^2 e^x - \sin{y}} ~ dx \)
+		\item \( xy \arcsin{z} - x^2 - 2 \sqrt{1 - z^2} = C \); \sfill % \( \pares{x ~ dy + y ~ dx} \arcsin{z} + \frac{1}{\sqrt{1 - z^2}} \pares{xy + 2z} ~ dz = 2x ~ dx \)
+
+		\label{sol:nonlinsys_pfaff:int_factor}
+		\item \( xz + \frac{y}{z} = C, ~ \mu = \frac{1}{z^2} \); \sfill % \( z^3 ~ dx + \pares{xz^2 - y} ~ dz + z ~ dy = 0 \)
+		\item \( xy \ln{z} - z^2 = C, ~ \mu = \ln{z} \); \sfill % \( x ~dy + y ~dx + \frac{x y}{z \ln{z}} ~ dz = \frac{2 z}{\ln{z}} ~dz \)
+		\item \( xe^z + y^2 z - xy = C, ~ \mu = e^z \); \sfill % \( \pares{2yz - x} e^{-z} ~ dy + \pares{1 - ye^{-z}} ~ dx + \pares{x + y^2 e^{-z}} ~ dz = 0 \)
+		\item \( 2y^3 \frac{z}{x^2} = C, ~ \mu = \frac{y}{x^3} \); \sfill % \( x \pares{y^2 ~ dz + 3 yz ~ dy} = 2 y^2 z ~ dx \)
+		\item \( z \ln{xy} = C, ~ \mu = \frac{z}{xy} \); \sfill % \( \frac{x y \cdot \ln{xy} ~dz}{z} + x ~dy + y ~dx = 0 \)
+		\item \( x^2 y - xy^2 + z^2 = C, ~ \mu = xy \); \sfill % \( \frac{2z}{xy} ~ dz + \frac{x}{y} ~ dy - \frac{y}{x} ~ dx = 2 \pares{dy - dx} \)
+		\item \( xy^2 - x^2 z + \sin{xy} = C, ~ \mu = xy \); \sfill % \( 2 \pares{dy - \frac{z}{y} ~ dx} + \pares{\frac{dy}{y} + \frac{dx}{x}} \cos{xy} = \frac{x}{y} ~ dz - \frac{y}{x} ~ dx \)
+		\item \( x^2 - xz^3 + \frac{2z}{y^3} = C, ~ \mu = \frac{x}{y} \); \sfill % \( \pares{\frac{z^3}{x} - 2} y ~ dx + \pares{3yz^2 - \frac{2}{xy^2}} ~ dz + \frac{6z}{xy^3} ~ dy = 0 \)
+		\item \( \frac{4x^3}{y^2} - y + 5z^2 = C, ~ \mu = \frac{1}{y^3 x^2} \); \sfill % \( 2x^2 y \pares{6 x^2 ~ dx + 5y^2 z ~ dz} - x^2 \pares{8 x^3 + y^3} ~ dy = 0 \)
+		\item \( xz + y^2 - z \ln\pares{x + y} = C, ~ \mu = \frac{x + y}{z} \); \sfill % \( \frac{zx}{x+y} ~ dz + \frac{z}{x+y}\pares{2y ~ dy + z ~ dx} = \frac{z}{x+y}\ln\pares{x+y} ~ dz + \frac{z^2}{(x+y)^2} \pares{dx + dy} \)
+		\item \( \frac{x}{z^2} -2x e^{-y} - \frac{z}{x^2} = C, ~ \mu = \frac{e^{-y}}{x^3 z^3} \); \sfill % \( 2x^3 z^2 ~ dy - \recip{z}\pares{2x^3 + z^3} e^y ~ dz + \recip{x} \pares{x^3 + 2z^3z} e^{y} ~ dx = 2x^2 z^2 ~ dx \)
+		
+		\label{sol:nonlinsys_pfaff:int_factor_hard}
+		\item \( xz - y e^{y-x} = C, ~ \mu = y e^{-x} \); \sfill % \( \frac{x}{y} e^{x} ~dz + \pares{e^y + \frac{z}{y} e^x} ~ dx = \pares{1 + \recip{y}} e^y ~ dy \)
+		\item \( y \sin{x} + z \cos{x} - y^2 z^2 = C, ~ \mu = \frac{\cos{x}}{z} \); \sfill % \( z\tan{x} \pares{dy - z ~ dz} - 2yz^2\sec{x} \pares{z ~ dy + y ~ dz} + zy ~ dx = z ~dz \)
+		\item \( xy \cot{z} + x \sin{z} + y \cos{z} = C, ~ \mu = z \cos{z} \); \sfill % \( x ~ dy + y ~ dx + \frac{1}{z} \pares{dy + x ~ dz} + \frac{\tan{z}}{z} \pares{dx - y ~ dz} = \frac{xy \sec{z}}{z \sin^2{z}} ~ dz \)
+		\item \( x^2 + xz^2 \sin{y} = C, ~ \mu = xz \cos{y} \); \sfill % \( z ~ dy + 2 \tan{y} ~ dz + \left(\frac{2}{z}\sec{y} + \frac{z}{x} \tan{y}\right) ~ dx = 0 \)
+		\item \( \arccot{\frac{z}{x}} + \arctan{\frac{y}{z}} = C, ~ \mu = \frac{1}{x^2 + z^2} \); \sfill % \( \pares{y^2 + z^2} \cdot \pares{z ~ dx - x ~ dz} = \pares{z^2 + x^2} \cdot \pares{ y ~ dz - z ~ dy } \)
+		\item \( z e^x + e^y - x^2 yz = C, ~ \mu = z e^{x + y} \); \sfill % \( e^{-y} \pares{\frac{dz}{z} + dx} - e^{-x-y} \pares{x^2 ~ dy + \frac{x^2y}{z} ~ dz + 2xy ~ dz} + \frac{e^{-x}}{z} ~ dy = 0 \)
+		\item \( \frac{y}{z} + \sqrt{x^2 + z^2} = C, ~ \mu = \frac{1}{z^2 \sqrt{x^2 + z^2}} \); \sfill % \( z^2 \pares{x ~ dx + z ~ dz} = \pares{y ~ dz - z ~ dy} \sqrt{x^2 + z^2} \)
+		\item \( x \sqrt{\frac{y}{z} + 1} + z^2 = C, ~ \mu = \frac{x}{\sqrt{yz + z^2}} \); \sfill % \( dy + dz + \frac{y+z}{x z} \pares{2z ~ dx - x ~ dz} + \frac{4z}{x} \sqrt{yz + z^2} ~ dz = 0 \)
+
+	\end{enumsols}

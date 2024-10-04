@@ -1,0 +1,66 @@
+\section{Обратное преобразование Фурье}
+
+	Обратное преобразование Фурье $\InvFourierS{F(\omega)}{t}$ -- интегральное преобразование, обратное к преобразованию Фурье. Определяется с помощью следующего выражения:
+	\[ \InvFourier{F} = f(t) = \int\limits_{-\infty}^{\infty} e^{2 \pi \omega t i} \cdot F(\omega) ~ d \omega \]
+
+	\subsection{Примеры}
+
+		В качестве примера рассмотрим функцию, прямое преобразование от которой уже было найдено:
+		\[ F(\omega) = - i \pi \cdot \sgn(2 \pi \omega). \] 
+		Распишем по общему определению обратное преобразование Фурье:
+		\[ 
+			\InvFourier{F} 
+				= \int\limits_{-\infty}^{\infty} e^{2 \pi \omega t i} \cdot \bpares{- i \pi \cdot \sgn(2 \pi \omega)} ~ d \omega 
+				= -i \pi \int\limits_{-\infty}^{\infty} \sgn(2 \pi \omega) \cdot e^{2 \pi \omega t i} ~ d \omega 
+				= \circledast 
+		\]
+		По определению функции $\sgn(t)$, разложим этот интеграл на два:
+		\[ 
+			\circledast 
+				= -i \pi \cdot \pares{ \int\limits_{-\infty}^{0} -1 \cdot e^{2 \pi \omega t i} ~ d \omega 
+				+ \int\limits_{0}^{\infty} 1 \cdot e^{2 \pi \omega t i} ~ d \omega } 
+				= \circledast 
+		\]
+		Представленные интегралы являются в общем случае достаточно простыми в нахождении первообразной, даже при том, что они содержат комплексное выражение:
+		\[ 
+			\circledast 
+				= -i \pi \cdot \pares{ 
+					\frac{e^{2 \pi \omega t i}}{2 \pi t i} \at_{\omega = 0}^{\omega \to -\infty} 
+					+ \frac{e^{2 \pi \omega t i}}{2 \pi t i} \at_{\omega = 0}^{\omega \to \infty} 
+				} 
+				= -\frac{1}{2t} \cdot \pares{ 
+					e^{2 \pi \omega t i} \at_{\omega = 0}^{\omega \to -\infty} 
+					+ e^{2 \pi \omega t i} \at_{\omega = 0}^{\omega \to \infty} 
+				} 
+		\]
+		При $\omega \to 0$, нетрудно заметить, что аргументы экспонент обнуляются, а случай при $\omega \to \pm \infty$ рассмотрим отдельно в предельной форме:
+		\[ 
+			\lim_{\omega \to -\infty} e^{2 \pi \omega t i} + \lim_{\omega \to \infty} e^{2 \pi \omega t i} 
+				= \lim_{\omega \to \infty} \pares{ e^{2 \pi \omega t i} + e^{-2 \pi \omega t i} } \cdot \frac{2}{2} 
+				= \lim_{\omega \to \infty} 2 \cos{2 \pi \omega t} 
+				= \star 
+		\]
+		Предположим, что данный предел был получен путем применения правила Лопиталя. Тогда воспользуемся им в обратную сторону:
+		\[ 
+			\star 
+				= \lim_{\omega \to \infty} \frac{
+					\displaystyle \int\limits_{0}^{\omega} 2 \cos{2 \pi \sigma t ~ d \sigma}
+				}{
+					\displaystyle \int\limits_{0}^{\omega} d \sigma
+				} 
+				= \lim_{\omega \to \infty} \frac{\sin{2 \pi \omega t}}{\pi \omega t} 
+				= \star 
+		\]
+		Разобьем дробь полученного предела на множители определенным образом:
+		\[ 
+			\star 
+				= \lim_{\omega \to \infty} \frac{2 \pi}{\omega} \cdot \frac{\sin{2 \pi \omega t}}{\pi \cdot 2 \pi t} 
+				= \star 
+		\]
+		Второй множитель можно разложить в дельта-функцию по одному из ее определений -- $\delta(2 \pi \omega t)$. Тогда:
+		\[ \star = \lim_{\omega \to \infty} \frac{2 \pi}{\omega} \cdot \delta(2 \pi \omega t) = 0. \]
+		Этот предел равен нулю на основе того, что знаменатель бесконечно растет, а дельта функция в ненулевой точке (полагая $t \neq 0$) равна нулю. В случае, если $t \to 0$, то нетрудно показать, что и такой предел так же равен нулю. Тогда
+		\[ \circledast = -\frac{1}{2t} \cdot \pares{0 - 1 - 1} = \frac{1}{t}. \]
+		Получили исходную функцию, пример которой был рассмотрен ранее.
+
+	% \pagebreak

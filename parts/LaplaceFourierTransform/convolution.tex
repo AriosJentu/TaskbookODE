@@ -1,0 +1,54 @@
+\section{Введение, оператор свертки}
+
+	В данном разделе будут описаны функции и операторы, которые будут использоваться в дальнейшем.
+
+	\begin{enumerate}
+
+		\item \( \sgn(t) \) -- функция знака аргумента. Определение:
+		\[ \sgn(t) = \left\lbrace \begin{split} &1, \quad && t > 0, \\ &0, \quad && t = 0, \\ &-1, \quad && t < 0; \end{split} \right. \]
+
+		\item \( \delta(t) \) -- дельта-функция Дирака, функция бесконечного точечного импульса. Определение:
+		\[ \delta(t) = \left\lbrace \begin{split} &\infty \quad &&t = 0, \\ &0 \quad &&t \neq 0; \end{split} \right. \]
+		Свойства:
+		\[ \int\limits_{-\infty}^{\infty} \delta(t) ~ dt = 1; ~ \int\limits_{-\infty}^{\infty} f(t) \cdot \delta(t) ~ dt = f(0); \]
+
+		\item \( u(t), H(t) \) -- функция Хевисайда, шаговая функция, пороговая функция. Определение:
+		\[ u(t) = \left\lbrace \begin{split} &1 \quad && t > 0, \\ &0 \quad && t \le 0; \end{split} \right. \] 
+
+		\item \( \Pi_{a, b}(t) \) -- функция прямоугольника, определяет ненулевой отрезок. Определение:
+		\[ \Pi_{a, b}(t) = \left\lbrace \begin{split} &1 \quad && a < t < b, \\ &0 \quad && \text{иначе}; \end{split} \right. \] 
+
+		\item \( f(t) * g(t) \) -- ($*$) оператор свертки. Определение:
+		\[ f(t) * g(t) = h(t) = \int\limits_{0}^{t} f(t-\tau) \cdot g(\tau) ~ d \tau; \]
+		Свойства:
+		\[ f * g = g * f; \quad ( f * g ) * h = f * ( g * h ); \quad f * (g + h) = f * g + f * h. \]
+
+	\end{enumerate}
+
+	Некоторые обобщения функции $\delta(t)$:
+	\[ 
+		\delta(t) 
+			= \lim_{h \to 0} \frac{h}{\pi \pares{t^2 + h^2}}, ~ \delta(t) 
+			= \lim_{h \to 0} \frac{h}{2} \cdot \abs{t}^{h - 1}, ~ \delta(t) 
+			= \lim_{h \to 0} \frac{\sin{\frac{t}{h}}}{\pi t}. 
+	\]
+
+	\subsection{Примеры}
+
+		Рассмотрим пример. Пусть $f(t) = t * t$. Распишем по определению:
+		\[ \begin{split} 
+			f(t) = t * t &= \int\limits_{0}^{t} (t-\tau) \cdot \tau ~ d \tau 
+				= \int\limits_{0}^{t} t \tau - \tau^2 ~ d \tau 
+				= t \cdot \frac{\tau^2}{2} - \frac{\tau^3}{3} \at_{\tau = 0}^{\tau = t} 
+				= \\ 
+			&= \frac{t^3}{2} - \frac{t^3}{3} = \frac{t^3}{6}.
+		\end{split} \]
+
+		Аналогично рассмотрим пример с функцией $\delta(t)$. Пусть $f(t) = 1 * \delta(t-1)$. Распишем по определению:
+		\[ f(t) = 1 * \delta(t-1) = \int\limits_{0}^{t} 1 \cdot \delta(\tau - 1) ~ d \tau = \circledast \]
+		Полагая, что $\tau - 1 \in (0, t)$, или, что то же, $\tau \in (1, t+1)$, получим
+		\[ \circledast = 1, ~ t > 1. \text{ Или } \circledast = 0, ~ \tau \notin (1, t+1). \]
+		Тогда
+		\[ f(t) = 1 * \delta(t-1) = \left\lbrace \begin{split} 1 \quad &t > 1 \\ 0 \quad &0 < t < 1 \end{split} \right., \text{ или }  f(t) = u(t-1), ~ t \ge 0. \]
+
+	% \pagebreak	

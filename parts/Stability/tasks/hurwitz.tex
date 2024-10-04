@@ -1,0 +1,63 @@
+\subsection{Задачи}
+
+	Для следующих линейных уравнений определить, является ли решение асимптотически устойчивым:
+	\begin{multicols}{2}
+		\begin{enumtasks}
+			
+			\label{stability_hurwitz:simple_calc}
+			\item \( y'' + 4y' + 2y = 0 \) % уст.
+			\item \( y'' + 6y' + 8y = 0 \) % уст.
+			\item \( y'' + 2y' + 5y = 0 \) % уст.
+			\item \( y'' + 9y' + y = 0 \) % уст.
+			\item \( y''' + 2y'' + 3y' + 2y = 0 \) % уст.
+			\item \( y''' + 3y'' + 4y' + y = 0 \) % уст.
+			\item \( y''' + 4y'' + y' + 4y = 0 \) % неуст.
+			\item \( y''' + 5y'' + 4y' + 2y = 0 \) % уст.
+			\item \( 2y''' + y'' + y' + 2y = 0 \) % неуст.
+			\item \( 2y''' + 3y'' + y' + 5y = 0 \) % неуст.
+
+			\label{stability_hurwitz:simple_calc_part2}
+			\item \( 2y''' + 5y'' + 4y' + 2y = 0 \) % уст.
+			\item \( 3y''' + y'' + 4y' + y = 0 \) % уст.
+			\item \( 3y''' + y'' + 3y' + 5y = 0 \) % неуст.
+			\item \( 3y''' + 2y'' + 3y' + 4y = 0 \) % неуст.
+			\item \( y^{IV} + y''' + 4y'' + y' + 3y = 0 \) % неуст.
+			\item \( y^{IV} + 3y''' + y'' + 2y' + y = 0 \) % неуст.
+			\item \( y^{IV} + 5y''' + 3y'' + 4y' + 1y = 0 \) % уст.
+			\item \( 2y^{IV} + 3y''' + 3y'' + 2y' + y = 0 \) % уст.
+			\itemstar \( y^{V} + 2y^{IV} + y''' + y'' + 2y' + 4y = 0 \) % уст.
+			\itemstar \( y^{V} + 4y^{IV} + 5y''' + 2y'' + y' + 2y = 0 \) % неуст.
+
+		\end{enumtasks}
+	\end{multicols}
+
+	Для следующих линейных уравнений определить, при каких значениях параметров $a, b$ решение является асимптотически устойчивым:
+	\begin{multicols}{2}
+		\begin{enumtasks}
+			
+			\label{stability_hurwitz:params_ab}
+			\item \( y''' + 5y'' + 4y' - ay = 0 \) % \( -20 < a < 0 \)
+			\item \( ay''' + y'' + 5y' + 5y = 0 \) % \( 0 < a < 1 \)
+			\item \( y''' - ay'' + 3y' + 5y = 0 \) % \( 3a + 5 < 0 \)
+			\item \( 2y''' + 2y'' + ay' + y = 0 \) % \( a > 1 \)
+			\item \( ay''' + 2y'' + by' + 3y = 0 \) % \( a > 0, ~ 2b > 3a \)
+			\item \( y''' + ay'' - by' + 2y = 0 \) % неуст.
+			\item \( y''' + 5y'' - ay' - by = 0 \) % \( b < 0, ~ 5a < b \)
+			\item \( 2y''' + ay'' + 2y' + by = 0 \) % \( b > 0, ~ a > b \)
+			\item \( ay''' + 2y'' + 3y' - by = 0 \) % \( a < 0, ~ b < 0, ~ ab + 6 > 0 \)
+			\item \( 3y''' - ay'' + by' + 3y = 0 \) % \( a < 0, ~ b > 0, ~ ab + 9 < 0 \)
+			
+			\label{stability_hurwitz:params_ab_part2}
+			\item \( 5y''' - ay'' + by' + 2y = 0 \) % \( a < 0, ~ ab + 10 < 0 \)
+			\item \( 4y''' + ay'' + 2y' - by = 0 \) % \( b < 0, ~ a > -2b \)
+			\item \( y^{IV} + y''' - ay'' + 3y' - by = 0 \) % \( b < 0, ~ 3a - b + 9 < 0 \)
+			\item \( y^{IV} + 5y''' + y'' - ay' + by = 0 \) % \( b > 0, ~ a^2 + 5a + 25b < 0 \)
+			\item \( y^{IV} + 2y''' + ay'' + 3y' + by = 0 \) % \( b > 0, ~ 2a > 3, ~ 6a - 4b - 9 > 0 \)
+			\item \( ay^{IV} + 2y''' + 3y'' + by' + y = 0 \) % \( a > 0, ~ 4 - 6b + ab^2 < 0 \)
+			\item \( y^{V} + 4y^{IV} + y''' + 4y'' + ay' - by = 0 \) % неуст.
+			\item \( y^{V} - ay^{IV} + 2y''' + y'' + 2y' + by = 0 \) % \( 2a < -1, ~ 2a^2 + 2a + 1 + ab < 0 \)
+			\itemstar \( 3y^{V} + 5y^{IV} + 5y''' + ay'' + by' + 5y = 0 \) % неуст.
+			\itemstar \( ay^{V} + y^{IV} + 3y''' + by'' + 5y' + 5y = 0 \) % \( a > 0, 14 - 10a + 5a^2 - 3b - 3 ab + a b^2 < 0 \)
+
+		\end{enumtasks}
+	\end{multicols}

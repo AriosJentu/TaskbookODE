@@ -1,0 +1,146 @@
+\section{Уравнения, допускающие понижение порядка}
+
+    Завершив раздел уравнений первого порядка, перейдем к разделу уравнений высших порядков. Теперь будем рассматривать уравнения следующего вида:
+    \[
+        F \Big( x, y, y', y^{(n)} \Big) = 0.
+    \]
+    Его можно свести к системе уравнений первого порядка с помощью следующей замены:
+    \[
+        y = u_1, ~ y' = u_2, ~ y'' = u_3, ~ \dots, ~ y^{(n - 1)} = u_n.
+    \]
+    Из этой замены следует соотношение:
+    \[
+        u_{k + 1} = u_k', ~ k = \overline{1, ~ n - 1}.
+    \]
+    В результате получим систему уравнений первого порядка следующего вида:
+    \[
+        \begin{cases}
+            u_1' = u_2, \\
+            u_2' = u_3, \\
+            \dots \\
+            F \pares{x, u_1, u_2, \dots, u_n, u_n'} = 0.
+        \end{cases}
+    \]
+    Введем классификацию уравнений:
+    \begin{enumerate}
+        \item Уравнение вида
+            \[
+                y^{(n)} = f(x)
+            \]
+            назовем $ n $-интегрируемым уравнением. Решение такого уравнение можно получить путем интегрирования уравнения $ n $ раз:
+            \[
+                y = \int \dots \int f(x) ~ d^n x + C_1 x^{n - 1} + C_2 x^{n - 2} + \dots + C_{n - 1} x + C_n.
+            \]
+
+        \item Уравнение вида
+            \[
+                F \Big( x, y^{(n)} \Big) = 0,
+            \]
+            при условии, что его невозможно свести к первому случаю, назовем уравнением, неразрешенным относительно производной. Если возможно выразить $ x $ в явном виде
+            \[
+                x = f \Big( y^{(n)} \Big)
+            \]
+            то решение можно построить методом общей параметризации:
+            \[
+                y^{(n)} = p \Longrightarrow x = f(p), ~ dx = f'(p) dp \Longrightarrow dy^{(n - 1)} = p f'(p) dp.
+            \]
+            Интегрируя полученный результат, получим уравнение на порядок ниже:
+            \[
+                y^{(n - 1)} = \int p f'(p) ~ dp + C_1.
+            \]
+            Дальнейшее интегрирование производится по переменной $ x $, при этом при интегрировании необходимо пользоваться соотношением между $ p $ и $ x $:
+            \[
+                y^{(n - 2)} = \int y^{(n - 1)} ~ dx = \int y^{(n - 1)}(p) \cdot f'(p) ~ dp + C_1x + C_2, ~ \dots
+            \]
+            Общее решение записывается в параметрическом виде:
+            \[
+                \begin{cases}
+                    x = f(p), \\
+                    y = F \bpares{p, x, C_1, \dots, C_n}.
+                \end{cases}
+            \]
+
+        \item Уравнение вида
+            \[
+                F \Big( x, y^{(k)}, y^{(k + 1)}, \dots, y^{(n)} \Big)
+            \]
+            называются уравнением, не содержащим искомой функции до производной $ k $-го порядка. Порядок понижается с помощью замены:
+            \[
+                u = y^{(k)}, ~ u = u(x) \Longrightarrow F \Big( x, u, u', u^{(n - k)} \Big) = 0.
+            \]
+
+        \item Уравнение вида
+            \[
+                F \Big( y^{(k)}, y^{(k + 1)}, \dots, y^{(n)} \Big) = 0
+            \]
+            называется уравнением, не содержащим аргумента и искомой функции до производной $ k $-го порядка. В данном уравнении самая младшая производная уравнения становится новым аргументом, а производная на порядок старше -- новой искомой функцией:
+            \[
+                y^{(k)} = t, ~ y^{(k + 1)} = u, ~ u = u(t), \difft{t}{x} = \difft{y^{(k)}}{x} = y^{(k + 1)}.
+            \]
+            Тогда производные на порядок старше можно найти с помощью дифференцирования сложной функции:
+            \[
+                y^{(k + 2)} = \difft{y^{(k + 1)}}{x} = \difft{u}{t} \cdot \difft{t}{x} = \difft{u}{t} \cdot y^{(k + 1)} = u \cdot \dot{u}.
+            \]
+            В результате получим новое уравнение, порядок которого ниже исходного на $ k + 1 $
+            \[
+                F \Big( y^{(k)}, y^{(k + 1)}, \dots, y^{(n)} \Big) = 0 \Longrightarrow G \Big( t, u, \dot{u}, \dots, u^{(n - k - 1)} \Big) = 0.
+            \]
+
+        \item Уравнение вида
+            \[
+                F \Big( y^{(n)}, y^{(n - 1)} \Big) = 0
+            \]
+            с помощью замены сводится к классическому уравнению первого порядка
+            \[
+                z = y^{(n - 1)}, ~ z' = y^{(n)} \Longrightarrow F \bpares{z, z'} = 0
+            \]
+            и называется уравнением, содержащим только производные старшего порядка и на один порядок ниже.
+
+        \item Уравнение вида
+            \[
+                F \Big( y^{(n)}, y^{(n - 2)} \Big) = 0
+            \]
+            с помощью замены сводится к уравнению второго порядка, не содержащего аргумента
+            \[
+                z = y^{(n - 2)}, ~ z'' = y^{(n)} \Longrightarrow F \bpares{z, z'} = 0.
+            \]
+            Если уравнение возможно разрешить относительно производной, то домножая уравнение на интегрирующий множитель $ 2z' $, можно понизить порядок исходного уравнения.
+    \end{enumerate}
+
+    \subsection{Примеры}
+        \[
+            \begin{split}
+                y''' = 6 - \cos{x} &\Longrightarrow y'' = 6x - \sin{x} + C_1 \Longrightarrow y' = 3x^2 + \cos{x} + C_1 x + C_2 \Longrightarrow \\ &\Longrightarrow y = x^3 + \sin{x} + C_1 x^2 + C_2 x + C_3.
+            \end{split}
+        \]
+
+        \[
+            \begin{split}
+                x &= 6y'' + e^{y''}, ~ y'' = p, ~ x = 6p + e^p, ~ dx = \bpares{6 + e^p} dp, ~ d(y') = p dx = p \bpares{6 + e^p} dp \Longrightarrow \\ &\Longrightarrow y' = \int \bpares{6p + pe^p} ~ dp = 3p^2 + (p - 1)e^p + C_1. \\
+                y &= \int y' ~ dx = \int \bpares{3p^2 + (p - 1)e^p} \bpares{6 + e^p} ~ dp + C_1 x + C_3 = \\ &= 6p^3 + 3e^p \bpares{p^2 - 2} + \dfrac{e^{2p}}{4}\pares{2p - 3} + C_1 x + C_2.
+            \end{split}
+        \]
+
+        \[
+            \begin{split}
+                \bpares{1 &+ x^2}y'' + 2xy' = 0, ~ u = y', ~ u = u(x), ~ u' = y'' \Longrightarrow \\ &\Longrightarrow \bpares{1 + x^2}u' + 2xu = 0 \Longrightarrow \dfrac{du}{u} = -\dfrac{2x dx}{1 + x^2} \Longrightarrow \\ &\Longrightarrow u = \dfrac{C_1}{x^2 + 1} \Longrightarrow y' = \dfrac{C_1}{x^2 + 1} \Longrightarrow y = C_1 \arctan{x} + C_2.
+            \end{split}
+        \]
+
+        \[
+            \begin{split}
+                1 &+ {y'}^2 = 2yy'', ~ y = t, ~ y' = u, ~ u = u(t), ~ y'' = \difft{y'}{x} = \difft{u}{x} = \difft{u}{t} \cdot \difft{t}{x} = u\dot{u} \Longrightarrow \\ &\Longrightarrow 1 + u^2 = 2tu\dot{u} \Longrightarrow \dfrac{2u du}{1 + u^2} = \dfrac{dt}{t} \Longrightarrow 1 + u^2 = C_1 t, ~ u = \pm \sqrt{C_1 t - 1} \Longrightarrow \\ &\Longrightarrow y'= \pm \sqrt{C_1 y - 1} \Longrightarrow \dfrac{dy}{\sqrt{C_1 y - 1}} = \pm 1 \Longrightarrow \sqrt{C_1 y - 1} = C_2 \pm \dfrac{C_1 x}{2}.
+            \end{split}
+        \]
+
+        \[
+            \begin{split}
+                y'' &= {y'}^2 + 1, ~ z = y', ~ z' = y'' \Longrightarrow z' = z^2 + 1 \Longrightarrow z = \tan{z + C_1} \Longrightarrow \\ &\Longrightarrow y = \int \tan{x + C_1} ~ dx = C_2 - \ln{\cos{(x + C_1)}}.
+            \end{split}
+        \]
+
+        \[
+            \begin{split}
+                y''' &= \drecp{{y'}^3}, ~ z = y', ~ z'' = y''' \Longrightarrow z'' = \drecp{z^3} \Longrightarrow 2z' z'' = \dfrac{2z'}{z^3} \Longrightarrow {z'}^2 = \drecp{C^2_1 - \drecp{z^2}} \Longrightarrow \\ &\Longrightarrow \dfrac{C_1 zz'}{\sqrt{z^2 - C^2_1}} = \pm 1 \Longrightarrow C_1 \sqrt{z^2 - C^2_1} = C_2 \pm x \Longrightarrow \\ &\Longrightarrow x = C_1 \sqrt{{y'}^2 - C^2_1} + C_2.
+            \end{split}
+        \]

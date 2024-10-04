@@ -1,0 +1,45 @@
+\section{Преобразование Фурье}
+
+	Преобразование Фурье $\FourierS{f(t)}{\omega}$ -- интегральное преобразование из функций вещественной переменной $t \in \mathbb{R}$ в функцию вещественной переменной $\omega \in \mathbb{R}$. Преобразование аналогично преобразованию Лапласа, но аргумент преобразования состоит только из комплексной части, а область интегрирования покрывает все вещественные числа:
+	\[ \FourierS{f(t)}{\omega} = F(\omega) = \int\limits_{-\infty}^{\infty} e^{-2 \pi \omega t i} \cdot f(t) ~ dt. \]
+
+	Преобразование Фурье подразделяется на вещественное и комплексное преобразования. Они получаются путем разложения экспоненты по формуле Эйлера: $e^{- 2 \pi \omega t i} = \cos(2 \pi \omega t) - i \sin(2 \pi \omega t)$. Таким образом, вещественное преобразование (косинус-преобразование) Фурье имеет вид:
+	\[ \FourierRe{f} = \int\limits_{-\infty}^{\infty} f(t) \cdot \cos(2 \pi \omega t) ~ dt, \]
+	и комплексное (синус-преобразование), соответственно:
+	\[ \FourierIm{f} = \int\limits_{-\infty}^{\infty} f(t) \cdot \sin(2 \pi \omega t) ~ dt. \]
+	Тогда:
+	\[ \Fourier{f} = \FourierRe{f} - i \cdot \FourierIm{f} \]
+
+	\subsection{Примеры}
+
+		В качестве примера рассмотрим функцию $f(t) = \frac{1}{t}$. Распишем по определению общего преобразования Фурье:
+		\[ 
+			\Fourier{f} 
+				= \int\limits_{-\infty}^{\infty} \frac{1}{t} \cdot e^{-2 \pi \omega t i} ~ dt 
+				= \int \frac{1}{t} \cdot \cos{2 \pi \omega t} ~ dt 
+				- i \int\limits_{-\infty}^{\infty} \frac{1}{t} \cdot \sin{2 \pi \omega t} ~ dt 
+				= \circledast 
+		\]
+		Полагая $u = 2 \pi \omega t$, и $du = 2 \pi \omega ~ dt$, получим:
+		\[ 
+			\circledast 
+				= \int\limits_{-\infty}^{\infty} \frac{\cos{u}}{u} ~ du 
+				- i \int\limits_{-\infty}^{\infty} \frac{\sin{u}}{u} ~ du 
+				= \circledast 
+		\]
+		Первый интеграл в общем случае расходится, но пользуясь понятием главного значения интеграла по Коши, при предположении, что преобразование Фурье всегда существует и сходится, положим, что $u = -u$, получим:
+		\[ 
+			\int\limits_{-\infty}^{\infty} \frac{\cos{u}}{u} ~ du 
+				= \int\limits_{\infty}^{-\infty} \frac{\cos{(-u)}}{-u} ~ d(-u) 
+				= -\int\limits_{-\infty}^{\infty} \frac{\cos{u}}{u} ~ du 
+				= 0. 
+		\]
+		Второй же интеграл в общем случае равен $\pi$, но при условии, что $\omega > 0$. Если же $\omega < 0$, пределы интегрирования меняют знак, а значит, что интеграл будет равен $-\pi$. При $\omega = 0$, сам интеграл равен $0$, из чего следует обобщение:
+		\[ 
+			\int\limits_{-\infty}^{\infty} \frac{\sin{u(\omega)}}{u(\omega)} ~ d \bpares{u(\omega)} 
+				= \pi \cdot \sgn(\omega). 
+		\]
+		Из замены выше стоит заметить, что при интегрировании $u$ содержит помимо $\omega$ еще коэффициент $2\pi$. Тогда, по свойствам функции $\sgn(t)$, перепишем результат в следующей канонической форме:
+		\[ \circledast = -i \pi \cdot \sgn(2 \pi \omega). \]
+
+	% \pagebreak
