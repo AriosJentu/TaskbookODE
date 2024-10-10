@@ -1,9 +1,89 @@
 \subsection{Задачи}
 	
 	Для следующих линейных уравнений построить общее решение:
-	% \begin{multicols}{2}
-	% 	\begin{enumtasks}
+	\begin{multicols}{3}
+		\begin{enumtasks}
 
+			\label{firstorder:linear}
+			\item \( xy' - y = \frac{2}{x} \) 																% y = Cx - \frac{1}{x}
+			\item \( xy' - y = x^2 \) 																		% y = Cx + x^2
+			\item \( xy' - 2y = x - 2 \) 																	% y = Cx^2 - x + 1
+			\item \( \pares{x + 1} \cdot y' - y = x e^{x} \) 												% y = C \pares{x + 1} + e^{x}
+			\item \( y' - 2y = x e^{x} \) 																	% y = C e^{2x} - \pares{x + 1} \cdot e^{x}
+			\item \( xy' + y = 3x^2 \) 																		% y = \frac{C}{x} + x^2
+			\item \( xy' + 2y = \pares{x + 2} e^{x} \) 														% y = \frac{C}{x^2} + e^{x}
+			\item \( y' - y + x = 1 \) 																		% y = C e^{x} + x
+			\item \( 2xy' - y = 2x + 1 \)																	% y = C \sqrt{x} + 2x - 1
+			\item \( y' + 2xy = 2x^2 + 1 \) 																% y = Ce^{-x^2} + x
+			\item \( y' + y \tan{x} = \sec{x} \) 															% y = C\cos{x} + \sin{x}
+			\item \( y' + 2 \sin{x} = y \tan{x} \) 															% y = C \sec{x} + \cos{x}
+			\item \( y' \pares{x^2 - 1} - xy = x^3 - 2x \) 													% y = C \sqrt{x^2 - 1} + x^2
+			\item \( y' + y = \pares{2x + 1} e^{x} + e^{-x} \) 												% y = \pares{C + x} \cdot e^{-x} + xe^{x}
+			\item \( xy' - y = xy + x + 1 \) 																% y = Cxe^{x} - 1
 
-	% 	\end{enumtasks}
-	% \end{multicols}
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\item \( y' - \frac{2y}{x} = 2x \cos{2x} - \sin{2x} \) 											% y = Cx^2 + x \sin{2x}
+			\item \( y'\tan{2x} - 2y = \tan{2x} - 2x - 2 \) 												% y = C \sin{2x} + x + 1
+			\item \( y' \sinh{x} + 1 = y \cosh{x} \) 														% y = C \sinh{x} + \cosh{x}
+			\item \( y' \sinh{2x} = 2y \cosh{2x} - 2\cosh^3{x} \) 											% y = C \sinh{2x} + \cosh{x}
+			\item \( y' \tan{x} = y \sec^2{x} + \cos{2x} - 2 \) 											% y = C \tan{x} + \cos^2{x}
+			\item \( xy' \ln{x} + 1 = y - \frac{\ln{x} + 1}{x} \) 											% y = C \ln{x} + \frac{1}{x} + 1
+			\item \( xy' \pares{x + \ln{x}} = \pares{x + 1} \cdot y + x \ln{x} - x \) 						% y = C \pares{x + \ln{x}} + x
+			\item \( xy' \ln{x} = y \pares{\ln{x} + 1} - \ln^2{x} \) 										% y = Cx \ln{x} + \ln{x}
+			\item \( y' - 2y \cos{x} = \cos{x} - \sin{2x} \) 												% y = Ce^{2 \sin{x}} + \sin{x}
+			\item \( y' = \pares{1 - \tan{x}} \cdot y + e^{x} \sec{x} \) 									% y = Ce^{x} \cos{x} + e^{x} \sin{x}
+			\item \( xy' + y = \ln{x} + 2 - \frac{y}{\ln{x}} \) 											% y = \frac{C}{x \ln{x}} + \ln{x}
+			\itemstar \( y' \pares{e^{-x} - 1} + y \pares{2 - e^{-x}} = \pares{2 - e^{x}} \cdot e^{2x} \) 	% y = C \pares{e^{x} - e^{2x}} + e^{3x}
+			\itemstar \( y' \ln\pares{x^2 + 1} + \frac{2x \pares{x - y}}{x^2 + 1} = \ln\pares{x^2 + 1} \) 	% y = C \ln\pares{x^2 + 1} + x
+			\itemstar \( y' \pares{x^2 + 1} \arctan{x} = y + \frac{2x \arctan{x} + 1}{x^2 + 1} \) 			% y = C \arctan{x} - \frac{1}{x^2 + 1}
+			\itemstar \( y' \pares{x^2 + 1} + xy = x \arsinh{x} + \sqrt{1 + x^2} \) 						% y = \frac{C}{\sqrt{x^2 + 1}} + \arsinh{x}
+
+		\end{enumtasks}
+	\end{multicols}
+
+	Найти решение следующих уравнений, удолвлетворяющих начальным условиям:
+	\begin{multicols}{3}
+		\begin{enumtasks}
+
+			\label{firstorder:linear_cauchy}
+			\item \( y' + 1 = y, ~ y(0) = 2 \) 																% y = e^{x} + 1
+			\item \( y' - y = 2x e^{x}, ~ y(0) = 1 \) 														% y = \pares{x^2 + 1} e^{x}
+			\item \( y' - 2y = 1 - 2x, ~ y(0) = 0 \) 														% y = x
+			\item \( y' - y = 6x - x^3, ~ y(1) = 4 \) 														% y = x^3 + 3x^2
+			\item \( x^2y' = 2xy - 3, ~ y(1) = 3 \) 														% y = 2x^2 + \frac{1}{x}
+			\item \( 2xy' + \frac{2}{\sqrt{x}} = y, ~ y(1) = 0 \) 											% y = \frac{1}{\sqrt{x}} - \sqrt{x}
+
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{multicols}{2}
+		\begin{enumtasks}
+
+			\item \( y' + y = 2x \pares{x - 1} \cdot e^{x}, ~ y(1) = 1 \) 									% y = e^{1 - x} + (x - 1)^2 e^{x}
+			\item \( y' - 2y = 2x^2 \pares{3 - 2x}, ~ y(0) = 3 \) 											% y = 3e^{2x} + 2x^3
+			\item \( xy' + 3y = \pares{x + 3} \cdot e^{x}, ~ y(1) = 1 \) 									% y = \frac{1 - e}{x^3} + e^{x}
+			\item \( xy' - y = \pares{2x - 1} \cdot e^{2x} - 2x^2, ~ y(2) = e^4 \) 							% y = 4x - 2x^2 + e^{2x}
+			\item \( y' - \frac{y}{x + 1} = \frac{1}{\sqrt{x^2 - 1}}, ~ y(1) = 2 \) 						% y = x + 1 + \sqrt{x^2 - 1}
+			\item \( y' \tan{x} - y = 2\tan^3{x}, ~ y \pares{\frac{\pi}{4}} = 3 \) 							% y = \sqrt{2} \sin{x} + 2 \tan{x}
+			\item \( y' = y \cdot \pares{\tan{x} - 2} - 2 \cos{x}, ~ y(0) = 0 \) 							% y = \pares{1 - e^{2x}} \cdot \cos{x}
+			\item \( y' - 2xy = \pares{2x - 1} \cdot e^{x} - 2x^2 + 1, ~ y(0) = 0 \) 						% y = e^{x^2} + x - e^{x}
+			\item \( xy' \ln{x} - y = 3x \pares{\ln{x} - 1}, ~ y(e) = 2 + 3e \) 							% y = 2 \ln{x} + 3x
+			\item \( y' - y \tanh{x} = \cosh^2{x}, ~ y(0) = 1 \) 											% y = \pares{\sinh{x} + 1} \cdot \cosh{x}
+
+		\end{enumtasks}
+	\end{multicols}
+	
+	\begin{enumtasks}
+			
+		\itemstar \( y' \sin{4x} - 4y = 2 \sin{4x} - 4 \pares{2x - 1}, ~ y\pares{\frac{\pi}{8}} = \frac{\pi}{4} \) 			% y = \tan{2x} + 2x - 1
+		\itemstar \( y' \pares{x^2 - 1} - xy = -x^3 \cos{x} - \pares{x^2 - 2} \sin{x}, ~ y(\pi) = \sqrt{\pi^2 - 1} - 1 \) 	% y = \sqrt{x^2 - 1} - x \sin{x} + \cos{x}
+		\itemstar \( xy' + \pares{x + 1} \sinh{x} = y \cdot \pares{x + 1} + x \cosh{x}, ~ 4y(\ln{2}) = 8 \ln{2} + 3 \) 		% y = C x e^{x} + \sinh{x}
+		\itemstar \( xy' \arctan{x} - \frac{xy}{x^2 + 1} = y \arctan{x} - \frac{x^2}{x^2 + 1}, ~ y(1) = 0  \) 				% y = x \cdot \pares{\frac{4}{\pi} \arctan{x} - 1}
+
+	\end{enumtasks}
+

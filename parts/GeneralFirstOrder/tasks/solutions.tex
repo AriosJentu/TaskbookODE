@@ -30,15 +30,12 @@
 		\itemstar \( \sin{y} = 2 \arctan{e^{x}} + C \) % \( y' \cdot \cosh{x} = \sec{y} \)
 		\itemstar \( y^{\ln{y} + 1} = xe + C \) % \( y^{\ln{y}} \cdot y' = \frac{x^{\frac{1}{\ln{x}}}}{2\ln{y} + 1} 
 		\itemstar \( \pares{x-1}^3 \cdot e^{y} = 4\ln\pares{x - 1} \cdot \pares{x-1}^3 + x^4 - 3x^3 - 3x^2 + 9x + C \) % \( \pares{x-1}^4 \cdot y' = x^4 \cdot e^{-y} \)
-		% \label{sol:firstorder:separable2}
+		\label{sol:firstorder:separable2}
 		\itemstar \( \arcsin^2{y} = x \sqrt{1 - x^2} + \arcsin{x} + C \) % \( y' \cdot \arcsin{y} = \sqrt{1 - y^2 - x^2 + x^2 y^2} \)
 		\itemstar \( y^2 - y = C \cdot \sec{x} \cdot \pares{\sec{x} + \tan{x}} \) % \( 2yy' \cos{x} + y \sin{x} - y^2 = y^2 \sin{x} + y' \cos{x} - y 
 		\itemstar \( \tan^3{y} - 3\tan{y} + 3y = \arctan{\frac{\tan{x} - 1}{\sqrt{2 \tan{x}}}} - \artanh{\frac{\tan{x} + 1}{\sqrt{2 \tan{x}}}} + C \) % \( 3y' = \cot^4{y} \cdot \sqrt{2\tan{x}} \)
 
-	\end{enumsols}
-
-	\label{sol:firstorder:separable_cauchy}
-	\begin{enumsols}
+		\label{sol:firstorder:separable_cauchy}
 		\item \( y = 1 \) % \( y' = 0, ~ y(0) = 1 \)
 		\item \( y = \pares{x + 2}^2 \) % \( y' - 4 = 2x, ~ y(1) = 9 \)
 		\item \( y = x \) % \( y' = \frac{y}{x}, ~ y(1) = 1 \)
@@ -59,4 +56,111 @@
 		\item \( \tan{y} = e^{-x} - x^2 \) % \( y' = \pares{2x + e^{-x}} \cdot \cos^2{y}, ~ y(0) = 1 \)
 		\item \( 2\sqrt{y} - 2 \ln\pares{\sqrt{y} + 1} = x \) % \( y' = \sqrt{y} + 1, ~ y(1) = 2 - \ln{4} \)
 		\item \( \cosec{y} + \cot{y} = Ce^{\arctan{e^x}} \) % \( y' \cosh{x} = \sin{y}, ~ x \to -\infty, ~ y = \frac{\pi}{2} \)
+	
+	\end{enumsols}
+
+\subsection*{Однородные уравнения}
+
+\subsection*{Линейные уравнения}
+
+	\label{sol:firstorder:linear}
+	\begin{enumsols}
+
+		\item \( y = Cx - \frac{1}{x} \) % \( xy' - y = \frac{2}{x} \)
+		\item \( y = Cx + x^2 \) % \( xy' - y = x^2 \)
+		\item \( y = Cx^2 - x + 1 \) % \( xy' - 2y = x - 2 \)
+		\item \( y = C \pares{x + 1} + e^{x} \) % \( \pares{x + 1} \cdot y' - y = x e^{x} \)
+		\item \( y = C e^{2x} - \pares{x + 1} \cdot e^{x} \) % \( y' - 2y = x e^{x} \)
+		\item \( y = \frac{C}{x} + x^2 \) % \( xy' + y = 3x^2 \)
+		\item \( y = \frac{C}{x^2} + e^{x} \) % \( xy' + 2y = \pares{x + 2} e^{x} \)
+		\item \( y = C e^{x} + x \) % \( y' - y + x = 1 \)
+		\item \( y = C \sqrt{x} + 2x - 1 \) % \( 2xy' - y = 2x + 1 \)
+		\item \( y = Ce^{-x^2} + x \) % \( y' + 2xy = 2x^2 + 1 \)
+		\item \( y = C\cos{x} + \sin{x} \) % \( y' + y \tan{x} = \sec{x} \)
+		\item \( y = C \sec{x} + \cos{x} \) % \( y' + 2 \sin{x} = y \tan{x} \)
+		\item \( y = C \sqrt{x^2 - 1} + x^2 \) % \( y' \pares{x^2 - 1} - xy = x^3 - 2x \)
+		\item \( y = \pares{C + x} \cdot e^{-x} + xe^{x} \) % \( y' + y = \pares{2x + 1} e^{x} + e^{-x} \)
+		\item \( y = Cxe^{x} - 1 \) % \( xy' - y = xy + x + 1 \)
+
+		\item \( y = Cx^2 + x \sin{2x} \) % \( y' - \frac{2y}{x} = 2x \cos{2x} - \sin{2x} \)
+		\item \( y = C \sin{2x} + x + 1 \) % \( y'\tan{2x} - 2y = \tan{2x} - 2x - 2 \)
+		\item \( y = C \sinh{x} + \cosh{x} \) % \( y' \sinh{x} + 1 = y \cosh{x} \)
+		\item \( y = C \sinh{2x} + \cosh{x} \) % \( y' \sinh{2x} = 2y \cosh{2x} - 2\cosh^3{x} \)
+		\item \( y = C \tan{x} + \cos^2{x} \) % \( y' \tan{x} = y \sec^2{x} + \cos{2x} - 2 \)
+		\item \( y = C \ln{x} + \frac{1}{x} + 1 \) % \( xy' \ln{x} + 1 = y - \frac{\ln{x} + 1}{x} \)
+		\item \( y = C \pares{x + \ln{x}} + x \) % \( xy' \pares{x + \ln{x}} = \pares{x + 1} \cdot y + x \ln{x} - x \)
+		\item \( y = Cx \ln{x} + \ln{x} \) % \( xy' \ln{x} = y \pares{\ln{x} + 1} - \ln^2{x} \)
+		\item \( y = Ce^{2 \sin{x}} + \sin{x} \) % \( y' - 2y \cos{x} = \cos{x} - \sin{2x} \)
+		\item \( y = Ce^{x} \cos{x} + e^{x} \sin{x} \) % \( y' = \pares{1 - \tan{x}} \cdot y + e^{x} \sec{x} \)
+		\item \( y = \frac{C}{x \ln{x}} + \ln{x} \) % \( xy' + y = \ln{x} + 2 - \frac{y}{\ln{x}} \)
+		\itemstar \( y = C \pares{e^{x} - e^{2x}} + e^{3x} \) % \( y' \pares{e^{-x} - 1} + y \pares{2 - e^{-x}} = \pares{2 - e^{x}} \cdot e^{2x} \)
+		\itemstar \( y = C \ln\pares{x^2 + 1} + x \) % \( y' \ln\pares{x^2 + 1} + \frac{2x \pares{x - y}}{x^2 + 1} = \ln\pares{x^2 + 1} \)
+		\itemstar \( y = C \arctan{x} - \frac{1}{x^2 + 1} \) % \( y' \pares{x^2 + 1} \arctan{x} = y + \frac{2x \arctan{x} + 1}{x^2 + 1} \)
+		\itemstar \( y = \frac{C}{\sqrt{x^2 + 1}} + \arsinh{x} \) % \( y' \pares{x^2 + 1} + xy = x \arsinh{x} + \sqrt{1 + x^2} \)
+
+		\label{sol:firstorder:linear_cauchy}
+
+		\item \( y = e^{x} + 1 \) % \( y' + 1 = y, ~ y(0) = 2 \)
+		\item \( y = \pares{x^2 + 1} e^{x} \) % \( y' - y = 2x e^{x}, ~ y(0) = 1 \)
+		\item \( y = x \) % \( y' - 2y = 1 - 2x, ~ y(0) = 0 \)
+		\item \( y = x^3 + 3x^2 \) % \( y' - y = 6x - x^3, ~ y(1) = 4 \)
+		\item \( y = 2x^2 + \frac{1}{x} \) % \( x^2y' = 2xy - 3, ~ y(1) = 3 \)
+		\item \( y = \frac{1}{\sqrt{x}} - \sqrt{x} \) % \( 2xy' + \frac{2}{\sqrt{x}} = y, ~ y(1) = 0 \)
+
+		\item \( y = e^{1 - x} + (x - 1)^2 e^{x} \) % \( y' + y = 2x \pares{x - 1} \cdot e^{x}, ~ y(1) = 1 \)
+		\item \( y = 3e^{2x} + 2x^3 \) % \( y' - 2y = 2x^2 \pares{3 - 2x}, ~ y(0) = 3 \)
+		\item \( y = \frac{1 - e}{x^3} + e^{x} \) % \( xy' + 3y = \pares{x + 3} \cdot e^{x}, ~ y(1) = 1 \)
+		\item \( y = 4x - 2x^2 + e^{2x} \) % \( xy' - y = \pares{2x - 1} \cdot e^{2x} - 2x^2, ~ y(2) = e^4 \)
+		\item \( y = x + 1 + \sqrt{x^2 - 1} \) % \( y' - \frac{y}{x + 1} = \frac{1}{\sqrt{x^2 - 1}}, ~ y(1) = 2 \)
+		\item \( y = \sqrt{2} \sin{x} + 2 \tan{x} \) % \( y' \tan{x} - y = 2\tan^3{x}, ~ y \pares{\frac{\pi}{4}} = 3 \)
+		\item \( y = \pares{1 - e^{2x}} \cdot \cos{x} \) % \( y' = y \cdot \pares{\tan{x} - 2} - 2 \cos{x}, ~ y(0) = 0 \)
+		\item \( y = e^{x^2} + x - e^{x} \) % \( y' - 2xy = \pares{2x - 1} \cdot e^{x} - 2x^2 + 1, ~ y(0) = 0 \)
+		\item \( y = 2 \ln{x} + 3x \) % \( xy' \ln{x} - y = 3x \pares{\ln{x} - 1}, ~ y(e) = 2 + 3e \)
+		\item \( y = \pares{\sinh{x} + 1} \cdot \cosh{x} \) % \( y' - y \tanh{x} = \cosh^2{x}, ~ y(0) = 1 \)
+
+		\itemstar \( y = \tan{2x} + 2x - 1 \) % \( y' \sin{4x} - 4y = 2 \sin{4x} - 4 \pares{2x - 1}, ~ y\pares{\frac{\pi}{8}} = \frac{\pi}{4} \)
+		\itemstar \( y = \sqrt{x^2 - 1} - x \sin{x} + \cos{x} \) % \( y' \pares{x^2 - 1} - xy = -x^3 \cos{x} - \pares{x^2 - 2} \sin{x}, ~ y(\pi) = \sqrt{\pi^2 - 1} - 1 \)
+		\itemstar \( y = C x e^{x} + \sinh{x} \) % \( xy' + \pares{x + 1} \sinh{x} = y \cdot \pares{x + 1} + x \cosh{x}, ~ 4y(\ln{2}) = 8 \ln{2} + 3 \)
+		\itemstar \( y = x \cdot \pares{\frac{4}{\pi} \arctan{x} - 1} \) % \( xy' \arctan{x} - \frac{xy}{x^2 + 1} = y \arctan{x} - \frac{x^2}{x^2 + 1}, ~ y(1) = 0  \)
+
+	\end{enumsols}
+
+\subsection*{Уравнения, приводящиеся к линейным}
+
+\subsection*{Уравнения в полных дифференциалах, интегрирующий множитель}
+
+	\label{sol:firstorder:totalderiv}
+	\begin{enumsols}
+
+		\item \( 2xy + e^{y} = C \) % \( 2y ~ dx + \pares{2x + e^{y}} ~ dy = 0 \)
+		\item \( x^2 + 2x e^{-y} - y = C \) % \( \pares{2x e^{-y} + 1} \cdot y' = 2 \pares{x + e^{-y}} \)
+		\item \( 6xy^3 + x - 2 \cos{y} = C \) % \( \pares{6y^3 + 1} ~ dx + 2\pares{9xy^2 + \sin{y}} ~ dy = 0 \)
+		\item \( x^3 + xe^{-y} - 2y^2 = C \) % \( \pares{3x^2 + e^{-y}} ~ dx = \pares{x e^{-y} + 4y} ~ dy \)
+		\item \( \sqrt{x^2 + y^2} - x^2 = C \) % \( \frac{y ~ dy}{\sqrt{x^2 + y^2}} + \frac{x ~ dx}{\sqrt{x^2 + y^2}} = 2x ~ dx \)
+		\item \( e^{x + 2y} - 2e^{-y} = C \) % \( \pares{2 ~ dy + dx} \cdot e^{x + 2y} + 2e^{-y} ~ dy = 0 \)
+		\item \( y \tan{y} - 2xy^2 = C \) % \( \pares{y \sec^2{y} + \tan{y}} ~ dy = 2y^2 ~ dx + 4xy ~ dy \)
+		\item \( y \ln{x} + \cos{2x} = C \) % \( y' \ln{x} + \frac{y}{x} = 2 \sin{2x} \)
+		\item \( xy^3 - x + \cos{2y} = C \) % \( \pares{y^3 - 1} ~ dx + 3xy^2 ~ dy = 2 \sin{2y} ~ dy \)
+		\item \( \sin{xy} - 3x^2 = C \) % \( x \cos{xy} ~ dy + y \cos{xy} ~ dx = 9x^2 ~ dx \)
+		\item \( 4y^3 - 3x + e^{-y} \tan{x} = C \) % \( 12y^2 y' - 3 = \pares{y' \tan{x} - \sec^2{x}} \cdot e^{-y} \)
+		\item \( y^2 - x^2 + 2y \sin{3x} = C \) % \( \pares{y + \sin{3x}} \cdot y' = x - 3y \cos{3x} \)
+		\item \( 5e^{2x} - 2x \ln{y} = C \) % \( 5e^{2x} = \frac{xy'}{y} + \ln{y} \)
+		\item \( \frac{\sin{x}}{y} + \frac{y}{x} = C \) % \( \frac{y'}{x} + \frac{\cos{x}}{y} = \frac{y}{x^2} + \frac{y' \cos{x}}{y^2} \)
+		\item \( y^2 - x + \frac{1}{x + y} = C \) % \( \pares{2y - \frac{1}{\pares{x + y}^2}} \cdot y' = 1 + \frac{1}{\pares{x + y}^2} \)
+		\item \( 5x - 3e^{y} + e^{2xy} = C \) % \( 2e^{2xy} \pares{x ~ dy + y ~ dx} = 3e^{y} ~ dy - 5 ~ dx \)
+		\item \( x^3 y^2 + \ln{x} - \sec{y} = C \) % \( 3x^2 y^2 + 2x^3 y y' = y' \sec{y} \tan{y} - \frac{1}{x} \)
+		\item \( \sqrt{xy} - e^{2y} = C \) % \( \sqrt{xy} \cdot \pares{\frac{dy}{y} + \frac{dx}{x}} = 4e^{2y} ~ dy \)
+		\item \( x^3 + \arctan{\frac{x}{y}} = C \) % \(  \frac{y - xy'}{x^2 + y^2} + 3x^2 = 0  \)
+		\item \( y + 2\sec{xy} = C \) % \( 2 \sec{xy} \tan{xy} \cdot \pares{y ~ dx + x ~ dy} + dy = 0 \)
+		\item \( x^3 + x \cos{y} - \frac{y}{x} = C \) % \( \pares{\frac{1}{x} - x \sin{y}} ~ dy = \pares{\frac{y}{x^2} - \cos{y} - 3x^2} ~ dx \)
+		\item \( y \arcsin{x} - x^3 = C \) % \( \frac{y}{\sqrt{1 - x^2}} + y' \arcsin{x} = 3x^2 \)
+		\item \( x^2 y^2 + x \ln{y} = C \) % \( \pares{2xy^2 + \ln{y}} ~ dx + \pares{2x^2 y + \frac{x}{y}} ~ dy = 0 \)
+		\item \( x^3 - x^2 y + xy^2 + \sin{y} = C \) % \( y^2 + 2xy \cdot \pares{y' - 1} + 3x^2 + y' \cos{y} = x^2 y' \)
+		\item \( xe^{y} - ye^{-x} = C \) % \( xy' e^y + ye^{-x} = y' e^{-x} - e^{y} \)
+		\item \( y \tan{3x} - \cos{x} = C \) % \( 3y\sec^2{3x} ~ dx + \sin{x} ~ dx + \tan{3x} ~ dy = 0 \)
+		\item \( x \ln\pares{x + y} - y \ln{x} = C \) % \( \frac{x}{x + y} \pares{dx + dy} + \ln\pares{x + y} ~ dx = \ln{x} ~ dy + \frac{y}{x} ~ dx \)
+		\item \( x \sqrt{y^2 + 1} + y \sqrt{x^2 + 1} = C \) % \( \pares{\frac{xy}{\sqrt{x^2 + 1}} + \sqrt{y^2 + 1}} ~ dx + \pares{\frac{xy}{\sqrt{y^2 + 1}} + \sqrt{x^2 + 1}} ~ dy = 0 \)
+		\item \( \frac{y}{\pares{x + y}^3} - \frac{x^2}{y} = C \) % \( \pares{\frac{x^2}{y^2} + \frac{1}{\pares{x + y}^3}} ~ dy = \pares{\frac{2x}{y} + \frac{3y}{\pares{x + y}^4}} ~ dx + \frac{3y}{\pares{x + y}^4} ~ dy \)
+		\item \( \arctan{x} \cdot \arctan{y} - \frac{1}{x^2 - y^2} = C \) % \( \frac{2y}{\pares{x^2 - y^2}^2} ~ dy - \frac{2x}{\pares{x^2 - y^2}^2} ~ dx = \frac{\arctan{y}}{x^2 + 1} ~ dx + \frac{\arctan{x}}{y^2 + 1} ~ dy \)
+	
 	\end{enumsols}

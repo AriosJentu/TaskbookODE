@@ -1,9 +1,46 @@
 \subsection{Задачи}
 	
 	Для следующих уравнений построить общее решение:
-	% \begin{multicols}{2}
-	% 	\begin{enumtasks}
+	\begin{multicols}{2}
+		\begin{enumtasks}
 
+			\label{firstorder:totalderiv}
+			\item \( 2y ~ dx + \pares{2x + e^{y}} ~ dy = 0 \) 												% 2xy + e^{y} = C
+			\item \( \pares{2x e^{-y} + 1} \cdot y' = 2 \pares{x + e^{-y}} \) 								% x^2 + 2x e^{-y} - y = C
+			\item \( \pares{6y^3 + 1} ~ dx + 2\pares{9xy^2 + \sin{y}} ~ dy = 0 \) 							% 6xy^3 + x - 2 \cos{y} = C
+			\item \( \pares{3x^2 + e^{-y}} ~ dx = \pares{x e^{-y} + 4y} ~ dy \) 							% x^3 + xe^{-y} - 2y^2 = C
+			\item \( \frac{y ~ dy}{\sqrt{x^2 + y^2}} + \frac{x ~ dx}{\sqrt{x^2 + y^2}} = 2x ~ dx \) 		% \sqrt{x^2 + y^2} - x^2 = C
+			\item \( \pares{2 ~ dy + dx} \cdot e^{x + 2y} + 2e^{-y} ~ dy = 0 \) 							% e^{x + 2y} - 2e^{-y} = C
+			\item \( \pares{y \sec^2{y} + \tan{y}} ~ dy = 2y^2 ~ dx + 4xy ~ dy \) 							% y \tan{y} - 2xy^2 = C
+			\item \( y' \ln{x} + \frac{y}{x} = 2 \sin{2x} \) 												% y \ln{x} + \cos{2x} = C
+			\item \( \pares{y^3 - 1} ~ dx + 3xy^2 ~ dy = 2 \sin{2y} ~ dy \) 								% xy^3 - x + \cos{2y} = C
+			\item \( x \cos{xy} ~ dy + y \cos{xy} ~ dx = 9x^2 ~ dx \) 										% \sin{xy} - 3x^2 = C
+			\item \( 12y^2 y' - 3 = \pares{y' \tan{x} - \sec^2{x}} \cdot e^{-y} \) 							% 4y^3 - 3x + e^{-y} \tan{x} = C
+			\item \( \pares{y + \sin{3x}} \cdot y' = x - 3y \cos{3x} \) 									% y^2 - x^2 + 2y \sin{3x} = C
+			\item \( 5e^{2x} = \frac{xy'}{y} + \ln{y} \) 													% 5e^{2x} - 2x \ln{y} = C
+			\item \( \frac{y'}{x} + \frac{\cos{x}}{y} = \frac{y}{x^2} + \frac{y' \cos{x}}{y^2} \) 			% \frac{\sin{x}}{y} + \frac{y}{x} = C
+			\item \( \pares{2y - \frac{1}{\pares{x + y}^2}} \cdot y' = 1 + \frac{1}{\pares{x + y}^2} \) 	% y^2 - x + \frac{1}{x + y} = C
+			\item \( 2e^{2xy} \pares{x ~ dy + y ~ dx} = 3e^{y} ~ dy - 5 ~ dx \) 							% 5x - 3e^{y} + e^{2xy} = C
+			\item \( 3x^2 y^2 + 2x^3 y y' = y' \sec{y} \tan{y} - \frac{1}{x} \) 							% x^3 y^2 + \ln{x} - \sec{y} = C
+			\item \( \sqrt{xy} \cdot \pares{\frac{dy}{y} + \frac{dx}{x}} = 4e^{2y} ~ dy \) 					% \sqrt{xy} - e^{2y} = C
+			\item \(  \frac{y - xy'}{x^2 + y^2} + 3x^2 = 0  \) 												% x^3 + \arctan{\frac{x}{y}} = C
+			\item \( 2 \sec{xy} \tan{xy} \cdot \pares{y ~ dx + x ~ dy} + dy = 0 \) 							% y + 2\sec{xy} = C
+			\item \( \pares{\frac{1}{x} - x \sin{y}} ~ dy = \pares{\frac{y}{x^2} - \cos{y} - 3x^2} ~ dx \) 	% x^3 + x \cos{y} - \frac{y}{x} = C
+			\item \( \frac{y}{\sqrt{1 - x^2}} + y' \arcsin{x} = 3x^2 \) 									% y \arcsin{x} - x^3 = C
+			\item \( \pares{2xy^2 + \ln{y}} ~ dx + \pares{2x^2 y + \frac{x}{y}} ~ dy = 0 \) 				% x^2 y^2 + x \ln{y} = C
+			\item \( y^2 + 2xy \cdot \pares{y' - 1} + 3x^2 + y' \cos{y} = x^2 y' \) 						% x^3 - x^2 y + xy^2 + \sin{y} = C
+			\item \( xy' e^y + ye^{-x} = y' e^{-x} - e^{y} \) 												% xe^{y} - ye^{-x} = C
+			\item \( 3y\sec^2{3x} ~ dx + \sin{x} ~ dx + \tan{3x} ~ dy = 0 \) 								% y \tan{3x} - \cos{x} = C
 
-	% 	\end{enumtasks}
-	% \end{multicols}
+		\end{enumtasks}
+	\end{multicols}
+
+	\begin{enumtasks}
+	
+		\item \( \frac{x}{x + y} \pares{dx + dy} + \ln\pares{x + y} ~ dx = \ln{x} ~ dy + \frac{y}{x} ~ dx \) 																% x \ln\pares{x + y} - y \ln{x} = C
+		\item \( \pares{\frac{xy}{\sqrt{x^2 + 1}} + \sqrt{y^2 + 1}} ~ dx + \pares{\frac{xy}{\sqrt{y^2 + 1}} + \sqrt{x^2 + 1}} ~ dy = 0 \) 									% x \sqrt{y^2 + 1} + y \sqrt{x^2 + 1} = C
+		\item \( \pares{\frac{x^2}{y^2} + \frac{1}{\pares{x + y}^3}} ~ dy = \pares{\frac{2x}{y} + \frac{3y}{\pares{x + y}^4}} ~ dx + \frac{3y}{\pares{x + y}^4} ~ dy \) 	% \frac{y}{\pares{x + y}^3} - \frac{x^2}{y} = C
+		\item \( \frac{2y}{\pares{x^2 - y^2}^2} ~ dy - \frac{2x}{\pares{x^2 - y^2}^2} ~ dx = \frac{\arctan{y}}{x^2 + 1} ~ dx + \frac{\arctan{x}}{y^2 + 1} ~ dy \) 			% \arctan{x} \cdot \arctan{y} - \frac{1}{x^2 - y^2} = C
+	
+	\end{enumtasks}
+
