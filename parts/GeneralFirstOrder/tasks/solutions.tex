@@ -162,5 +162,27 @@
 		\item \( x \sqrt{y^2 + 1} + y \sqrt{x^2 + 1} = C \) % \( \pares{\frac{xy}{\sqrt{x^2 + 1}} + \sqrt{y^2 + 1}} ~ dx + \pares{\frac{xy}{\sqrt{y^2 + 1}} + \sqrt{x^2 + 1}} ~ dy = 0 \)
 		\item \( \frac{y}{\pares{x + y}^3} - \frac{x^2}{y} = C \) % \( \pares{\frac{x^2}{y^2} + \frac{1}{\pares{x + y}^3}} ~ dy = \pares{\frac{2x}{y} + \frac{3y}{\pares{x + y}^4}} ~ dx + \frac{3y}{\pares{x + y}^4} ~ dy \)
 		\item \( \arctan{x} \cdot \arctan{y} - \frac{1}{x^2 - y^2} = C \) % \( \frac{2y}{\pares{x^2 - y^2}^2} ~ dy - \frac{2x}{\pares{x^2 - y^2}^2} ~ dx = \frac{\arctan{y}}{x^2 + 1} ~ dx + \frac{\arctan{x}}{y^2 + 1} ~ dy \)
+
+		\label{sol:firstorder:intfactor}
+		\item \( \mu = x + 2y, ~ y^2 + xy = C \) % \( y' + \frac{y}{x + 2y} = 0 \)
+		\item \( \mu = e^{y}, ~ x^2 + xe^{y} = C \) % \( xy' + 2xe^{-y} + 1 = 0 \)
+		\item \( \mu = xy, ~ x^2 - xy + y^2 = C \) % \( \pares{\frac{2}{x} - \frac{1}{y}} ~ dx + \pares{\frac{2}{y} - \frac{1}{x}} ~ dy = 0 \)
+		\item \( \mu = y, ~ y^2 \tan{x} - xy = C \) % \( \pares{2 \tan{x} - \frac{x}{y}} ~ dy + \pares{y \sec^2 {x} - 1} ~ dx = 0 \)
+		\item \( \mu = \cos{x}, ~ y^2 + y \sin{x} = C \) % \( y ~ dx + \pares{2y \sec{x} + \tan{x}} ~ dy = 0 \)
+		\item \( \mu = e^{x}, ~ xye^{x} + y^2 = C \) % \( \pares{2y e^{-x} + x} ~ dy + y\pares{x + 1} ~ dx = 0 \)
+		\item \( \mu = \cos{y}, ~ x^2 + y \cos{y} - 2 \sin{y} = C \) % \( 2x\sec{y} ~ dx = \pares{y \tan{y} + 1} ~ dy \)
+		\item \( \mu = \frac{1}{y}, ~ x \ln{y} - 3e^{x} = C \) % \( xy' + y \ln{y} = 3ye^{x} \)
+		\item \( \mu = e^{x - y}, ~ xe^{x - y} + e^{x + y} = C \) % \( e^{2y} \pares{dx + dy} + \pares{x + 1} ~ dx = x ~ dy \)
+		\item \( \mu = e^{-y}, ~ x^2 - y^2 - 2e^{x - y} = C \) % \( e^{y} \pares{yy' - x} = e^{x} \pares{y' - 1} \)
+		\item \( \mu = y, ~ 2xy^2 + y \tan{y} = C \) % \( 2y ~ dx + \pares{4x + \sec^2{y} + \frac{\tan{y}}{y}} ~ dy = 0 \)
+		\item \( \mu = \sec{x}, ~ xy\sec{x} + y^2 = C \) % \( \pares{2y \cos{x} - x} \cdot y' = y \cdot \pares{x\tan{x} + 1} \)
+		\item \( \mu = \frac{x}{y^2}, ~ x^2 + \frac{3x}{y^2} - y = C \) % \( \pares{\frac{6}{y} + \frac{y^2}{x}} ~ dy = \pares{2y^2 + \frac{3}{x}} ~ dx \)
+		\item \( \mu = e^{-2y}, ~ xe^{-2y} + 2 \sinh{y} = C \) % \( 2 \pares{x - e^{2y} \cosh{y}} y' = 1 \)
+		\item \( \mu = x, ~ x^2 + 2xy \ln{y} + y^2 = C \) % \( \ln{y} \cdot \pares{\frac{y}{x} + y'} + \pares{\frac{y}{x} + 1} \cdot y' + 1 = 0 \)
+		\item \( \mu = \frac{1}{y \sqrt{1 - x^2}}, ~ y \sqrt{1 - x^2} + \ln{y} = C \) % \( \pares{\sqrt{1 - x^2} - x^2 y} ~ dy = xy^2 ~ dx - y ~ dy \)
+		\item \( \mu = \sec^2{y}, ~ xy - x^2 + \tan{y} = C \) % \( \pares{x \cos^2{y} + 1} \cdot y' = \pares{2x - y} \cos^2{y} \)
+		\item \( \mu = x, ~ x \arctan{y} - 2x^3 = C \) % \( \frac{y'}{y^2 + 1} = 6x - \frac{1}{x} \cdot \arctan{y} \)
+		\item \( \mu = y, ~ xy \ln{x} - y \ln{y} = C \) % \( \pares{\ln{x} + 1} ~ dx + \frac{x}{y} \ln{x} ~ dy = \frac{1}{y} \cdot \pares{\ln{y} + 1} ~ dy \)
+		\item \( \mu = \frac{1}{x^2 \sqrt{1 - y^2}}, ~ x \arcsin{y} + \frac{\sqrt{1 - y^2}}{x} = C \) % \( x \cdot \pares{x^2 - y} \cdot y' + y^2 = 1 - x^2 \sqrt{1 - y^2} \cdot \arcsin{y} \)
 	
 	\end{enumsols}
