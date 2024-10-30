@@ -13,7 +13,7 @@
 			\item \( xy' + y = 3x^2 \) 																		% y = \frac{C}{x} + x^2
 			\item \( xy' + 2y = \pares{x + 2} e^{x} \) 														% y = \frac{C}{x^2} + e^{x}
 			\item \( y' - y + x = 1 \) 																		% y = C e^{x} + x
-			\item \( 2xy' - y = 2x + 1 \)																	% y = C \sqrt{x} + 2x - 1
+			\item \( 2y = xy' + \pares{2y + 1} \cdot y' \)													% x = C \sqrt{y} + 2y - 1
 			\item \( y' + 2xy = 2x^2 + 1 \) 																% y = Ce^{-x^2} + x
 			\item \( y' + y \tan{x} = \sec{x} \) 															% y = C\cos{x} + \sin{x}
 			\item \( y' + 2 \sin{x} = y \tan{x} \) 															% y = C \sec{x} + \cos{x}
@@ -28,8 +28,7 @@
 		\begin{enumtasks}
 
 			\item \( y' - \frac{2y}{x} = 2x \cos{2x} - \sin{2x} \) 											% y = Cx^2 + x \sin{2x}
-			\item \( y'\tan{2x} - 2y = \tan{2x} - 2x - 2 \) 												% y = C \sin{2x} + x + 1
-			\item \( y' \sinh{x} + 1 = y \cosh{x} \) 														% y = C \sinh{x} + \cosh{x}
+			\item \( y' \tan{2x} - 2y = \tan{2x} - 2x - 2 \) 												% y = C \sin{2x} + x + 1
 			\item \( y' \sinh{2x} = 2y \cosh{2x} - 2\cosh^3{x} \) 											% y = C \sinh{2x} + \cosh{x}
 			\item \( y' \tan{x} = y \sec^2{x} + \cos{2x} - 2 \) 											% y = C \tan{x} + \cos^2{x}
 			\item \( xy' \ln{x} + 1 = y - \frac{\ln{x} + 1}{x} \) 											% y = C \ln{x} + \frac{1}{x} + 1
@@ -38,6 +37,7 @@
 			\item \( y' - 2y \cos{x} = \cos{x} - \sin{2x} \) 												% y = Ce^{2 \sin{x}} + \sin{x}
 			\item \( y' = \pares{1 - \tan{x}} \cdot y + e^{x} \sec{x} \) 									% y = Ce^{x} \cos{x} + e^{x} \sin{x}
 			\item \( xy' + y = \ln{x} + 2 - \frac{y}{\ln{x}} \) 											% y = \frac{C}{x \ln{x}} + \ln{x}
+			\item \( 2y^2 y' \cos{y} = xy' - y \) 															% x = Cy - 2y \sin{y}
 			\itemstar \( y' \pares{e^{-x} - 1} + y \pares{2 - e^{-x}} = \pares{2 - e^{x}} \cdot e^{2x} \) 	% y = C \pares{e^{x} - e^{2x}} + e^{3x}
 			\itemstar \( y' \ln\pares{x^2 + 1} + \frac{2x \pares{x - y}}{x^2 + 1} = \ln\pares{x^2 + 1} \) 	% y = C \ln\pares{x^2 + 1} + x
 			\itemstar \( y' \pares{x^2 + 1} \arctan{x} = y + \frac{2x \arctan{x} + 1}{x^2 + 1} \) 			% y = C \arctan{x} - \frac{1}{x^2 + 1}
