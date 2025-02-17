@@ -151,126 +151,130 @@
 
 	\subsection{Примеры}
 
-		В качестве примера рассмотрим следующую систему нелинейных дифференциальных уравнений:
-		\[ \syst{\dot{x} &= y \cos{x}, \\ \dot{y} &= \sin{x}.} \]
-		Найдем ее стационарные точки. Для это построим решение следующей системы:
-		\[ \syst{&y \cos{x} = 0 \\ &\sin{x} = 0} \implies \syst{x &= \pi k, ~ k \in \mathbb{Z}, \\ y &= 0.} \]
-		Построим соответствующую линеаризованную систему в окрестности точек $M_k = \pares{\pi k, 0}$:
-		\[ 
-			\tilde{J} \pares{x, y} \sat_{x = \pi k, ~ y = 0} = 
-			\begin{pmatrix}
-				-y \sin{x} & \cos{x} \\ \cos{x} & 0
-			\end{pmatrix} \sat_{x = \pi k, ~ y = 0} = 
-			\begin{pmatrix}
-				0 & (-1)^k \\ (-1)^k & 0
-			\end{pmatrix}
-		\]
-		Собственные значения матрицы: $\lambda_{1, 2} = \pm 1$ -- вещественные, разных знаков, соответственно точки $M_k = \pares{\pi k, 0}$ являются седловыми. Собственные вектора матрицы:
-		\[ \lambda_1 = -1: \vec{v}_1 = \begin{pmatrix} (-1)^k \\ -1 \end{pmatrix}, ~ \lambda_2 = 1: \vec{v}_2 = \begin{pmatrix} (-1)^k \\ 1 \end{pmatrix}. \]
-		Матрица преобразования, и жорданова форма имеют следующий вид:
-		\[ P = \begin{pmatrix} (-1)^k & (-1)^k \\ -1 & 1 \end{pmatrix}, ~ J = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}. \]
-		Применим преобразование $P$ для фазового пространства, описанного на рис. (\ref{Stability:Saddle}):
-		\begin{multicols}{2}
+		\begin{enumerate}
 
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=0.35\textwidth]{additional/Stability/Points/Example1Odd.pdf}
-				\caption{Седловая точка в случае $k$ -- нечетных}
-				\label{Stability:Example1Odd}
-			\end{figure}
+			\item В качестве примера рассмотрим следующую систему нелинейных дифференциальных уравнений:
+				\[ \syst{\dot{x} &= y \cos{x}, \\ \dot{y} &= \sin{x}.} \]
+				Найдем ее стационарные точки. Для это построим решение следующей системы:
+				\[ \syst{&y \cos{x} = 0 \\ &\sin{x} = 0} \implies \syst{x &= \pi k, ~ k \in \mathbb{Z}, \\ y &= 0.} \]
+				Построим соответствующую линеаризованную систему в окрестности точек $M_k = \pares{\pi k, 0}$:
+				\[ 
+					\tilde{J} \pares{x, y} \sat_{x = \pi k, ~ y = 0} = 
+					\begin{pmatrix}
+						-y \sin{x} & \cos{x} \\ \cos{x} & 0
+					\end{pmatrix} \sat_{x = \pi k, ~ y = 0} = 
+					\begin{pmatrix}
+						0 & (-1)^k \\ (-1)^k & 0
+					\end{pmatrix}
+				\]
+				Собственные значения матрицы: $\lambda_{1, 2} = \pm 1$ -- вещественные, разных знаков, соответственно точки $M_k = \pares{\pi k, 0}$ являются седловыми. Собственные вектора матрицы:
+				\[ \lambda_1 = -1: \vec{v}_1 = \begin{pmatrix} (-1)^k \\ -1 \end{pmatrix}, ~ \lambda_2 = 1: \vec{v}_2 = \begin{pmatrix} (-1)^k \\ 1 \end{pmatrix}. \]
+				Матрица преобразования, и жорданова форма имеют следующий вид:
+				\[ P = \begin{pmatrix} (-1)^k & (-1)^k \\ -1 & 1 \end{pmatrix}, ~ J = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}. \]
+				Применим преобразование $P$ для фазового пространства, описанного на рис. (\ref{Stability:Saddle}):
+				\begin{multicols}{2}
 
-		\columnbreak
+					\begin{figure}[H]
+						\centering
+						\includegraphics[width=0.35\textwidth]{additional/Stability/Points/Example1Odd.pdf}
+						\caption{Седловая точка в случае $k$ -- нечетных}
+						\label{Stability:Example1Odd}
+					\end{figure}
 
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=0.35\textwidth]{additional/Stability/Points/Example1Even.pdf}
-				\caption{Седловая точка в случае $k$ -- четных}
-				\label{Stability:Example1Even}
-			\end{figure}
+				\columnbreak
 
-		\end{multicols}
-		Объединим данные траектории на общем изображении:
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.7\textwidth]{additional/Stability/Points/Example1Sol.pdf}
-			\caption{Фазовое пространство решения}
-			\label{Stability:Example1Sol}
-		\end{figure}
+					\begin{figure}[H]
+						\centering
+						\includegraphics[width=0.35\textwidth]{additional/Stability/Points/Example1Even.pdf}
+						\caption{Седловая точка в случае $k$ -- четных}
+						\label{Stability:Example1Even}
+					\end{figure}
 
-		Рассмотрим следующий пример:
-		\[ \left\lbrace \begin{split}
-			\dot{x} &= - 2 x^2 y - 2 x y^2 - 2 y^2 + 22 y \\
-			\dot{y} &= 2 x^2 y - 2 x y + 2 y^2 - 22 y
-		\end{split} \right. \]
-		Найдем нули системы:
-		\[ 
-			\syst{
-				&y \pares{x^2 + xy + y - 11} = 0 \\ &y \pares{x^2 - x + y - 11} = 0 
-			} \implies \begin{split} 
-				&M_0 = \pares{C, 0}, ~ M_1 = \pares{0, 11}, \\ 
-				&M_2 = \pares{-3, -1}, ~ M_3 = \pares{4, -1}. 
-			\end{split} 
-		\]
-		Матрица Якоби исходной системы имеет следующий вид: 
-		\[
-			\tilde{J} = \begin{pmatrix}
-				- 4xy - 2y^2 & - 2 x^2 - 4xy - 4y + 22 \\ 
-				4xy - 2y & 2 x^2 - 2x + 4y - 22
-			\end{pmatrix}
-		\]
+				\end{multicols}
+				Объединим данные траектории на общем изображении:
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{additional/Stability/Points/Example1Sol.pdf}
+					\caption{Фазовое пространство решения}
+					\label{Stability:Example1Sol}
+				\end{figure}
 
-		Рассмотрим точку $M_0$. Матрица Якоби в окрестности точки $M_0$ принимает вид:
-		\[
-			\tilde{J} = \begin{pmatrix}
-				0 & 22 - 2C^2 \\
-				0 & -22 + 2C^2
-			\end{pmatrix}
-		\]
-		Собственные значения и соответствующие им собственные вектора следующие:
-		\[ \lambda_1 = 0: \vec{v}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, ~ \lambda_2 = -22 + 2C^2: \vec{v}_2 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}. \]
-		Так как среди собственных значений присутствует хотя-бы один ноль, то точка $M_0 \forall C$ является семейством параллельных прямых. В случае, если $C^2 < 11$ -- интегральные прямые сходятся к прямой, образованной вектором $\vec{v}_1$ перпендикулярно вектору $\vec{v}_2$; если $C^2 > 11$ -- интегральные прямые исходят из прямой, образованной вектором $\vec{v}_1$ перпендикулярно вектору $\vec{v}_2$; если $C^2 = 11$, то окрестность находится в состоянии покоя.
+			\item Рассмотрим следующий пример:
+				\[ \left\lbrace \begin{split}
+					\dot{x} &= - 2 x^2 y - 2 x y^2 - 2 y^2 + 22 y \\
+					\dot{y} &= 2 x^2 y - 2 x y + 2 y^2 - 22 y
+				\end{split} \right. \]
+				Найдем нули системы:
+				\[ 
+					\syst{
+						&y \pares{x^2 + xy + y - 11} = 0 \\ &y \pares{x^2 - x + y - 11} = 0 
+					} \implies \begin{split} 
+						&M_0 = \pares{C, 0}, ~ M_1 = \pares{0, 11}, \\ 
+						&M_2 = \pares{-3, -1}, ~ M_3 = \pares{4, -1}. 
+					\end{split} 
+				\]
+				Матрица Якоби исходной системы имеет следующий вид: 
+				\[
+					\tilde{J} = \begin{pmatrix}
+						- 4xy - 2y^2 & - 2 x^2 - 4xy - 4y + 22 \\ 
+						4xy - 2y & 2 x^2 - 2x + 4y - 22
+					\end{pmatrix}
+				\]
 
-		Рассмотрим точку $M_1$. Матрица Якоби в окрестности точки $M_1$ принимает вид:
-		\[
-			\tilde{J} = \begin{pmatrix}
-				-242 & -22 \\
-				-22 & 22
-			\end{pmatrix}
-		\]
-		Собственные значения и соответствующие им собственные вектора следующие:
-		\[ \lambda_{1, 2} = 22 \pares{-5 \pm \sqrt{37}}: \vec{v}_{1, 2} = \begin{pmatrix} 6 \pm \sqrt{37} \\ 1 \end{pmatrix}. \]
-		Собственные значения разных знаков, тогда точка $M_1$ -- неустойчивая седловая точка. Интегральные кривые сходятся вдоль прямой, образованной вектором $\vec{v}_2$, и расходятся вдоль прямой, образованной вектором $\vec{v}_1$.
+				Рассмотрим точку $M_0$. Матрица Якоби в окрестности точки $M_0$ принимает вид:
+				\[
+					\tilde{J} = \begin{pmatrix}
+						0 & 22 - 2C^2 \\
+						0 & -22 + 2C^2
+					\end{pmatrix}
+				\]
+				Собственные значения и соответствующие им собственные вектора следующие:
+				\[ \lambda_1 = 0: \vec{v}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, ~ \lambda_2 = -22 + 2C^2: \vec{v}_2 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}. \]
+				Так как среди собственных значений присутствует хотя-бы один ноль, то точка $M_0 \forall C$ является семейством параллельных прямых. В случае, если $C^2 < 11$ -- интегральные прямые сходятся к прямой, образованной вектором $\vec{v}_1$ перпендикулярно вектору $\vec{v}_2$; если $C^2 > 11$ -- интегральные прямые исходят из прямой, образованной вектором $\vec{v}_1$ перпендикулярно вектору $\vec{v}_2$; если $C^2 = 11$, то окрестность находится в состоянии покоя.
 
-		Рассмотрим точку $M_2$. Матрица Якоби в окрестности точки $M_2$ принимает вид:
-		\[
-			\tilde{J} = \begin{pmatrix}
-				-14 & -4 \\
-				14 & -2
-			\end{pmatrix}
-		\]
-		Собственные значения и соответствующие им собственные вектора следующие:
-		\[ \lambda_{1, 2} = -8 \pm i \cdot 2\sqrt{5}: \vec{v}_{1, 2} = \begin{pmatrix} -3 \pm i \sqrt{5} \\ 7 \end{pmatrix}. \]
-		Оба собственных значения комплексные, с отрицательной вещественной частью, тогда точка $M_2$ -- устойчивый фокус. Вещественная матрица преобразования и матрица комплексного числа примут следующий вид:
-		\[ P = \begin{pmatrix} 2 & -2 \\ \sqrt{5} - 3 & \sqrt{5} + 3 \end{pmatrix}, ~ J = \begin{pmatrix} -8 & -2\sqrt{5} \\ 2\sqrt{5} & -8 \end{pmatrix}. \]
+				Рассмотрим точку $M_1$. Матрица Якоби в окрестности точки $M_1$ принимает вид:
+				\[
+					\tilde{J} = \begin{pmatrix}
+						-242 & -22 \\
+						-22 & 22
+					\end{pmatrix}
+				\]
+				Собственные значения и соответствующие им собственные вектора следующие:
+				\[ \lambda_{1, 2} = 22 \pares{-5 \pm \sqrt{37}}: \vec{v}_{1, 2} = \begin{pmatrix} 6 \pm \sqrt{37} \\ 1 \end{pmatrix}. \]
+				Собственные значения разных знаков, тогда точка $M_1$ -- неустойчивая седловая точка. Интегральные кривые сходятся вдоль прямой, образованной вектором $\vec{v}_2$, и расходятся вдоль прямой, образованной вектором $\vec{v}_1$.
 
-		Рассмотрим точку $M_3$. Матрица Якоби в окрестности точки $M_3$ принимает вид:
-		\[
-			\tilde{J} = \begin{pmatrix}
-				14 & 10 \\
-				-14 & -2
-			\end{pmatrix}
-		\]
-		Собственные значения и соответствующие им собственные вектора следующие:
-		\[ \lambda_{1, 2} = 6 \pm i \cdot 2\sqrt{19}: \vec{v}_{1, 2} = \begin{pmatrix} 4 \pm i \sqrt{19} \\ -7 \end{pmatrix}. \]
-		Оба собственных значения комплексные, с положительной вещественной частью, тогда точка $M_2$ -- неустойчивый фокус. Вещественная матрица преобразования и матрица комплексного числа примут следующий вид:
-		\[ P = \begin{pmatrix} -5 & 5 \\ \sqrt{19} + 4 & \sqrt{19} - 4 \end{pmatrix}, ~ J = \begin{pmatrix} 6 & -2\sqrt{19} \\ 2\sqrt{19} & 6 \end{pmatrix}. \]
+				Рассмотрим точку $M_2$. Матрица Якоби в окрестности точки $M_2$ принимает вид:
+				\[
+					\tilde{J} = \begin{pmatrix}
+						-14 & -4 \\
+						14 & -2
+					\end{pmatrix}
+				\]
+				Собственные значения и соответствующие им собственные вектора следующие:
+				\[ \lambda_{1, 2} = -8 \pm i \cdot 2\sqrt{5}: \vec{v}_{1, 2} = \begin{pmatrix} -3 \pm i \sqrt{5} \\ 7 \end{pmatrix}. \]
+				Оба собственных значения комплексные, с отрицательной вещественной частью, тогда точка $M_2$ -- устойчивый фокус. Вещественная матрица преобразования и матрица комплексного числа примут следующий вид:
+				\[ P = \begin{pmatrix} 2 & -2 \\ \sqrt{5} - 3 & \sqrt{5} + 3 \end{pmatrix}, ~ J = \begin{pmatrix} -8 & -2\sqrt{5} \\ 2\sqrt{5} & -8 \end{pmatrix}. \]
 
-		Объединим все точки и траектории в их окрестности на общем изображении:
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.7\textwidth]{additional/Stability/Points/Example2Sol.pdf}
-			\caption{Фазовое пространство решения}
-			\label{Stability:Example2Sol}
-		\end{figure}
+				Рассмотрим точку $M_3$. Матрица Якоби в окрестности точки $M_3$ принимает вид:
+				\[
+					\tilde{J} = \begin{pmatrix}
+						14 & 10 \\
+						-14 & -2
+					\end{pmatrix}
+				\]
+				Собственные значения и соответствующие им собственные вектора следующие:
+				\[ \lambda_{1, 2} = 6 \pm i \cdot 2\sqrt{19}: \vec{v}_{1, 2} = \begin{pmatrix} 4 \pm i \sqrt{19} \\ -7 \end{pmatrix}. \]
+				Оба собственных значения комплексные, с положительной вещественной частью, тогда точка $M_2$ -- неустойчивый фокус. Вещественная матрица преобразования и матрица комплексного числа примут следующий вид:
+				\[ P = \begin{pmatrix} -5 & 5 \\ \sqrt{19} + 4 & \sqrt{19} - 4 \end{pmatrix}, ~ J = \begin{pmatrix} 6 & -2\sqrt{19} \\ 2\sqrt{19} & 6 \end{pmatrix}. \]
+
+				Объединим все точки и траектории в их окрестности на общем изображении:
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.7\textwidth]{additional/Stability/Points/Example2Sol.pdf}
+					\caption{Фазовое пространство решения}
+					\label{Stability:Example2Sol}
+				\end{figure}
+
+		\end{enumerate}
 
 	% \pagebreak

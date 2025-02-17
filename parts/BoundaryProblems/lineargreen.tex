@@ -91,154 +91,155 @@
 
 	\subsection{Примеры}
 
-		Построим интегральную форму следующей краевой задачи:
-		\[ y'' + y' - 2y = 10e^{-x} \cos{x}, ~ y(0) = 1, ~ y(\ln{2}) = -1. \]
-		Введем функцию $v$, удовлетворяющую однородным условиям Дирихле:
-		\[ v(0) = v(\ln{2}) = 0. \]
-		Найдем функции $p(x)$ и $q(x)$. Домножим исходное уравнение на некоторой неизвестный интегрирующий множитель $\mu(x)$. Соответствующее уравнение для функций $p$ и $q$ можно найти из следующего соотношения:
-		\[ \mu \cdot \pares{y'' + y' - 2y} = \difft{}{x} \bracks{p \cdot y'} - q \cdot y \]
-		Раскрываем скобки, получим:
-		\[ y'' \mu + y' \mu - 2y \mu = py'' + p'y' - qy, \]
-		отсюда:
-		\[ p = \mu, ~ p' = \mu, ~ q = 2 \mu. \]
-		Найдем $p$:
-		\[ p' = p \implies p = C e^{x}, \text{ пусть } C = 1, \]
-		тогда
-		\[ q = 2 e^{x}. \]
-		Сведем исходное уравнение к операторному виду:
-		\[ L[y] = \difft{}{x} \bracks{y' e^x} - 2 y e^x = 10 \cos{x}. \]
-		Домножим уравнение на функцию $v$, и проинтегрируем:
-		\[ \int\limits_{0}^{\ln{2}} \difft{}{x} \bracks{y' e^x} \cdot v ~ dx - 2 \int\limits_{0}^{\ln{2}} y e^{x} \cdot v ~ dx = 10 \int\limits_{0}^{\ln{2}} \cos{x} \cdot v ~ dx. \]
-		Воспользуемся формулой интегрирования по частям для первого интеграла, получим:
-		\[ y' e^{x} \cdot v \at_{x = 0}^{x = \ln{2}} - \int\limits_{0}^{\ln{2}} y' e^{x} \cdot v' ~ dx - 2 \int\limits_{0}^{\ln{2}} y e^{x} \cdot v ~ dx = 10 \int\limits_{0}^{\ln{2}} \cos{x} \cdot v ~ dx. \]
-		Введем скалярное произведение следующим образом:
-		\[ \pares{u, v} = \int\limits_{0}^{\ln{2}} u(x) \cdot v(x) ~ dx. \]
-		Упростим выражение, получим следующую интегральную форму исходной краевой задачи:
-		\[ \pares{y' e^{x}, v'} + 2 \pares{y e^{x}, v} = - 10 \pares{\cos{x}, v}. \]
+		\begin{enumerate}
 
-		\vspace{10pt}
+			\item Построим интегральную форму следующей краевой задачи:
+				\[ y'' + y' - 2y = 10e^{-x} \cos{x}, ~ y(0) = 1, ~ y(\ln{2}) = -1. \]
+				Введем функцию $v$, удовлетворяющую однородным условиям Дирихле:
+				\[ v(0) = v(\ln{2}) = 0. \]
+				Найдем функции $p(x)$ и $q(x)$. Домножим исходное уравнение на некоторой неизвестный интегрирующий множитель $\mu(x)$. Соответствующее уравнение для функций $p$ и $q$ можно найти из следующего соотношения:
+				\[ \mu \cdot \pares{y'' + y' - 2y} = \difft{}{x} \bracks{p \cdot y'} - q \cdot y \]
+				Раскрываем скобки, получим:
+				\[ y'' \mu + y' \mu - 2y \mu = py'' + p'y' - qy, \]
+				отсюда:
+				\[ p = \mu, ~ p' = \mu, ~ q = 2 \mu. \]
+				Найдем $p$:
+				\[ p' = p \implies p = C e^{x}, \text{ пусть } C = 1, \]
+				тогда
+				\[ q = 2 e^{x}. \]
+				Сведем исходное уравнение к операторному виду:
+				\[ L[y] = \difft{}{x} \bracks{y' e^x} - 2 y e^x = 10 \cos{x}. \]
+				Домножим уравнение на функцию $v$, и проинтегрируем:
+				\[ \int\limits_{0}^{\ln{2}} \difft{}{x} \bracks{y' e^x} \cdot v ~ dx - 2 \int\limits_{0}^{\ln{2}} y e^{x} \cdot v ~ dx = 10 \int\limits_{0}^{\ln{2}} \cos{x} \cdot v ~ dx. \]
+				Воспользуемся формулой интегрирования по частям для первого интеграла, получим:
+				\[ y' e^{x} \cdot v \at_{x = 0}^{x = \ln{2}} - \int\limits_{0}^{\ln{2}} y' e^{x} \cdot v' ~ dx - 2 \int\limits_{0}^{\ln{2}} y e^{x} \cdot v ~ dx = 10 \int\limits_{0}^{\ln{2}} \cos{x} \cdot v ~ dx. \]
+				Введем скалярное произведение следующим образом:
+				\[ \pares{u, v} = \int\limits_{0}^{\ln{2}} u(x) \cdot v(x) ~ dx. \]
+				Упростим выражение, получим следующую интегральную форму исходной краевой задачи:
+				\[ \pares{y' e^{x}, v'} + 2 \pares{y e^{x}, v} = - 10 \pares{\cos{x}, v}. \]
 
-		Построим решение следующей неоднородной краевой задачи для линейного неоднородного уравнения второго порядка с переменными коэффициентами:
-		\[ \syst{
-			&x \pares{2x - 1} y'' + 2 \pares{x - 1} y' - 2y = 6x \pares{x - 1} + 2, \\ 
-			&y(1) + y'(1) = 3, ~ 2y(2) - y'(2) = 3 
-		}\]
-		Решение будем строить в виде линейной комбинации двух функций:
-		\[ y = u + v, \]
-		где функция $v$ удовлетворяет неоднородным краевым условиям, а для функции $u$ ставится новая краевая задача. Пусть $v$ -- некоторая линейная функция: $v = Ax + B$. Найдем коэффициенты $A$ и $B$:
-		\[ \syst{
-			& 2A + B = 3 \\
-			& 3A + 2B = 3
-		} \implies A = 3, B = -3, ~ v(x) = 3\pares{x - 1}. \]
-		% Подставляя значение функции $v$ в исходное уравнение, получим, что $L[v] = 0$.
-		Тогда новая краевая задача принимает следующий вид:
-		\[ \syst{
-			&x \pares{2x - 1} \pares{u + 3x - 3}'' + 2 \pares{x - 1} \pares{u + 3x - 3}' - 2 \pares{u + 3x - 3} = 6x \pares{x - 1} + 2, \\ 
-			&u(1) + u'(1) = 0, ~ 2u(2) - u'(2) = 0
-		} \]
-		Раскроем скобки, упростим выражение:
-		\[ \syst{
-			&x \pares{2x - 1} u'' + 2 \pares{x - 1} u' - 2u = 6x \pares{x - 1} + 2, \\
-			&u(1) + u'(1) = 0, ~ 2u(2) - u'(2) = 0 
-		}\]
-		Найдем значение функций $p(x)$ и $q(x)$ домножая исходное уравнение на интегрирующий множитель $\mu(x)$:
-		\[ \mu \cdot \bpares{x \pares{2x - 1} u'' + 2 \pares{x - 1} u' - 2u} = p u'' + p'u' - q u. \]
-		Отсюда следует:
-		\[ p = \mu \cdot x \pares{2x - 1}, ~ p' = 2\mu \cdot \pares{x - 1}, ~ q = 2\mu. \]
-		Найдем $p$:
-		\[ \frac{p'}{p} = \frac{2 \pares{x - 1}}{x \pares{2x - 1}} \implies p(x) = \frac{C x^2}{2x - 1}, ~ \text{пусть } C = 1, \]
-		тогда
-		\[ \mu(x) = \frac{x}{\pares{2x - 1}^2}, ~ q(x) = \frac{2x}{\pares{2x - 1}^2}, ~ f(x) = \frac{2x \bpares{3x \pares{x - 1} + 1}}{\pares{2x - 1}^2} \]
-		Таким образом, исходное уравнение принимает следующий вид:
-		\[ \difft{}{x} \bracks{ \frac{x^2}{2x - 1} \cdot u' } - \frac{2x}{\pares{2x - 1}^2} = \frac{2x \bpares{3x \pares{x - 1} + 1}}{\pares{2x - 1}^2} \]
-		Найдем однородные решения исходного уравнения:
-		\[ x \pares{2x - 1} u'' + 2 \pares{x - 1} u' - 2u = 0. \]
-		Подберем частное решение. Пусть $u = x^n$. Подставим в уравнение:
-		\[ n\pares{n - 1} \cdot x \pares{2x - 1} x^{n - 2} + 2n \pares{x - 1} \cdot x^{n-1} - 2x^n = 0. \]
-		Рассчитаем коэффициенты при старших степенях $x$:
-		\[ 2n \pares{n - 1} x^n + 2n x^n - 2x^n = 0 \implies n = \pm 1. \]
-		Найдем частное решение в виде полинома степени $n = 1$: $u = x + a$. Подставим в уравнение:
-		\[ 2 \pares{x - 1} - 2 \pares{x + a} = 0 \implies a = -1. \]
-		Частное решение однородного уравнения: $u = x - 1$. Найдем второе частное решение. Положим $u = z \cdot \pares{x - 1}, ~ z = z(x)$. Подставим в уравнение:
-		\[ x\pares{2x^2 - 3x + 1} z'' + 2\pares{3x^2 - 3x + 1} z' = 0. \]
-		Разделяя переменные, получим:
-		\[ z' = C_1 \cdot \frac{1 - 2x}{x^2 \pares{x-1}^2} \implies z = C_1 \pares{\frac{1}{x-1} - \frac{1}{x}} + C_2. \]
-		Подставляя и упрощая, получим общее решение однородного уравнения:
-		\[ u = C_1 \pares{x - 1} + \frac{C_2}{x} \]
+			\item Построим решение следующей неоднородной краевой задачи для линейного неоднородного уравнения второго порядка с переменными коэффициентами:
+				\[ \syst{
+					&x \pares{2x - 1} y'' + 2 \pares{x - 1} y' - 2y = 6x \pares{x - 1} + 2, \\ 
+					&y(1) + y'(1) = 3, ~ 2y(2) - y'(2) = 3 
+				}\]
+				Решение будем строить в виде линейной комбинации двух функций:
+				\[ y = u + v, \]
+				где функция $v$ удовлетворяет неоднородным краевым условиям, а для функции $u$ ставится новая краевая задача. Пусть $v$ -- некоторая линейная функция: $v = Ax + B$. Найдем коэффициенты $A$ и $B$:
+				\[ \syst{
+					& 2A + B = 3 \\
+					& 3A + 2B = 3
+				} \implies A = 3, B = -3, ~ v(x) = 3\pares{x - 1}. \]
+				% Подставляя значение функции $v$ в исходное уравнение, получим, что $L[v] = 0$.
+				Тогда новая краевая задача принимает следующий вид:
+				\[ \syst{
+					&x \pares{2x - 1} \pares{u + 3x - 3}'' + 2 \pares{x - 1} \pares{u + 3x - 3}' - 2 \pares{u + 3x - 3} = 6x \pares{x - 1} + 2, \\ 
+					&u(1) + u'(1) = 0, ~ 2u(2) - u'(2) = 0
+				} \]
+				Раскроем скобки, упростим выражение:
+				\[ \syst{
+					&x \pares{2x - 1} u'' + 2 \pares{x - 1} u' - 2u = 6x \pares{x - 1} + 2, \\
+					&u(1) + u'(1) = 0, ~ 2u(2) - u'(2) = 0 
+				}\]
+				Найдем значение функций $p(x)$ и $q(x)$ домножая исходное уравнение на интегрирующий множитель $\mu(x)$:
+				\[ \mu \cdot \bpares{x \pares{2x - 1} u'' + 2 \pares{x - 1} u' - 2u} = p u'' + p'u' - q u. \]
+				Отсюда следует:
+				\[ p = \mu \cdot x \pares{2x - 1}, ~ p' = 2\mu \cdot \pares{x - 1}, ~ q = 2\mu. \]
+				Найдем $p$:
+				\[ \frac{p'}{p} = \frac{2 \pares{x - 1}}{x \pares{2x - 1}} \implies p(x) = \frac{C x^2}{2x - 1}, ~ \text{пусть } C = 1, \]
+				тогда
+				\[ \mu(x) = \frac{x}{\pares{2x - 1}^2}, ~ q(x) = \frac{2x}{\pares{2x - 1}^2}, ~ f(x) = \frac{2x \bpares{3x \pares{x - 1} + 1}}{\pares{2x - 1}^2} \]
+				Таким образом, исходное уравнение принимает следующий вид:
+				\[ \difft{}{x} \bracks{ \frac{x^2}{2x - 1} \cdot u' } - \frac{2x}{\pares{2x - 1}^2} = \frac{2x \bpares{3x \pares{x - 1} + 1}}{\pares{2x - 1}^2} \]
+				Найдем однородные решения исходного уравнения:
+				\[ x \pares{2x - 1} u'' + 2 \pares{x - 1} u' - 2u = 0. \]
+				Подберем частное решение. Пусть $u = x^n$. Подставим в уравнение:
+				\[ n\pares{n - 1} \cdot x \pares{2x - 1} x^{n - 2} + 2n \pares{x - 1} \cdot x^{n-1} - 2x^n = 0. \]
+				Рассчитаем коэффициенты при старших степенях $x$:
+				\[ 2n \pares{n - 1} x^n + 2n x^n - 2x^n = 0 \implies n = \pm 1. \]
+				Найдем частное решение в виде полинома степени $n = 1$: $u = x + a$. Подставим в уравнение:
+				\[ 2 \pares{x - 1} - 2 \pares{x + a} = 0 \implies a = -1. \]
+				Частное решение однородного уравнения: $u = x - 1$. Найдем второе частное решение. Положим $u = z \cdot \pares{x - 1}, ~ z = z(x)$. Подставим в уравнение:
+				\[ x\pares{2x^2 - 3x + 1} z'' + 2\pares{3x^2 - 3x + 1} z' = 0. \]
+				Разделяя переменные, получим:
+				\[ z' = C_1 \cdot \frac{1 - 2x}{x^2 \pares{x-1}^2} \implies z = C_1 \pares{\frac{1}{x-1} - \frac{1}{x}} + C_2. \]
+				Подставляя и упрощая, получим общее решение однородного уравнения:
+				\[ u = C_1 \pares{x - 1} + \frac{C_2}{x} \]
 
-		Подберем два линейно-независимых частных решения, удовлетворящих однородным краевым условиям. Для этого найдем производную функции $u$:
-		\[ u' = C_1 - \frac{C_2}{x^2}. \]
-		Система для двух частных решений принимает вид:
-		\[ \begin{matrix}
-			\syst{&u_1 = C_1 \pares{x - 1} + \frac{C_2}{x}, \\ &u_1(1) + u_1'(1) = 0.} & 
-			\syst{&u_2 = C_1 \pares{x - 1} + \frac{C_2}{x}, \\ &2u_2(2) - u_2'(2) = 0.} 
-		\end{matrix} \]
-		Подберем значения $C_1$ и $C_2$ для функций $u_1$ и $u_2$:
-		\[ u_1: C_2 + C_1 - C_2 = 0; \quad u_2: 2C_1 + C_2 - C_1 + \frac{C_2}4 = 0. \]
-		Выберем следующие функции:
-		\[ u_1 = \frac{1}{x}, ~ u_2 = 5 \pares{x - 1} - \frac{4}{x}. \]
-		Проверим их линейную независимость:
-		\[ W(x) = \begin{vmatrix} 
-			\dfrac{1}{x} & 5 \pares{x - 1} - \dfrac{4}{x} \\
-			-\dfrac{1}{x^2} & 5 + \dfrac{4}{x^2}
-		\end{vmatrix} = \frac{5}{x^2} \pares{2x - 1} \neq 0. \]
+				Подберем два линейно-независимых частных решения, удовлетворящих однородным краевым условиям. Для этого найдем производную функции $u$:
+				\[ u' = C_1 - \frac{C_2}{x^2}. \]
+				Система для двух частных решений принимает вид:
+				\[ \begin{matrix}
+					\syst{&u_1 = C_1 \pares{x - 1} + \frac{C_2}{x}, \\ &u_1(1) + u_1'(1) = 0.} & 
+					\syst{&u_2 = C_1 \pares{x - 1} + \frac{C_2}{x}, \\ &2u_2(2) - u_2'(2) = 0.} 
+				\end{matrix} \]
+				Подберем значения $C_1$ и $C_2$ для функций $u_1$ и $u_2$:
+				\[ u_1: C_2 + C_1 - C_2 = 0; \quad u_2: 2C_1 + C_2 - C_1 + \frac{C_2}4 = 0. \]
+				Выберем следующие функции:
+				\[ u_1 = \frac{1}{x}, ~ u_2 = 5 \pares{x - 1} - \frac{4}{x}. \]
+				Проверим их линейную независимость:
+				\[ W(x) = \begin{vmatrix} 
+					\dfrac{1}{x} & 5 \pares{x - 1} - \dfrac{4}{x} \\
+					-\dfrac{1}{x^2} & 5 + \dfrac{4}{x^2}
+				\end{vmatrix} = \frac{5}{x^2} \pares{2x - 1} \neq 0. \]
 
-		Построим функцию Грина:
-		\[ G(x, t) = \syst{
-			& \frac{C_1(t)}{x}, ~ 1 \le x < t \le 2, \\
-			& C_2(t) \cdot \pares{5 \pares{x - 1} - \frac{4}{x}}, ~ 1 \le t < x \le 2.
-		} \]
-		Выпишем условия непрерывности и разрывности функции Грина:
-		\[ \syst{
-			& \frac{C_1(t)}{t} = C_2(t) \cdot \pares{5 \pares{t - 1} - \frac{4}{t}} \\
-			& C_2(t) \cdot \pares{5 + \frac{4}{t^2}} + \frac{C_1(t)}{t^2} = \frac{1}{p(t)} = \frac{2t - 1}{t^2}.
-		} \]
-		Запишем данную систему в матричной форме относительно неизвестных $C_1(t)$ и $C_2(t)$:
-		\[ \begin{pmatrix} 
-			\dfrac{1}{t} & -5 \pares{t - 1} + \dfrac{4}{t} \\
-			\dfrac{1}{t^2} & 5 + \dfrac{4}{t^2}
-		\end{pmatrix} \begin{pmatrix} C_1(t) \\ C_2(t) \end{pmatrix} = \begin{pmatrix} 0 \\ \dfrac{2t - 1}{t^2} \end{pmatrix} \]
-		Определитель матрицы коэффициентов при $C_1(t)$, $C_2(t)$ известен, и равен $W(t)$. Тогда
-		\[ C_1(t) = \frac{t^2}{5\pares{2t - 1}} \cdot \pares{5 \pares{t - 1} - \frac{4}{t}} \cdot \frac{2t - 1}{t^2} = \frac{1}{5} \pares{5 \pares{t - 1} - \frac{4}{t}}, \] 
-		\[ C_2(t) = \frac{t^2}{5\pares{2t - 1}} \cdot \frac{1}{t} \cdot \frac{2t - 1}{t^2} = \frac{1}{5t}. \]
-		Тогда функция Грина принимает следующий вид:
-		\[ G(x, t) = \syst{
-			& \frac{1}{5x} \cdot \pares{5 \pares{t - 1} - \frac{4}{t}}, ~ 1 \le x < t \le 2, \\
-			& \frac{1}{5t} \cdot \pares{5 \pares{x - 1} - \frac{4}{x}}, ~ 1 \le t < x \le 2.
-		} \] 
+				Построим функцию Грина:
+				\[ G(x, t) = \syst{
+					& \frac{C_1(t)}{x}, ~ 1 \le x < t \le 2, \\
+					& C_2(t) \cdot \pares{5 \pares{x - 1} - \frac{4}{x}}, ~ 1 \le t < x \le 2.
+				} \]
+				Выпишем условия непрерывности и разрывности функции Грина:
+				\[ \syst{
+					& \frac{C_1(t)}{t} = C_2(t) \cdot \pares{5 \pares{t - 1} - \frac{4}{t}} \\
+					& C_2(t) \cdot \pares{5 + \frac{4}{t^2}} + \frac{C_1(t)}{t^2} = \frac{1}{p(t)} = \frac{2t - 1}{t^2}.
+				} \]
+				Запишем данную систему в матричной форме относительно неизвестных $C_1(t)$ и $C_2(t)$:
+				\[ \begin{pmatrix} 
+					\dfrac{1}{t} & -5 \pares{t - 1} + \dfrac{4}{t} \\
+					\dfrac{1}{t^2} & 5 + \dfrac{4}{t^2}
+				\end{pmatrix} \begin{pmatrix} C_1(t) \\ C_2(t) \end{pmatrix} = \begin{pmatrix} 0 \\ \dfrac{2t - 1}{t^2} \end{pmatrix} \]
+				Определитель матрицы коэффициентов при $C_1(t)$, $C_2(t)$ известен, и равен $W(t)$. Тогда
+				\[ C_1(t) = \frac{t^2}{5\pares{2t - 1}} \cdot \pares{5 \pares{t - 1} - \frac{4}{t}} \cdot \frac{2t - 1}{t^2} = \frac{1}{5} \pares{5 \pares{t - 1} - \frac{4}{t}}, \] 
+				\[ C_2(t) = \frac{t^2}{5\pares{2t - 1}} \cdot \frac{1}{t} \cdot \frac{2t - 1}{t^2} = \frac{1}{5t}. \]
+				Тогда функция Грина принимает следующий вид:
+				\[ G(x, t) = \syst{
+					& \frac{1}{5x} \cdot \pares{5 \pares{t - 1} - \frac{4}{t}}, ~ 1 \le x < t \le 2, \\
+					& \frac{1}{5t} \cdot \pares{5 \pares{x - 1} - \frac{4}{x}}, ~ 1 \le t < x \le 2.
+				} \] 
 
-		Построим решение новой краевой задачи:
-		\[ u(x) = \int\limits_1^2 G(x, t) \cdot f(t) ~ dt = \int\limits_1^x G_2(x, t) \cdot f(t) ~ dt + \int\limits_x^2 G_1(x, t) \cdot f(t) ~ dt = \circledast \]
-		Рассмотрим каждый интеграл отдельно:
-		\[
-			I_1 = \int\limits_1^x G_2(x, t) \cdot f(t) ~ dt = \frac{1}{5} \cdot \pares{5 \pares{x - 1} - \frac{4}{x}} \cdot \int\limits_1^x \frac{1}{t} \cdot \frac{2t \bpares{3t \pares{t - 1} + 1}}{\pares{2t - 1}^2} ~ dt = \star
-		\]
-		\[ \begin{split} 
-			I'_1 &= 2 \int\limits_1^x \frac{3t \pares{t - 1} + 1}{\pares{2t - 1}^2} ~ dt = \frac{1}{2} \int\limits_1^x 3 + \frac{1}{\pares{2t - 1}^2} = \frac{3}{2} t - \frac{1}{4 \pares{2t - 1}} \at_{t = 1}^{t = x} = \\
-			&= \frac{3}{2} x - \frac{1}{4 \pares{2x - 1}} - \frac{5}{4} = \frac{1}{4} \cdot \pares{6x - 5 - \frac{1}{2x - 1}};
-		\end{split} \]
-		\[ 
-			\star = \frac{1}{20} \cdot \pares{5 \pares{x - 1} - \frac{4}{x}} \cdot \pares{6x - 5 - \frac{1}{2x - 1}} = \frac{15x^4 - 35 x^3 + 13x^2 + 11x - 4}{5x \pares{2x - 1}};
-		\]
+				Построим решение новой краевой задачи:
+				\[ u(x) = \int\limits_1^2 G(x, t) \cdot f(t) ~ dt = \int\limits_1^x G_2(x, t) \cdot f(t) ~ dt + \int\limits_x^2 G_1(x, t) \cdot f(t) ~ dt = \circledast \]
+				Рассмотрим каждый интеграл отдельно:
+				\[
+					I_1 = \int\limits_1^x G_2(x, t) \cdot f(t) ~ dt = \frac{1}{5} \cdot \pares{5 \pares{x - 1} - \frac{4}{x}} \cdot \int\limits_1^x \frac{1}{t} \cdot \frac{2t \bpares{3t \pares{t - 1} + 1}}{\pares{2t - 1}^2} ~ dt = \star
+				\]
+				\[ \begin{split} 
+					I'_1 &= 2 \int\limits_1^x \frac{3t \pares{t - 1} + 1}{\pares{2t - 1}^2} ~ dt = \frac{1}{2} \int\limits_1^x 3 + \frac{1}{\pares{2t - 1}^2} = \frac{3}{2} t - \frac{1}{4 \pares{2t - 1}} \at_{t = 1}^{t = x} = \\
+					&= \frac{3}{2} x - \frac{1}{4 \pares{2x - 1}} - \frac{5}{4} = \frac{1}{4} \cdot \pares{6x - 5 - \frac{1}{2x - 1}};
+				\end{split} \]
+				\[ 
+					\star = \frac{1}{20} \cdot \pares{5 \pares{x - 1} - \frac{4}{x}} \cdot \pares{6x - 5 - \frac{1}{2x - 1}} = \frac{15x^4 - 35 x^3 + 13x^2 + 11x - 4}{5x \pares{2x - 1}};
+				\]
 
-		\[ 
-			I_2 = \int\limits_x^2 G_1(x, t) \cdot f(t) ~ dt = \frac{1}{5x} \cdot \int\limits_x^2 \pares{5 \pares{t - 1} - \frac{4}{t}} \cdot \frac{2t \bpares{3t \pares{t - 1} + 1}}{\pares{2t - 1}^2} ~ dt = \star
-		\]
-		\[ \begin{split}
-			I'_2 &= \int\limits_x^2 \pares{5 \pares{t - 1} - \frac{4}{t}} \cdot \frac{2t \bpares{3t \pares{t - 1} + 1}}{\pares{2t - 1}^2} ~ dt = \int\limits_x^2 \frac{15}{2} t^2 - \frac{15}{2} t - \frac{43}{8} - \frac{21}{8 \pares{2t - 1}^2} ~ dt = \\
-			&= \frac{5}{2} t^3 - \frac{15}{4} t^2 - \frac{43}{8} t + \frac{21}{16\pares{2t - 1}} \at_{t = x}^{t = 2} = -\frac{39}{8} - \frac{5}{2} x^3 + \frac{15}{4} x^2 + \frac{43}{8} x - \frac{21}{16\pares{2x - 1}} = \\
-			&= -\frac{5x^4 - 10x^3 - 7x^2 + 16x - 4}{2x - 1};
-		\end{split} \]
-		\[ 
-			\star = -\frac{5x^4 - 10x^3 - 7x^2 + 16x - 4}{5x \pares{2x - 1}};
-		\]
-		\[ \begin{split}
-			\circledast &= \frac{15x^4 - 35 x^3 + 13x^2 + 11x - 4}{5x \pares{2x - 1}} - \frac{5x^4 - 10x^3 - 7x^2 + 16x - 4}{5x \pares{2x - 1}} = \\
-			&= \frac{10x^4 - 25 x^3 + 20x^2 - 5x}{5x \pares{2x - 1}} = \frac{2x^3 - 5x^2 + 4x - 1}{2x - 1} = \pares{x-1}^2.
-		\end{split} \]
-		Тогда общее решение принимает вид:
-		\[ y = u + v = \pares{x-1}^2 + 3 \pares{x-1} = x^2 + x - 2. \]
+				\[ 
+					I_2 = \int\limits_x^2 G_1(x, t) \cdot f(t) ~ dt = \frac{1}{5x} \cdot \int\limits_x^2 \pares{5 \pares{t - 1} - \frac{4}{t}} \cdot \frac{2t \bpares{3t \pares{t - 1} + 1}}{\pares{2t - 1}^2} ~ dt = \star
+				\]
+				\[ \begin{split}
+					I'_2 &= \int\limits_x^2 \pares{5 \pares{t - 1} - \frac{4}{t}} \cdot \frac{2t \bpares{3t \pares{t - 1} + 1}}{\pares{2t - 1}^2} ~ dt = \int\limits_x^2 \frac{15}{2} t^2 - \frac{15}{2} t - \frac{43}{8} - \frac{21}{8 \pares{2t - 1}^2} ~ dt = \\
+					&= \frac{5}{2} t^3 - \frac{15}{4} t^2 - \frac{43}{8} t + \frac{21}{16\pares{2t - 1}} \at_{t = x}^{t = 2} = -\frac{39}{8} - \frac{5}{2} x^3 + \frac{15}{4} x^2 + \frac{43}{8} x - \frac{21}{16\pares{2x - 1}} = \\
+					&= -\frac{5x^4 - 10x^3 - 7x^2 + 16x - 4}{2x - 1};
+				\end{split} \]
+				\[ 
+					\star = -\frac{5x^4 - 10x^3 - 7x^2 + 16x - 4}{5x \pares{2x - 1}};
+				\]
+				\[ \begin{split}
+					\circledast &= \frac{15x^4 - 35 x^3 + 13x^2 + 11x - 4}{5x \pares{2x - 1}} - \frac{5x^4 - 10x^3 - 7x^2 + 16x - 4}{5x \pares{2x - 1}} = \\
+					&= \frac{10x^4 - 25 x^3 + 20x^2 - 5x}{5x \pares{2x - 1}} = \frac{2x^3 - 5x^2 + 4x - 1}{2x - 1} = \pares{x-1}^2.
+				\end{split} \]
+				Тогда общее решение принимает вид:
+				\[ y = u + v = \pares{x-1}^2 + 3 \pares{x-1} = x^2 + x - 2. \]
 
+		\end{enumerate}
 
 	\subsubsection*{Замечание}
 
